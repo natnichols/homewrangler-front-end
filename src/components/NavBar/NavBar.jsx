@@ -9,10 +9,14 @@ const NavBar = ({ user, handleLogout }) => {
       {user ?
         <div className={styles.container}>
           <div><NavLink to="/profiles/:profileId">User Profile</NavLink></div>
-          <div>Shipping List</div>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <div>Shopping List /</div>
           <div>My Pantry</div>
+          &nbsp;&nbsp;&nbsp;&nbsp;
           <div>Repairs</div>
+          &nbsp;&nbsp;&nbsp;&nbsp;
           <div>Budget</div>
+          &nbsp;&nbsp;&nbsp;&nbsp;
           <div><NavLink to="" onClick={handleLogout}>LOG OUT</NavLink></div>
         </div>
       :
