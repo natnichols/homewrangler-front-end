@@ -9,6 +9,7 @@ import Landing from './pages/Landing/Landing'
 import Profile from './pages/Profile/Profile'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
+import PantryList from './pages/PantryList/PantryList'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -68,6 +69,14 @@ function App() {
           element={
             <ProtectedRoute user={user}>
               <ChangePassword handleAuthEvt={handleAuthEvt} />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/pantryItems"
+          element={
+            <ProtectedRoute user={user}>
+              <PantryList />
             </ProtectedRoute>
           }
         />
