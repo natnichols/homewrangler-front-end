@@ -24,10 +24,11 @@ const Profiles = () => {
   
   return (
     <main className={styles.container}>
-      <h1>Hello. This is a list of all the profiles.</h1>
+      <h1>All profiles component.</h1>
       {profiles.map(profile => (
         <p key={profile._id}>{profile.name}</p>
       ))}
+      <h3>end of Profiles component</h3>
     </main>
   )
 }
