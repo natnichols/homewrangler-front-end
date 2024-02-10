@@ -28,6 +28,7 @@ const Profiles = () => {
       {profiles.map(profile => (
         <p key={profile._id}>{profile.name}</p>
       ))}
+      <h3>end of Profiles component</h3>
     </main>
   )
 }
