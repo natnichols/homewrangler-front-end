@@ -132,6 +132,7 @@ const Signup = ({ handleAuthEvt }) => {
           </button>
         </div>
       </form>
+      <h3>end of Signup component</h3>
     </main>
   )
 }
