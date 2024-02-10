@@ -53,6 +53,7 @@ const ChangePassword = ({ handleAuthEvt }) => {
             onChange={handleChange}
           />
         </label>
+        <br></br>
         <label className={styles.label}>
           New Password
           <input
@@ -62,6 +63,7 @@ const ChangePassword = ({ handleAuthEvt }) => {
             onChange={handleChange}
           />
         </label>
+        <br></br>
         <label className={styles.label}>
           Confirm New Password
           <input
@@ -78,6 +80,7 @@ const ChangePassword = ({ handleAuthEvt }) => {
           </button>
         </div>
       </form>
+      <h3>end of change password component</h3>
     </main>
   )
 }
