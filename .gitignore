@@ -1,6 +1,8 @@
 # local notes
 znotes.txt
 
+.env
+
 # Logs
 logs
 *.log
