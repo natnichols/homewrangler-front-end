@@ -1,3 +1,6 @@
+//npm modules
+import { NavLink } from 'react-router-dom'
+
 // css
 import styles from './Landing.module.css'
 
@@ -16,6 +19,8 @@ const Landing = ({ user }) => {
       ) : (
       <>
         'NOT-LOGGED IN SHOULD SEE THIS'
+        <div><NavLink to="/auth/login">Log In button</NavLink></div>
+        <div><NavLink to="/auth/signup">Sign Up button</NavLink></div>
       </>
       )}
 
