@@ -7,11 +7,20 @@
 
   align-items: center;
 
+  background-color: #9f9168;
+  font-size: 2em;
+
   width: 100%;
   padding: 10px;
 }
 
 
+.link {
+  text-decoration: none;
+}
+/* a.active {
+  text-decoration: underline;
+} */
 
 /* .container > * {
   margin: 10px 4px;
