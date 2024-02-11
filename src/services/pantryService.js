@@ -11,6 +11,16 @@ async function index() {
     console.log(error)
   }
 }
+async function show(pantryItemId) {
+  try {
+    const res = await fetch(`${BASE_URL}/${pantryItemId}`, {
+      headers: {'Authorization' : `Bearer ${tokenService.getToken()}`}
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
 
 export {
   index,

@@ -10,6 +10,7 @@ import Profile from './pages/Profile/Profile'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import PantryList from './pages/PantryList/PantryList'
+import PantryItemDetails from './pages/PantryItemDetail/PantryItemDetail'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -91,7 +92,16 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route
+          path="/pantryItems/:pantryItemId"
+          element={
+            <ProtectedRoute user={user}>
+              <PantryItemDetails PantryItemDetails={PantryItemDetails}/>
+            </ProtectedRoute>
+          }
+        />
       </Routes>
+      
     </>
   )
 }

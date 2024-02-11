@@ -18,6 +18,8 @@ const PantryCard = ({pantryItem}) => {
           </span>
           <h4>Amount: {pantryItem.amount}</h4>
           <h4>Category: {pantryItem.category}</h4>
+          {/* <h4>price: {pantryItem.price}</h4>
+          <h4>expires: {pantryItem.expires}</h4> */}
         </header>
 
       </article>
