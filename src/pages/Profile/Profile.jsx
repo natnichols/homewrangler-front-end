@@ -10,6 +10,8 @@ import styles from './Profile.module.css'
 
 const Profile = ({ user }) => {
   {console.log('test display username1', user.name)}  
+  {console.log('test nested profile?', user.profile)}  
+  {console.log('test nested profile name', user.profile.name)}  
   
   // const profilePhoto = user.profile.photo ? user.profile.photo : ''
 
@@ -20,6 +22,8 @@ const Profile = ({ user }) => {
         {/* <p>
           <img src={user.profile.photo} alt="The user's avatar" />
         </p> */}
+        <p>testing nested Profile props: {'-->'} {user.profile.name} {'<--'}</p>
+        <p>testing nested Profile props: {'-->'} {user.profile.name} {'<--'}</p>
 
         <p>{user.name}</p>
         <p>{user.email}</p>
