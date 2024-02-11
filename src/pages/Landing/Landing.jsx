@@ -19,7 +19,7 @@ const Landing = ({ user }) => {
         <div><NavLink to="/pantryItems">My Pantry button</NavLink></div>
         <br></br>
         <div>Repairs button</div>
-        &nbsp;&nbsp;&nbsp;&nbsp;
+        <br></br>
         <div>Budget button</div>
 
 
