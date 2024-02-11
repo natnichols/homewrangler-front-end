@@ -18,9 +18,9 @@
 .link {
   text-decoration: none;
 }
-.link:active {
+/* a.active {
   text-decoration: underline;
-}
+} */
 
 /* .container > * {
   margin: 10px 4px;

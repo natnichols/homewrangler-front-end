@@ -8,7 +8,7 @@ const NavBar = ({ user, handleLogout }) => {
     return (
       <nav>
           <div className={styles.container}>
-            
+
             <div>
               <NavLink
                 to="/profiles/:profileId"
@@ -24,6 +24,8 @@ const NavBar = ({ user, handleLogout }) => {
               <NavLink
                 to="/pantryItems"
                 className={styles.link}
+                // Not working yet:
+                // className={location.pathname === "/pantryItems" ? "styles.active" : "styles.link"} 
               >🥫
               </NavLink>
             </div>
