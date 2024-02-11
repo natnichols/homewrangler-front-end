@@ -7,13 +7,11 @@ import styles from './Landing.module.css'
 const Landing = ({ user }) => {
   return (
     <main className={styles.container}>
-      {/* <h1>Landing component</h1> */}
-      {/* <h2>test section below:</h2> */}
       {user ? (
       <>
         <br></br>
         'LOGGED-IN USER SHOULD SEE THIS'
-        <h1>HomeWrangler</h1>
+        <h1>HomeWrangler main landing</h1>
         <h2>howdy, {user ? user.name : 'pardner'}</h2>
         <br></br>
         <button>Shopping List (not active)</button>
