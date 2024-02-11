@@ -7,11 +7,17 @@
 
   align-items: center;
 
+  background-color: #9f9168;
+  font-size: 2em;
+
   width: 100%;
   padding: 10px;
 }
 
 
+.container > a {
+  text-decoration: none;
+}
 
 /* .container > * {
   margin: 10px 4px;
