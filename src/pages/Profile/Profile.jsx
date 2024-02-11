@@ -1,5 +1,5 @@
 // npm modules
-
+import { NavLink } from 'react-router-dom'
 // import { useState, useEffect } from 'react'
 
 // // services
@@ -23,7 +23,9 @@ const Profile = ({ user }) => {
 
         <p>{user.name}</p>
         <p>{user.email}</p>
-        <button>change password</button>
+        <NavLink to="/auth/change-password">
+          <button>change password</button>
+        </NavLink>
         <button>edit profile (not active - stretch)</button>
 
 
