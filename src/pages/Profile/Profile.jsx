@@ -1,4 +1,5 @@
-// // npm modules
+// npm modules
+import { NavLink } from 'react-router-dom'
 // import { useState, useEffect } from 'react'
 
 // // services
@@ -7,35 +8,32 @@
 // css
 import styles from './Profile.module.css'
 
-const Profile = () => {
-  // const [profiles, setProfiles] = useState([])
-
-  // useEffect(() => {
-  //   const fetchProfiles = async () => {
-  //     const profileData = await profileService.getAllProfiles()
-  //     setProfiles(profileData)
-  //   }
-  //   fetchProfiles()
-  // }, [])
-
-  // if (!profiles.length) {
-  //   return <main className={styles.container}><h1>Loading...</h1></main>
-  // }
+const Profile = ({ user }) => {
+  {console.log('test display username1', user.name)}  
+  {console.log('test nested profile?', user.profile)}  
+  {console.log('test nested profile name', user.profile.name)}  
   
+  // const profilePhoto = user.profile.photo ? user.profile.photo : ''
+
   return (
     <main className={styles.container}>
       <h1>Single profile component.</h1>
-      {/* {profiles.map(profile => (
-        <p key={profile._id}>{profile.name}</p>
-      ))} */}
-        <p>user photo will go here</p>
-        <p>user's name</p>
-        <p>user's email</p>
-        <p>change password button</p>
-        <p>edit profile button (stretch)</p>
+
+        {/* <p>
+          <img src={user.profile.photo} alt="The user's avatar" />
+        </p> */}
+        <p>testing nested Profile props: {'-->'} {user.profile.name} {'<--'}</p>
+        <p>testing nested Profile props: {'-->'} {user.profile.name} {'<--'}</p>
+
+        <p>{user.name}</p>
+        <p>{user.email}</p>
+        <NavLink to="/auth/change-password">
+          <button>change password</button>
+        </NavLink>
+        <button>edit profile (not active - stretch)</button>
 
 
-      <h3>end of Profile component</h3>
+      <h4>end of Profile component</h4>
     </main>
   )
 }
