@@ -10,7 +10,7 @@ const Landing = ({ user }) => {
       {/* <h1>Landing component</h1> */}
       {/* <h2>test section below:</h2> */}
       {user ? (
-        <>
+      <>
         'LOGGED-IN USER SHOULD SEE THIS'
         <h1>HomeWrangler</h1>
         <h2>howdy, {user ? user.name : 'pardner'}</h2>
@@ -21,22 +21,17 @@ const Landing = ({ user }) => {
         <div>Repairs button</div>
         <br></br>
         <div>Budget button</div>
-
-
       </>
       ) : (
-        <>
+      <>
         NOT-LOGGED IN SHOULD SEE THIS:
         <h1>HomeWrangler</h1>
         <h4>(logo will go here)</h4>
         <h3>"catchy app slogan goes here"</h3>
-
-
         <div><NavLink to="/auth/login">Log In button</NavLink></div>
         <div><NavLink to="/auth/signup">Sign Up button</NavLink></div>
       </>
       )}
-
 
       <h4>(end of Landing component)</h4>
     </main>
