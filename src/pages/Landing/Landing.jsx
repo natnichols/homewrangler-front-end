@@ -11,16 +11,20 @@ const Landing = ({ user }) => {
       {/* <h2>test section below:</h2> */}
       {user ? (
       <>
+        <br></br>
         'LOGGED-IN USER SHOULD SEE THIS'
         <h1>HomeWrangler</h1>
         <h2>howdy, {user ? user.name : 'pardner'}</h2>
         <br></br>
-        <div>Shopping List button</div>
-        <div><NavLink to="/pantryItems">My Pantry button</NavLink></div>
+        <button>Shopping List (not active)</button>
         <br></br>
-        <div>Repairs button</div>
+        <NavLink to="/pantryItems"><button>My Pantry</button></NavLink>
         <br></br>
-        <div>Budget button</div>
+        <br></br>
+        <button>Repairs (not active)</button>
+        <br></br>
+        <br></br>
+        <button>Budget button (not active)</button>
       </>
       ) : (
       <>
@@ -28,8 +32,9 @@ const Landing = ({ user }) => {
         <h1>HomeWrangler</h1>
         <h4>(logo will go here)</h4>
         <h3>"catchy app slogan goes here"</h3>
-        <div><NavLink to="/auth/login">Log In button</NavLink></div>
-        <div><NavLink to="/auth/signup">Sign Up button</NavLink></div>
+        <NavLink to="/auth/login"><button>Log In</button></NavLink>
+        <br></br>
+        <NavLink to="/auth/signup"><button>Sign Up</button></NavLink>
       </>
       )}
 
