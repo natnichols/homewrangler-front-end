@@ -1,5 +1,5 @@
 // npm modules
-import { useState } from 'react'
+import { useState, useEffect} from 'react'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 
 // pages
@@ -9,6 +9,7 @@ import Landing from './pages/Landing/Landing'
 import Profile from './pages/Profile/Profile'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
+import PantryList from './pages/PantryList/PantryList'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -16,12 +17,14 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 
 // services
 import * as authService from './services/authService'
+import * as pantryService from './services/pantryService'
 
 // styles
 import './App.css'
 
 function App() {
   const [user, setUser] = useState(authService.getUser())
+  const [pantryItems, setPantryItems] = useState([])
   const navigate = useNavigate()
 
   const handleLogout = () => {
@@ -33,6 +36,15 @@ function App() {
   const handleAuthEvt = () => {
     setUser(authService.getUser())
   }
+
+  useEffect( () => {
+    const fetchAllPantrys = async () => {
+      const data = await pantryService.index()
+      console.log(data)
+      setPantryItems(data)
+    }
+    if (user) fetchAllPantrys()
+  }, [user])
 
   return (
     <>
@@ -68,6 +80,14 @@ function App() {
           element={
             <ProtectedRoute user={user}>
               <ChangePassword handleAuthEvt={handleAuthEvt} />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/pantryItems"
+          element={
+            <ProtectedRoute user={user}>
+              <PantryList pantryItems={pantryItems}/>
             </ProtectedRoute>
           }
         />
