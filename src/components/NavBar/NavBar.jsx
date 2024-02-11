@@ -17,7 +17,7 @@ const NavBar = ({ user, handleLogout }) => {
             &nbsp;&nbsp;&nbsp;&nbsp;
             <div>💰</div>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <div><NavLink to="" onClick={handleLogout}>LOG OUT</NavLink></div>
+            <NavLink to="" onClick={handleLogout}><button>LogOut</button></NavLink>
           </div>
       </nav>
     )
