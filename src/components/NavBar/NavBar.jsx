@@ -8,16 +8,38 @@ const NavBar = ({ user, handleLogout }) => {
     return (
       <nav>
           <div className={styles.container}>
-            <div><NavLink to="/profiles/:profileId">🤠</NavLink></div>
+            
+            <div>
+              <NavLink
+                to="/profiles/:profileId"
+                className={styles.link}
+              >🤠
+              </NavLink>
+            </div>
+
             &nbsp;&nbsp;&nbsp;&nbsp;
             <div>🛒</div> / 
-            <div><NavLink to="/pantryItems">🥫</NavLink></div>
+
+            <div>
+              <NavLink
+                to="/pantryItems"
+                className={styles.link}
+              >🥫
+              </NavLink>
+            </div>
+
             &nbsp;&nbsp;&nbsp;&nbsp;
             <div>🔧</div>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <div>💰</div>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <NavLink to="" onClick={handleLogout}><button>LogOut</button></NavLink>
+            
+            <NavLink
+              to=""
+              onClick={handleLogout}
+            >
+              <button>LogOut</button>
+            </NavLink>
           </div>
       </nav>
     )

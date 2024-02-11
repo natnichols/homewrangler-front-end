@@ -15,8 +15,11 @@
 }
 
 
-.container > a {
+.link {
   text-decoration: none;
+}
+.link:active {
+  text-decoration: underline;
 }
 
 /* .container > * {
