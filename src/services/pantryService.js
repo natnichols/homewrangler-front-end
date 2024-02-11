@@ -24,4 +24,5 @@ async function show(pantryItemId) {
 
 export {
   index,
+  show,
 }

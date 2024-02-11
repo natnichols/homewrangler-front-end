@@ -10,7 +10,7 @@ import Profile from './pages/Profile/Profile'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import PantryList from './pages/PantryList/PantryList'
-import PantryItemDetails from './pages/PantryItemDetail/PantryItemDetail'
+import PantryItemDetails from './pages/PantryItemDetails/PantryItemDetails'
 
 // components
 import NavBar from './components/NavBar/NavBar'
