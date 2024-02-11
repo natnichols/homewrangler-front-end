@@ -10,7 +10,11 @@ const PantryList = (props) => {
         {/* pantry list */}
       </div>
       <div className={`${styles.container} ${styles.listContainer}`}>
-        My Pantry List
+        {props.pantryItems.map(pantryItem => 
+          <p key={pantryItem._id}>{pantryItem.name}
+
+          </p>  
+        )}
       </div>
     </main>
   );

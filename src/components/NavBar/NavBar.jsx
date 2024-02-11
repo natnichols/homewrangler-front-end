@@ -11,7 +11,7 @@ const NavBar = ({ user, handleLogout }) => {
           <div><NavLink to="/profiles/:profileId">User Profile</NavLink></div>
           &nbsp;&nbsp;&nbsp;&nbsp;
           <div>Shopping List /</div>
-          <div>My Pantry</div>
+          <div><NavLink to="/pantryItems">My Pantry</NavLink></div>
           &nbsp;&nbsp;&nbsp;&nbsp;
           <div>Repairs</div>
           &nbsp;&nbsp;&nbsp;&nbsp;
