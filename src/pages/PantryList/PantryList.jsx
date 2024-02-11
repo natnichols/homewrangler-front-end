@@ -1,6 +1,9 @@
 //css
 import styles from './PantryList.module.css'
 
+//components
+import PantryCard from '../../components/PantryCard/PantryCard';
+
 const PantryList = (props) => {
   return (  
     <main>
@@ -11,9 +14,7 @@ const PantryList = (props) => {
       </div>
       <div className={`${styles.container} ${styles.listContainer}`}>
         {props.pantryItems.map(pantryItem => 
-          <p key={pantryItem._id}>{pantryItem.name}
-
-          </p>  
+          <PantryCard key={pantryItem._id} pantryItem={pantryItem}/>
         )}
       </div>
     </main>
