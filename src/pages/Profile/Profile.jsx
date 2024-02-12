@@ -34,12 +34,8 @@ const Profile = ({ user }) => {
     <main className={styles.container}>
       <h1>Single profile component.</h1>
 
-        {/* <p>
-          <img src={user.profile.photo} alt="The user's avatar" />
-        </p> */}
-        {/* <p>testing nested Profile props: {'-->'} {user.profile.name} {'<--'}</p>
-        <p>testing nested Profile props: {'-->'} {user.profile.name} {'<--'}</p> */}
 
+        <p>{profile.name}</p>
         <p>{user.name}</p>
         <p>{user.email}</p>
         <NavLink to="/auth/change-password">
