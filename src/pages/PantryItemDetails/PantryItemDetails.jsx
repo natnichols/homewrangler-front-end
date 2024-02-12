@@ -1,7 +1,35 @@
+//npm modules
+import { useState, useEffect } from "react"
+import { useParams } from "react-router-dom";
+
+//services
+import * as pantryService from '../../services/pantryService'
+
+// css
+import styles from './PantryItemDetails'
+
 const PantryItemDetails = (props) => {
+  const { pantryItemId } = useParams()
+  const [pantryItem, setPantryItem] = useState(null)
+
+  useEffect(() => {
+    const fetchPantryItem = async () => {
+      const data = await pantryService.show(pantryItemId)
+      setPantryItem(data)
+    }
+    fetchPantryItem()
+  }, [pantryItemId])
+
+
   return (  
-    <main>
-      Detail
+    <main className={styles.container}>
+      <ul>{pantryItem.name}
+        <li>Name: {pantryItem.amount}</li>
+        <li>Category: {pantryItem.category}</li>
+        <li>Price: {pantryItem.price}</li>
+        <li>Expires: {pantryItem.expires}</li>
+      </ul>
+      
     </main>
   );
 }

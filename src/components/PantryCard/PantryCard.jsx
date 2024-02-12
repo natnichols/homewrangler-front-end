@@ -1,7 +1,8 @@
 //npm modules
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
 //components
+
 
 //css
 import styles from "./PantryCard.module.css"

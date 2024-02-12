@@ -96,7 +96,8 @@ function App() {
           path="/pantryItems/:pantryItemId"
           element={
             <ProtectedRoute user={user}>
-              <PantryItemDetails PantryItemDetails={PantryItemDetails}/>
+              {/* PantryItemDetails={PantryItemDetails} */}
+              <PantryItemDetails user={user} />
             </ProtectedRoute>
           }
         />
