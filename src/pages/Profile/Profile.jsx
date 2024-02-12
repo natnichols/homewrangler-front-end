@@ -9,8 +9,6 @@ import * as profileService from '../../services/profileService'
 import styles from './Profile.module.css'
 
 const Profile = ({ user }) => {
-  // {console.log('test display username1', user.name)}  
-  // {console.log('test nested profile name', user.profile.name)}  
   const { profileId } = useParams()
   const [profile, setProfile] = useState(null)
 
@@ -22,9 +20,7 @@ const Profile = ({ user }) => {
     fetchProfile()
   }, [profileId])
 
-
-  console.log('test single profile:', profile);
-  
+  // console.log('test single profile: ', profile);
 
   if (!profile) {
     return <main className={styles.container}><h2>Loading profile.</h2></main>
@@ -33,16 +29,19 @@ const Profile = ({ user }) => {
   return (
     <main className={styles.container}>
       <h1>Single profile component.</h1>
-
-
-        <p>{profile.name}</p>
-        <p>{user.name}</p>
-        <p>{user.email}</p>
+        <p>
+          <img
+            src={profile.photo}
+            alt="No profile photo! But that's ok. You look great."
+            style={{ width: '300px' }}
+          />
+        </p>
+        <p>Name: {profile.name}</p>
+        <p>Email: {user.email}</p>
         <NavLink to="/auth/change-password">
           <button>change password</button>
         </NavLink>
         <button>edit profile (not active - stretch)</button>
-
 
       <h4>end of Profile component</h4>
     </main>
