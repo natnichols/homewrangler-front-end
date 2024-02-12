@@ -16,11 +16,12 @@ const Profile = ({ user }) => {
 
   useEffect(() => {
     const fetchProfile = async () => {
-      const profileData = await profileService.getOneProfile()
+      const profileData = await profileService.getOneProfile(profileId)
       setProfile(profileData)
     }
     fetchProfile()
   }, [profileId])
+
 
   console.log('test single profile:', profile);
   
