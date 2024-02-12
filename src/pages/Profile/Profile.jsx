@@ -9,15 +9,27 @@ import * as profileService from '../../services/profileService'
 import styles from './Profile.module.css'
 
 const Profile = ({ user }) => {
-  {console.log('test display username1', user.name)}  
-  {console.log('test nested profile?', user.profile)}  
-  {console.log('test nested profile name', user.profile.name)}  
+  // {console.log('test display username1', user.name)}  
+  // {console.log('test nested profile?', user.profile)}  
+  // {console.log('test nested profile name', user.profile.name)}  
 
-  // const [profile, setProfile] = useState([])
+  const [profile, setProfile] = useState([])
 
+  useEffect(() => {
+    const fetchProfile = async () => {
+      const profileData = await profileService.getOneProfile()
+      setProfile(profileData)
+    }
+    fetchProfile()
+  }, [])
 
+  console.log('test single profile:', profile);
   
   // const profilePhoto = user.profile.photo ? user.profile.photo : ''
+
+  if (!profile.length) {
+    return <main className={styles.container}><h2>Loading profile.</h2></main>
+  }
 
   return (
     <main className={styles.container}>
