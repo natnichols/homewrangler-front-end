@@ -1,5 +1,5 @@
 // npm modules
-import { NavLink } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 // services
@@ -10,10 +10,9 @@ import styles from './Profile.module.css'
 
 const Profile = ({ user }) => {
   // {console.log('test display username1', user.name)}  
-  // {console.log('test nested profile?', user.profile)}  
   // {console.log('test nested profile name', user.profile.name)}  
-
-  const [profile, setProfile] = useState([])
+  const { profileId } = useParams()
+  const [profile, setProfile] = useState(null)
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -21,13 +20,12 @@ const Profile = ({ user }) => {
       setProfile(profileData)
     }
     fetchProfile()
-  }, [])
+  }, [profileId])
 
   console.log('test single profile:', profile);
   
-  // const profilePhoto = user.profile.photo ? user.profile.photo : ''
 
-  if (!profile.length) {
+  if (!profile) {
     return <main className={styles.container}><h2>Loading profile.</h2></main>
   }
 
