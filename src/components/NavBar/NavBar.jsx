@@ -20,7 +20,13 @@ const NavBar = ({ user, handleLogout }) => {
             </div>
 
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <div className={styles.linkbox}>🛒</div>
+            <div className={styles.linkbox}>
+              <NavLink
+                to={`/pantryItems/${user.profile}`}
+                className={styles.link}
+              >🛒
+              </NavLink>
+            </div>
 
             &nbsp;
             <div className={styles.linkbox}>
