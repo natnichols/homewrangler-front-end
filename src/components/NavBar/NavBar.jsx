@@ -4,6 +4,8 @@ import { NavLink } from 'react-router-dom'
 import styles from './NavBar.module.css'
 
 const NavBar = ({ user, handleLogout }) => {
+  // this test was for passing profile ID to Single Profile component
+  // {console.log('TEST USER ', user);}
   if (user) {
     return (
       <nav>
@@ -11,7 +13,7 @@ const NavBar = ({ user, handleLogout }) => {
 
             <div>
               <NavLink
-                to="/profiles/:profileId"
+                to={`/profiles/${user.profile}`}
                 className={styles.link}
               >🤠
               </NavLink>
