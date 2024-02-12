@@ -40,9 +40,21 @@ const NavBar = ({ user, handleLogout }) => {
             </div>
 
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <div className={styles.linkbox}>🔧</div>
+            <div className={styles.linkbox}>
+              <NavLink
+                to="/repairs"
+                className={styles.link}
+              >🔧
+              </NavLink>
+            </div>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <div className={styles.linkbox}>💰</div>
+            <div className={styles.linkbox}>
+              <NavLink
+                to="/budgets"
+                className={styles.link}
+              >💰
+              </NavLink>
+            </div>
             &nbsp;&nbsp;&nbsp;&nbsp;
             
             <NavLink
