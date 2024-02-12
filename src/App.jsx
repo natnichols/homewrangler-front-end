@@ -50,23 +50,10 @@ function App() {
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
+        {/* LANDING ROUTES */}
         <Route path="/" element={<Landing user={user} />} />
-        <Route
-          path="/profiles/:profileId"
-          element={
-            <ProtectedRoute user={user}>
-              <Profile user={user} />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/profiles"
-          element={
-            <ProtectedRoute user={user}>
-              <Profiles />
-            </ProtectedRoute>
-          }
-        />
+
+        {/* AUTH ROUTES */}
         <Route
           path="/auth/signup"
           element={<Signup handleAuthEvt={handleAuthEvt} />}
@@ -83,6 +70,34 @@ function App() {
             </ProtectedRoute>
           }
         />
+
+        {/* PROFILE ROUTES */}
+        <Route
+          path="/profiles/:profileId"
+          element={
+            <ProtectedRoute user={user}>
+              <Profile user={user} />
+            </ProtectedRoute>
+          }
+          />
+        <Route
+          path="/profiles"
+          element={
+            <ProtectedRoute user={user}>
+              <Profiles />
+            </ProtectedRoute>
+          }
+          />
+
+        {/* PANTRY ROUTES */}
+        <Route
+          path="/pantryItems/:profileId"
+          element={
+            <ProtectedRoute user={user}>
+              <ShoppingList pantryItems={pantryItems}/>
+            </ProtectedRoute>
+          }
+        />
         <Route
           path="/pantryItems"
           element={
@@ -91,6 +106,12 @@ function App() {
             </ProtectedRoute>
           }
         />
+
+        {/* REPAIR ROUTES */}
+        {/* BUDGET ROUTES */}
+
+
+
       </Routes>
     </>
   )
