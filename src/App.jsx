@@ -11,7 +11,8 @@ import ChangePassword from './pages/ChangePassword/ChangePassword'
 import Landing from './pages/Landing/Landing'
 import PantryList from './pages/PantryList/PantryList'
 import ShoppingList from './pages/ShoppingList/ShoppingList'
-
+import Repairs from './pages/Repairs/Repairs'
+import Budgets from './pages/Budgets/Budgets'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -110,8 +111,24 @@ function App() {
         />
 
         {/* REPAIR ROUTES */}
-        {/* BUDGET ROUTES */}
+        <Route
+          path="/repairs"
+          element={
+            <ProtectedRoute user={user}>
+              <Repairs />
+            </ProtectedRoute>
+          }
+        />
 
+        {/* BUDGET ROUTES */}
+        <Route
+          path="/budgets"
+          element={
+            <ProtectedRoute user={user}>
+              <Budgets />
+            </ProtectedRoute>
+          }
+        />
 
 
       </Routes>
