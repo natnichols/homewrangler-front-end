@@ -11,7 +11,7 @@ const NavBar = ({ user, handleLogout }) => {
       <nav>
           <div className={styles.container}>
 
-            <div>
+            <div className={styles.linkbox}>
               <NavLink
                 to={`/profiles/${user.profile}`}
                 className={styles.link}
@@ -20,9 +20,10 @@ const NavBar = ({ user, handleLogout }) => {
             </div>
 
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <div>🛒</div> / 
+            <div className={styles.linkbox}>🛒</div>
 
-            <div>
+            &nbsp;
+            <div className={styles.linkbox}>
               <NavLink
                 to="/pantryItems"
                 className={styles.link}
@@ -33,9 +34,9 @@ const NavBar = ({ user, handleLogout }) => {
             </div>
 
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <div>🔧</div>
+            <div className={styles.linkbox}>🔧</div>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <div>💰</div>
+            <div className={styles.linkbox}>💰</div>
             &nbsp;&nbsp;&nbsp;&nbsp;
             
             <NavLink
