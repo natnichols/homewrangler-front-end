@@ -16,7 +16,11 @@ const RepairCard = ({ repair }) => {
             <h2>{repair.priority}</h2>
           </span>
         </header>
-        <p>{repair.repairtasks}</p>
+        {repair.repairTasks.map(repairTask => (
+        <li key={repairTask._id}>
+          {repairTask.task}
+        </li>
+      ))}
       </article>
     </Link>
   )
