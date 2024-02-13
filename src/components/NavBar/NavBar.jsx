@@ -4,23 +4,32 @@ import { NavLink } from 'react-router-dom'
 import styles from './NavBar.module.css'
 
 const NavBar = ({ user, handleLogout }) => {
+  // this test was for passing profile ID to Single Profile component
+  // {console.log('TEST USER ', user);}
   if (user) {
     return (
       <nav>
           <div className={styles.container}>
 
-            <div>
+            <div className={styles.linkbox}>
               <NavLink
-                to="/profiles/:profileId"
+                to={`/profiles/${user.profile}`}
                 className={styles.link}
               >🤠
               </NavLink>
             </div>
 
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <div>🛒</div> / 
+            <div className={styles.linkbox}>
+              <NavLink
+                to={`/pantryItems/${user.profile}`}
+                className={styles.link}
+              >🛒
+              </NavLink>
+            </div>
 
-            <div>
+            &nbsp;
+            <div className={styles.linkbox}>
               <NavLink
                 to="/pantryItems"
                 className={styles.link}
@@ -31,9 +40,21 @@ const NavBar = ({ user, handleLogout }) => {
             </div>
 
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <div>🔧</div>
+            <div className={styles.linkbox}>
+              <NavLink
+                to="/repairs"
+                className={styles.link}
+              >🔧
+              </NavLink>
+            </div>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <div>💰</div>
+            <div className={styles.linkbox}>
+              <NavLink
+                to="/budgets"
+                className={styles.link}
+              >💰
+              </NavLink>
+            </div>
             &nbsp;&nbsp;&nbsp;&nbsp;
             
             <NavLink

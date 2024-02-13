@@ -23,11 +23,11 @@ const PantryItemDetails = (props) => {
 
   return (  
     <main className={styles.container}>
-      <ul>Detail
-        {/* {pantryItem.name} */}
-        {/* <li>Name: {pantryItem.amount}</li>
+      <ul>Dtail
+        {pantryItem.name} 
+        <li>Name: {pantryItem.amount}</li>
         <li>Category: {pantryItem.category}</li>
-        <li>Price: {pantryItem.price}</li> */}
+        <li>Price: {pantryItem.price}</li>
       </ul>
       
     </main>

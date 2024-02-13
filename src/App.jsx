@@ -5,11 +5,14 @@ import { Routes, Route, useNavigate } from 'react-router-dom'
 // pages
 import Signup from './pages/Signup/Signup'
 import Login from './pages/Login/Login'
-import Landing from './pages/Landing/Landing'
 import Profile from './pages/Profile/Profile'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
+import Landing from './pages/Landing/Landing'
 import PantryList from './pages/PantryList/PantryList'
+import ShoppingList from './pages/ShoppingList/ShoppingList'
+import Repairs from './pages/Repairs/Repairs'
+import Budgets from './pages/Budgets/Budgets'
 import PantryItemDetails from './pages/PantryItemDetails/PantryItemDetails'
 
 // components
@@ -51,23 +54,10 @@ function App() {
     <>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
+        {/* LANDING ROUTES */}
         <Route path="/" element={<Landing user={user} />} />
-        <Route
-          path="/profiles/:profileId"
-          element={
-            <ProtectedRoute user={user}>
-              <Profile user={user} />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/profiles"
-          element={
-            <ProtectedRoute user={user}>
-              <Profiles />
-            </ProtectedRoute>
-          }
-        />
+
+        {/* AUTH ROUTES */}
         <Route
           path="/auth/signup"
           element={<Signup handleAuthEvt={handleAuthEvt} />}
@@ -84,6 +74,42 @@ function App() {
             </ProtectedRoute>
           }
         />
+
+        {/* PROFILE ROUTES */}
+        <Route
+          path="/profiles/:profileId"
+          element={
+            <ProtectedRoute user={user}>
+              <Profile user={user} />
+            </ProtectedRoute>
+          }
+          />
+        <Route
+          path="/profiles"
+          element={
+            <ProtectedRoute user={user}>
+              <Profiles />
+            </ProtectedRoute>
+          }
+          />
+
+        {/* PANTRY ROUTES */}
+        <Route
+          path="/pantryItems/:pantryItemId"
+          element={
+            <ProtectedRoute user={user}>
+              <PantryItemDetails user={user} />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/pantryItems/:profileId"
+          element={
+            <ProtectedRoute user={user}>
+              <ShoppingList pantryItems={pantryItems}/>
+            </ProtectedRoute>
+          }
+        />
         <Route
           path="/pantryItems"
           element={
@@ -92,15 +118,29 @@ function App() {
             </ProtectedRoute>
           }
         />
+        
+
+        {/* REPAIR ROUTES */}
         <Route
-          path="/pantryItems/:pantryItemId"
+          path="/repairs"
           element={
             <ProtectedRoute user={user}>
-              {/* PantryItemDetails={PantryItemDetails} */}
-              <PantryItemDetails user={user} />
+              <Repairs />
             </ProtectedRoute>
           }
         />
+
+        {/* BUDGET ROUTES */}
+        <Route
+          path="/budgets"
+          element={
+            <ProtectedRoute user={user}>
+              <Budgets />
+            </ProtectedRoute>
+          }
+        />
+
+
       </Routes>
       
     </>
