@@ -21,11 +21,8 @@ const Repairs = (props) => {
     <main className={styles.container}>
       <h1>List of Repairs</h1>
         <RepairAdd />
-        <RepairCard />
         {props.repairs.map(repair => (
-          <h1 key={repair._id}>
-            {repair.name}
-          </h1>
+          <RepairCard key={repair._id} repair={repair} />
         ))}
         <BudgetAvail />
       <h4>end of Repairs component</h4>
