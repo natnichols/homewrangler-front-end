@@ -58,4 +58,4 @@ const RepairAdd = (props) => {
   )
 }
 
-export default RepairAdd;
+export default RepairAdd
