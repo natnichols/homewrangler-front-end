@@ -1,4 +1,15 @@
-.container {
+.nav-wrap {
+  display: flex;
+  justify-content: space-evenly;
+
+  /* width: 100%; */
+  margin: 5px;
+  display: flex;
+  width: 800px;
+  background-color: #28251c;
+}
+
+.testname {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;

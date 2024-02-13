@@ -9,7 +9,8 @@ const NavBar = ({ user, handleLogout }) => {
   if (user) {
     return (
       <nav>
-          <div className={styles.container}>
+          <div className="nav-wrap">
+          <div className={styles.testname}>
 
             <div className={styles.linkbox}>
               <NavLink
@@ -65,6 +66,8 @@ const NavBar = ({ user, handleLogout }) => {
               <button>LogOut</button>
             </NavLink>
           </div>
+          {/* end of wrapper below - maybe not needed */}
+          </div> 
       </nav>
     )
   }
