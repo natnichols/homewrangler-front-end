@@ -1,4 +1,11 @@
-//css
+// npm modules
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+
+// services
+import * as repairService from '../../services/repairService'
+
+// css
 import styles from './RepairDetails.module.css'
 
 const RepairDetails = () => {
