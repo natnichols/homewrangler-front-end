@@ -1,8 +1,8 @@
 # 🤠 HomeWrangler 🏡
 
-#### _Now what can we help y'all with?_ 🤠
+### _Now what can we help y'all with?_ 🤠
 
-Do you have regular items in your pantry that you're tired of rewriting on your grocery list? Do you have a growing list of repairs that you need to take care of? Do you need a place to keep track of how much money that's all gonna cost? Let us wrangle that for you in the latest organizational app, **HomeWrangler**.
+Do you have regular items in your pantry that you're tired of rewriting on your grocery list? Do you have a growing list of repairs that you need to take care of? Do you need a place to keep track of how much money that's all gonna cost? Let us wrangle that for you in the latest organizational app! **_HomeWrangler_**
 
 ![Placeholder for Logo OR Screenshot of Landing page](/src/assets/cowboy-hat-tp-bg-large.png)
 
