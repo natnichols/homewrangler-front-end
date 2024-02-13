@@ -16,17 +16,11 @@ import BudgetAvail from '../../components/BudgetAvail/BudgetAvail'
 import styles from './Repairs.module.css'
 
 const Repairs = (props) => {
-  const [showAddRepair, setshowAddRepair] = useState(false);
+  const [showAddRepair, setshowAddRepair] = useState(false)
 
   const toggleAddForm = () => {
-    setshowAddRepair(!showAddRepair);
-  };
-  
-  // const handleAddRepair = async (repairFormData) => {
-  //   const newRepair = await repairService.create(repairFormData)
-  //   setRepairs([newRepair, ...repairs])
-  //   navigate('/repairs')
-  // }
+    setshowAddRepair(!showAddRepair)
+  }
   
   return (
     <main className={styles.container}>
