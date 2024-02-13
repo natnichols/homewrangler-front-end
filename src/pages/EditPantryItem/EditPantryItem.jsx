@@ -15,7 +15,8 @@ const EditPantryItem = (props) => {
   }
 
   const handleChange = evt => {
-    setFormData({...formData, [evt.target.name]: evt.target.value})
+    const value = evt.target.type === "checkbox" ? evt.target.checked : evt.target.value;
+    setFormData({...formData, [evt.target.name]: value})
   }
   
 
@@ -66,6 +67,15 @@ const EditPantryItem = (props) => {
           id="price-input"
           placeholder="price"
           value={formData.price}
+          onChange={handleChange}
+        />
+        <label htmlFor="price-input">Expires?</label>
+        <input
+          // required
+          type="checkbox"
+          name="expires"
+          id="expires-input"
+          checked={formData.expires}
           onChange={handleChange}
         />
         <button type="submit">Update</button>
