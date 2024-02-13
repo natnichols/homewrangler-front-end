@@ -41,5 +41,12 @@ Do you have regular items in your pantry that you're tired of rewriting on your 
 ### [View our Planning Materials on Trello](https://trello.com/b/07MzUQgw/homewrangler%F0%9F%A4%A0 "HomeWrangler Trello Board") 🤠📋
 
 ## Ice Box 🧊
-- [ ] Checkbox
+<!-- - [ ] Households -->
+<!-- - [ ] edit profile -->
+<!-- - [ ] budget categories -->
+<!-- - [ ] repair supplies (pantryItem) -->
+<!-- - [ ] repair task cost -->
+<!-- - [ ] amount left (pantryItem) -->
+<!-- - [ ] expiration date (pantryItem) -->
+<!-- - [ ] Weather API -->
 
