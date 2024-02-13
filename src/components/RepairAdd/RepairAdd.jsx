@@ -23,7 +23,16 @@ const RepairAdd = (props) => {
   return (
     <main className={styles.container}>
       <form onSubmit={handleSubmit}>
-        
+        <label htmlFor="name-input">Name</label>
+        <input 
+          required
+          type="text" 
+          name="name"
+          id="name-input"
+          value={formData.name}
+          placeholder="Name"
+          onChange={handleChange}
+        />
       </form>
     </main>
   )
