@@ -24,6 +24,7 @@ import PantryItemForm from './components/PantryItemForm/pantryItemForm'
 // services
 import * as authService from './services/authService'
 import * as pantryService from './services/pantryService'
+import * as repairService from './services/repairService'
 
 // styles
 import './App.css'
@@ -31,6 +32,7 @@ import './App.css'
 function App() {
   const [user, setUser] = useState(authService.getUser())
   const [pantryItems, setPantryItems] = useState([])
+  const [repairs, setRepairs] = useState([])
   const navigate = useNavigate()
 
   const handleLogout = () => {
@@ -50,6 +52,14 @@ function App() {
       setPantryItems(data)
     }
     if (user) fetchAllPantrys()
+  }, [user])
+
+  useEffect(() => {
+    const fetchAllRepairs = async () => {
+      const data = await repairService.index()
+      setRepairs(data)
+    }
+    if (user) fetchAllRepairs()
   }, [user])
 
   const handlePantryItemForm = async (pantryFormData) => {
@@ -149,7 +159,7 @@ function App() {
           path="/repairs"
           element={
             <ProtectedRoute user={user}>
-              <Repairs />
+              <Repairs repairs={repairs} />
             </ProtectedRoute>
           }
         />

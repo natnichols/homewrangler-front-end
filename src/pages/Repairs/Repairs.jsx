@@ -1,5 +1,5 @@
 // npm modules
-import { useState, useEffect } from 'react'
+
 
 // pages
 
@@ -10,12 +10,13 @@ import RepairCard from '../../components/RepairCard/RepairCard'
 import RepairAdd from '../../components/RepairAdd/RepairAdd'
 
 // services
-import * as repairService from '../../services/repairService'
+
 
 // css
 import styles from './Repairs.module.css'
 
 const Repairs = (props) => {
+
   return (
     <main className={styles.container}>
       <h1>Repairs component</h1>
