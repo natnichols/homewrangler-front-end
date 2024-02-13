@@ -74,6 +74,12 @@ function App() {
     navigate('pantryItems')
   }
 
+  const handleDeletePantryItem = async (pantryItemId) => {
+    const deletedPantryItem = await pantryService.deletePantryItem(pantryItemId)
+    setPantryItems(pantryItems.filter(p => p._id !== deletedPantryItem._id))
+    navigate('/pantryItems')
+  }
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -122,7 +128,7 @@ function App() {
           path="/pantryItems/:pantryItemId"
           element={
             <ProtectedRoute user={user}>
-              <PantryItemDetails user={user} />
+              <PantryItemDetails handleDeletePantryItem={handleDeletePantryItem} user={user} />
             </ProtectedRoute>
           }
         />

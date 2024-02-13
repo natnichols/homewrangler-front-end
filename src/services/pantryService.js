@@ -54,9 +54,22 @@ async function update(pantryItemFormData) {
   }
 }
 
+async function deletePantryItem(pantryItemId){
+  try {
+    const res = await fetch(`${BASE_URL}/${pantryItemId}`, {
+      method: "DELETE",
+      headers: {'Authorization' : `Bearer ${tokenService.getToken()}`}
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export {
   index,
   show,
   create,
   update,
+  deletePantryItem
 }
