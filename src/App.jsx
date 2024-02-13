@@ -171,7 +171,7 @@ function App() {
           path="/repairs"
           element={
             <ProtectedRoute user={user}>
-              <Repairs repairs={repairs} />
+              <Repairs handleAddRepair={handleAddRepair} repairs={repairs} />
             </ProtectedRoute>
           }
         />
@@ -183,6 +183,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+        {/* is below route needed? */}
         <Route 
           path="/repairs/new"
           element={
