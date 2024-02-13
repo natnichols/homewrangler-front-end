@@ -11,7 +11,52 @@ async function index() {
     console.log(error)
   }
 }
+async function show(pantryItemId) {
+  try {
+    const res = await fetch(`${BASE_URL}/${pantryItemId}`, {
+      headers: {'Authorization' : `Bearer ${tokenService.getToken()}`}
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+async function create(pantryItemFormData) {
+  try {
+    const res = await fetch(BASE_URL, {
+      method: 'POST',
+      headers: {
+        'Authorization' : `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(pantryItemFormData)
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  } 
+}
+
+async function update(pantryItemFormData) {
+  try {
+    const res = await fetch(`${BASE_URL}/${pantryItemFormData._id}`, {
+      method: 'PUT',
+      headers: {
+        'Authorization' : `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(pantryItemFormData)
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
 
 export {
   index,
+  show,
+  create,
+  update,
 }
