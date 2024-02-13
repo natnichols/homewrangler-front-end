@@ -14,6 +14,7 @@ import ShoppingList from './pages/ShoppingList/ShoppingList'
 import Repairs from './pages/Repairs/Repairs'
 import Budgets from './pages/Budgets/Budgets'
 import PantryItemDetails from './pages/PantryItemDetails/PantryItemDetails'
+import EditPantryItem from './pages/EditPantryItem/EditPantryItem'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -130,6 +131,14 @@ function App() {
             <ProtectedRoute user={user}>
               <PantryItemForm handlePantryItemForm={handlePantryItemForm}/>
               <PantryList pantryItems={pantryItems}/>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/pantryItems/:pantryItemId/edit"
+          element={
+            <ProtectedRoute user={user}>
+              <EditPantryItem handleUpdatePantryItem={handleUpdatePantryItem} />
             </ProtectedRoute>
           }
         />

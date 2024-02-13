@@ -1,6 +1,6 @@
 //npm modules
 import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 //services
 import * as pantryService from '../../services/pantryService'
@@ -24,11 +24,19 @@ const PantryItemDetails = (props) => {
   return (  
     <main className={styles.container}>
       <ul>Dtail
-        {pantryItem.name} 
-        <li>Name: {pantryItem.amount}</li>
+        <li>Name: {pantryItem.name} </li>
+        <li>Amount: {pantryItem.amount}</li>
         <li>Category: {pantryItem.category}</li>
         <li>Price: {pantryItem.price}</li>
+        {pantryItem.owner && pantryItem.owner._id === props.user.profile && (
+          <>
+            <Link to={`/pantryItems/${pantryItem._id}/edit`} state={pantryItem}>
+              <button>Edit</button>
+            </Link>
+          </>
+        )}
       </ul>
+      
       
     </main>
   );
