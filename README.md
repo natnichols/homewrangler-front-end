@@ -11,11 +11,11 @@ Let us wrangle all that for you in the latest organizational app! **_HomeWrangle
 
 Do you have regular items in your pantry that you're tired of rewriting on your grocery list? Do you have a growing list of repairs that you need to take care of? Do you need a place to keep track of how much money that's all gonna cost? HomeWrangler can help you wrangle it all! 
 
-<!-- add slightly more detailed description of how to navigate/use the app -->
+<!--! add slightly more detailed description of how to navigate/use the app -->
 
 ## Ready to join us, partner? [Check Out HomeWrangler Here](link "HomeWrangler") 🤠
 
-<!-- add additional app screenshot? -->
+<!--! add additional app screenshot? -->
 
 ## Contributors
 * [Rich Bozek](https://github.com/rbozek "Rich Bozek's GitHub Profile")
@@ -36,7 +36,8 @@ Do you have regular items in your pantry that you're tired of rewriting on your 
 ![Nodemon](https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD)
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)
-<!-- *** add REACT + any other necessary badges -->
+
+<!--! *** add REACT + any other necessary badges ^^^ -->
 
 ### [View our Planning Materials on Trello](https://trello.com/b/07MzUQgw/homewrangler%F0%9F%A4%A0 "HomeWrangler Trello Board") 🤠📋
 
