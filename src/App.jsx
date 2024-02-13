@@ -10,11 +10,12 @@ import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import Landing from './pages/Landing/Landing'
 import PantryList from './pages/PantryList/PantryList'
-import ShoppingList from './pages/ShoppingList/ShoppingList'
-import Repairs from './pages/Repairs/Repairs'
-import Budgets from './pages/Budgets/Budgets'
 import PantryItemDetails from './pages/PantryItemDetails/PantryItemDetails'
 import EditPantryItem from './pages/EditPantryItem/EditPantryItem'
+import ShoppingList from './pages/ShoppingList/ShoppingList'
+import Repairs from './pages/Repairs/Repairs'
+import RepairDetails from './pages/RepairDetails/RepairDetails'
+import Budgets from './pages/Budgets/Budgets'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -164,6 +165,14 @@ function App() {
           element={
             <ProtectedRoute user={user}>
               <Repairs repairs={repairs} />
+            </ProtectedRoute>
+          }
+        />
+        <Route 
+          path="/repairs/:repairId"
+          element={
+            <ProtectedRoute user={user}>
+              <RepairDetails user={user} />
             </ProtectedRoute>
           }
         />
