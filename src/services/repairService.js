@@ -9,8 +9,8 @@ export async function index() {
       headers: { 'Authorization': `Bearer ${tokenService.getToken()}` },
     })
     return res.json()
-  } catch (error) {
-    console.log(error)
+  } catch (err) {
+    console.log(`🚨`, err)
   }
 }
 
