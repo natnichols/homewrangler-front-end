@@ -2,7 +2,7 @@
 import styles from './Budgets.module.css'
 
 // components
-import BudgetChange from '../BudgetChange/BudgetChange';
+import BudgetChange from '../../components/BudgetChange/BudgetChange';
 import BudgetAvail from '../../components/BudgetAvail/BudgetAvail';
 
 const Budgets = () => {
