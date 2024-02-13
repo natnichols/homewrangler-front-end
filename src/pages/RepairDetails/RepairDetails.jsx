@@ -20,6 +20,10 @@ const RepairDetails = (props) => {
     fetchRepair()
   }, [repairId])
 
+  if (!repair) {
+    return <main className={styles.container}><h2>Loading repair...</h2></main>
+  }
+
   return (
     <main className={styles.container}>
       <h2>RepairDetails component</h2>
