@@ -33,6 +33,25 @@ const RepairAdd = (props) => {
           placeholder="Name"
           onChange={handleChange}
         />
+        <label htmlFor="priority-input">Priority</label>
+        <input 
+          type="text"
+          name="priority"
+          id="priority-input"
+          value={formData.priority}
+          placeholder="Priority"
+          onChange={handleChange}
+        />
+        <label htmlFor="description-input">Description</label>
+        <input 
+          type="text" 
+          name="description"
+          id="description-input"
+          value={formData.description}
+          placeholder="Description"
+          onChange={handleChange}
+        />
+        <button type="submit">Add Repair 🔧✨</button>
       </form>
     </main>
   )
