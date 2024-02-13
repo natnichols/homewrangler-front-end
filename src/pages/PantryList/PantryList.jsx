@@ -1,3 +1,6 @@
+// npm
+import { useState } from 'react';
+
 //css
 import styles from './PantryList.module.css'
 
@@ -5,10 +8,24 @@ import styles from './PantryList.module.css'
 import PantryCard from '../../components/PantryCard/PantryCard';
 import PantryItemAdd from '../../components/PantryItemAdd/PantryItemAdd';
 
+
 const PantryList = (props) => {
+  const [showItemAdd, setShowItemAdd] = useState(false);
+
+  const toggleAddForm = () => {
+    setShowItemAdd(!showItemAdd);
+  };
+
+
   return (  
     <main>
-      <PantryItemAdd handlePantryItemAdd={props.handlePantryItemAdd} />
+      <h1>My Pantry</h1>
+
+      <button onClick={toggleAddForm}>
+        {showItemAdd ? "Hide Add Form" : "Show Add Form"}
+      </button>
+
+      {showItemAdd && <PantryItemAdd handlePantryItemAdd={props.handlePantryItemAdd} /> }
 
       {/* container for Add Item form - may not be needed later. */}
       {/* <div className={`${styles.container} ${styles.formContainer}`}>
