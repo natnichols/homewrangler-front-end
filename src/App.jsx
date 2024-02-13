@@ -15,6 +15,7 @@ import EditPantryItem from './pages/EditPantryItem/EditPantryItem'
 import ShoppingList from './pages/ShoppingList/ShoppingList'
 import Repairs from './pages/Repairs/Repairs'
 import RepairDetails from './pages/RepairDetails/RepairDetails'
+import RepairEdit from './pages/RepairEdit/RepairEdit'
 import Budgets from './pages/Budgets/Budgets'
 
 // components
@@ -85,6 +86,12 @@ function App() {
     const newRepair = await repairService.create(repairFormData)
     setRepairs([newRepair, ...repairs])
     navigate('/repairs')
+  }
+
+  const handleUpdateRepair = async (repairFormData) => {
+    const updatedRepair = await repairService.update(repairFormData)
+    setRepairs(repairs.map(repair => repair._id === updatedRepair._id ? updatedRepair : repair ))
+    navigate('/repairs/:repairId')
   }
 
   return (
@@ -180,6 +187,14 @@ function App() {
           element={
             <ProtectedRoute user={user}>
               <RepairDetails user={user} />
+            </ProtectedRoute>
+          }
+        />
+        <Route 
+          path="/repairs/:repairId/edit"
+          element={
+            <ProtectedRoute>
+              <RepairEdit handleUpdateRepair={handleUpdateRepair} />
             </ProtectedRoute>
           }
         />
