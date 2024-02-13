@@ -16,16 +16,12 @@ import RepairAdd from '../../components/RepairAdd/RepairAdd'
 import styles from './Repairs.module.css'
 
 const Repairs = (props) => {
-  console.log('Repair List props:', props)
   return (
     <main className={styles.container}>
       <h1>List of Repairs</h1>
         <RepairAdd />
-        <RepairCard />
         {props.repairs.map(repair => (
-          <h1 key={repair._id}>
-            {repair.name}
-          </h1>
+          <RepairCard key={repair._id} repair={repair} />
         ))}
         <BudgetAvail />
       <h4>end of Repairs component</h4>

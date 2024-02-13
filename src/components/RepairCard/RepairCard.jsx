@@ -1,13 +1,28 @@
-//css
+// npm modules
+import { Link } from 'react-router-dom'
+
+// components
+
+// css
 import styles from './RepairCard.module.css'
 
-const RepairCard = () => {
+const RepairCard = ({ repair }) => {
   return (
-    <main className={styles.container}>
-      <h3>RepairCard component</h3>
-        <p>(link to Repair Details in here)</p>
-      <h4>end of RepairCard component</h4>
-    </main>
+    <Link to={`/repairs/${repair._id}`}>
+      <article className={styles.container}>
+        <header>
+          <span>
+            <h2>{repair.name}</h2>
+            <h2>{repair.priority}</h2>
+          </span>
+        </header>
+        {repair.repairTasks.map(repairTask => (
+        <li key={repairTask._id}>
+          {repairTask.task}
+        </li>
+      ))}
+      </article>
+    </Link>
   )
 }
 
