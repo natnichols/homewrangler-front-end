@@ -94,7 +94,7 @@ function App() {
 
         {/* PANTRY ROUTES */}
         <Route
-          path="/pantryItems/:profileId"
+          path="/pantryItems/shoppingCart/:profileId"
           element={
             <ProtectedRoute user={user}>
               <ShoppingList pantryItems={pantryItems}/>
