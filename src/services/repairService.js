@@ -15,5 +15,12 @@ export async function index() {
 }
 
 export async function show(repairId) {
-  
+  try {
+    const res = await fetch(`${BASE_URL}/${repairId}`, {
+      headers: { 'Authorization': `Bearer ${tokenService.getToken()}` },
+    })
+    return res.json()
+  } catch (err) {
+    console.log(`🚨`, err)
+  }
 }
