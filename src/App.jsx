@@ -19,7 +19,6 @@ import EditPantryItem from './pages/EditPantryItem/EditPantryItem'
 // components
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
-import PantryItemForm from './components/PantryItemForm/pantryItemForm'
 
 // services
 import * as authService from './services/authService'
@@ -46,12 +45,12 @@ function App() {
   }
 
   useEffect( () => {
-    const fetchAllPantrys = async () => {
+    const fetchFullPantry = async () => {
       const data = await pantryService.index()
       console.log(data)
       setPantryItems(data)
     }
-    if (user) fetchAllPantrys()
+    if (user) fetchFullPantry()
   }, [user])
 
   useEffect(() => {
@@ -62,14 +61,14 @@ function App() {
     if (user) fetchAllRepairs()
   }, [user])
 
-  const handlePantryItemForm = async (pantryFormData) => {
-    const newPantryItem = await pantryService.create(pantryFormData)
+  const handlePantryItemAdd = async (pantryItemData) => {
+    const newPantryItem = await pantryService.create(pantryItemData)
     setPantryItems([newPantryItem, ...pantryItems])
     navigate('/pantryItems')
   }
 
-  const handleUpdatePantryItem = async (pantryItemFormData) => {
-    const updatedPantryItem = await pantryService.update(pantryItemFormData)
+  const handleUpdatePantryItem = async (pantryItemData) => {
+    const updatedPantryItem = await pantryService.update(pantryItemData)
     setPantryItems(pantryItems.map(pantryItem => pantryItem._id === updatedPantryItem._id ? updatedPantryItem : pantryItem))
     navigate('pantryItems')
   }
@@ -145,7 +144,7 @@ function App() {
           path="/pantryItems"
           element={
             <ProtectedRoute user={user}>
-              <PantryList handlePantryItemForm={handlePantryItemForm} pantryItems={pantryItems}/>
+              <PantryList handlePantryItemAdd={handlePantryItemAdd} pantryItems={pantryItems}/>
             </ProtectedRoute>
           }
         />

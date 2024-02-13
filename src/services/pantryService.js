@@ -22,7 +22,7 @@ async function show(pantryItemId) {
   }
 }
 
-async function create(pantryItemFormData) {
+async function create(pantryItemData) {
   try {
     const res = await fetch(BASE_URL, {
       method: 'POST',
@@ -30,7 +30,7 @@ async function create(pantryItemFormData) {
         'Authorization' : `Bearer ${tokenService.getToken()}`,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(pantryItemFormData)
+      body: JSON.stringify(pantryItemData)
     })
     return res.json()
   } catch (error) {
@@ -38,15 +38,15 @@ async function create(pantryItemFormData) {
   } 
 }
 
-async function update(pantryItemFormData) {
+async function update(pantryItemData) {
   try {
-    const res = await fetch(`${BASE_URL}/${pantryItemFormData._id}`, {
+    const res = await fetch(`${BASE_URL}/${pantryItemData._id}`, {
       method: 'PUT',
       headers: {
         'Authorization' : `Bearer ${tokenService.getToken()}`,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(pantryItemFormData)
+      body: JSON.stringify(pantryItemData)
     })
     return res.json()
   } catch (error) {

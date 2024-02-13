@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 //css
-import styles from "./PantryItemForm.module.css"
+import styles from "./PantryItemAdd.module.css"
 
-const PantryItemForm = (props) => {
+const PantryItemAdd = (props) => {
   const [formData, setFormData] = useState({
     name: '',
     amount: '',
@@ -15,7 +15,7 @@ const PantryItemForm = (props) => {
     //prevent page refashing
     evt.preventDefault()
     //call handleAddPantryItem
-    props.handlePantryItemForm(formData)
+    props.handlePantryItemAdd(formData)
 
   }
 
@@ -78,4 +78,4 @@ const PantryItemForm = (props) => {
   )
 }
 
-export default PantryItemForm
+export default PantryItemAdd
