@@ -145,8 +145,7 @@ function App() {
           path="/pantryItems"
           element={
             <ProtectedRoute user={user}>
-              <PantryItemForm handlePantryItemForm={handlePantryItemForm}/>
-              <PantryList pantryItems={pantryItems}/>
+              <PantryList handlePantryItemForm={handlePantryItemForm} pantryItems={pantryItems}/>
             </ProtectedRoute>
           }
         />
