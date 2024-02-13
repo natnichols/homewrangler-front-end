@@ -8,7 +8,7 @@ import * as repairService from '../../services/repairService'
 // css
 import styles from './RepairDetails.module.css'
 
-const RepairDetails = (props) => {
+const RepairDetails = (/*props*/) => {
   const { repairId } = useParams()
   const [repair, setRepair] = useState(null)
 
