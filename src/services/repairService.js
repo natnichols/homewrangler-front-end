@@ -24,3 +24,19 @@ export async function show(repairId) {
     console.log(`🚨`, err)
   }
 }
+
+export async function create(repairFormData) {
+  try {
+    const res = await fetch(BASE_URL, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(repairFormData)
+    })
+    return res.json()
+  } catch (err) {
+    console.log(`🚨`, err)
+  }
+}

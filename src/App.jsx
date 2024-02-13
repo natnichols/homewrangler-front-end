@@ -20,6 +20,7 @@ import Budgets from './pages/Budgets/Budgets'
 // components
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
+import RepairAdd from './components/RepairAdd/RepairAdd'
 
 // services
 import * as authService from './services/authService'
@@ -54,14 +55,6 @@ function App() {
     if (user) fetchFullPantry()
   }, [user])
 
-  useEffect(() => {
-    const fetchAllRepairs = async () => {
-      const data = await repairService.index()
-      setRepairs(data)
-    }
-    if (user) fetchAllRepairs()
-  }, [user])
-
   const handlePantryItemAdd = async (pantryItemData) => {
     const newPantryItem = await pantryService.create(pantryItemData)
     setPantryItems([newPantryItem, ...pantryItems])
@@ -78,6 +71,20 @@ function App() {
     const deletedPantryItem = await pantryService.deletePantryItem(pantryItemId)
     setPantryItems(pantryItems.filter(p => p._id !== deletedPantryItem._id))
     navigate('/pantryItems')
+  }
+
+  useEffect(() => {
+    const fetchAllRepairs = async () => {
+      const data = await repairService.index()
+      setRepairs(data)
+    }
+    if (user) fetchAllRepairs()
+  }, [user])
+
+  const handleAddRepair = async (repairFormData) => {
+    const newRepair = await repairService.create(repairFormData)
+    setRepairs([newRepair, ...repairs])
+    navigate('/repairs')
   }
 
   return (
@@ -173,6 +180,14 @@ function App() {
           element={
             <ProtectedRoute user={user}>
               <RepairDetails user={user} />
+            </ProtectedRoute>
+          }
+        />
+        <Route 
+          path="/repairs/new"
+          element={
+            <ProtectedRoute user={user}>
+              <RepairAdd handleAddRepair={handleAddRepair} />
             </ProtectedRoute>
           }
         />
