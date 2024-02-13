@@ -7,9 +7,9 @@ const PantryItemAdd = (props) => {
   const [formData, setFormData] = useState({
     name: '',
     amount: '',
-    category: 'Fridge',
+    category: 'Grocery',
     price: '',
-    // expires: '',
+    expires: false,
   })
 
   const handleSubmit = evt => {
@@ -21,7 +21,9 @@ const PantryItemAdd = (props) => {
   }
 
   const handleChange = evt  => {
-    setFormData({...formData, [evt.target.name]: evt.target.value})
+    //to change value of checkbox from "on/off" to "true/false"
+    const value = evt.target.type === "checkbox" ? evt.target.checked : evt.target.value;
+    setFormData({...formData, [evt.target.name]: value})
   }
 
   return (  
@@ -73,14 +75,15 @@ const PantryItemAdd = (props) => {
           value={formData.price}
           onChange={handleChange}
         />
-        {/* <label htmlFor="expires-input">Expires?</label>
+        <label htmlFor="expires-input">Expires?</label>
         <input
+          // required
           type="checkbox"
           name="expires"
           id="expires-input"
           checked={formData.expires}
           onChange={handleChange}
-        /> */}
+        />
         <button type="submit">Submit</button>
       </form>
     </main>
