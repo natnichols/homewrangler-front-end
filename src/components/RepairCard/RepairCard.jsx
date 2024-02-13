@@ -13,6 +13,7 @@ const RepairCard = ({ repair }) => {
         <header>
           <span>
             <h2>{repair.name}</h2>
+            <h2>{repair.priority}</h2>
           </span>
         </header>
         <p>{repair.description}</p>
