@@ -9,6 +9,7 @@ const PantryItemAdd = (props) => {
     amount: '',
     category: 'Fridge',
     price: '',
+    // expires: '',
   })
 
   const handleSubmit = evt => {
@@ -59,7 +60,7 @@ const PantryItemAdd = (props) => {
           <option value="Fridge">Fridge</option>
           <option value="Freezer">Freezer</option>
           <option value="Health & Beauty">Health & Beauty</option>
-          <option value="Household">House hold</option>
+          <option value="Household">Household</option>
           <option value="Repairs">Repairs</option>
         </select>
         <label htmlFor="price-input">Price:</label>
@@ -72,6 +73,14 @@ const PantryItemAdd = (props) => {
           value={formData.price}
           onChange={handleChange}
         />
+        {/* <label htmlFor="expires-input">Expires?</label>
+        <input
+          type="checkbox"
+          name="expires"
+          id="expires-input"
+          checked={formData.expires}
+          onChange={handleChange}
+        /> */}
         <button type="submit">Submit</button>
       </form>
     </main>
