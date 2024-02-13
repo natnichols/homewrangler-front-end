@@ -28,12 +28,11 @@ const RepairDetails = (/*props*/) => {
     <main className={styles.container}>
       <article>
         <header>
-          <h1>{repair.name}</h1>
+          <h1>{repair.name} - {repair.priority}</h1>
           <span>
-            <h2>{repair.priority}</h2>
+          <h3>Description: {repair.description}</h3>
           </span>
         </header>
-        <p>{repair.description}</p>
       </article>
       <section>
         <h1>Repair Tasks</h1>
