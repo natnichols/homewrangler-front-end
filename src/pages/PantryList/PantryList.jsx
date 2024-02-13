@@ -16,7 +16,6 @@ const PantryList = (props) => {
     setShowItemAdd(!showItemAdd);
   };
 
-
   return (  
     <main>
       <h1>My Pantry</h1>
@@ -24,12 +23,7 @@ const PantryList = (props) => {
       <button onClick={toggleAddForm}>
         {showItemAdd ? "Hide Add Form" : "Show Add Form"}
       </button>
-
       {showItemAdd && <PantryItemAdd handlePantryItemAdd={props.handlePantryItemAdd} /> }
-
-      {/* container for Add Item form - may not be needed later. */}
-      {/* <div className={`${styles.container} ${styles.formContainer}`}>
-      </div> */}
 
       <div className={`${styles.container} ${styles.listContainer}`}>
         {props.pantryItems.map(pantryItem => 
