@@ -10,7 +10,7 @@ Do you have regular items in your pantry that you're tired of rewriting on your 
 
 ## Ready to join us, partner? [Check Out HomeWrangler Here](link "HomeWrangler") 🤠
 
-<!-- add additional app screenshot? maybe of listings page once I have more listings? -->
+<!-- add additional app screenshot? -->
 
 ## Contributors
 * [Rich Bozek](https://github.com/rbozek "Rich Bozek's GitHub Profile")
