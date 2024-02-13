@@ -34,7 +34,6 @@ const Repairs = (props) => {
         <RepairCard key={repair._id} repair={repair} />
       ))}
       <BudgetAvail />
-      <h4>end of Repairs component</h4>
     </main>
   )
 }
