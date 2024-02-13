@@ -12,11 +12,10 @@ const RepairCard = ({ repair }) => {
       <article className={styles.container}>
         <header>
           <span>
-            <h2>RepairCard component</h2>
-            <h3>{repair.name}</h3>
+            <h2>{repair.name}</h2>
           </span>
         </header>
-        <h4>end of RepairCard component</h4>
+        <p>{repair.description}</p>
       </article>
     </Link>
     // <main className={styles.container}>
