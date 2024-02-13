@@ -22,6 +22,11 @@ const Repairs = (props) => {
       <h1>List of Repairs</h1>
         <RepairAdd />
         <RepairCard />
+        {props.repairs.map(repair => (
+          <h1 key={repair._id}>
+            {repair.name}
+          </h1>
+        ))}
         <BudgetAvail />
       <h4>end of Repairs component</h4>
     </main>
