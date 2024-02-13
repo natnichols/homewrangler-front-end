@@ -40,3 +40,19 @@ export async function create(repairFormData) {
     console.log(`🚨`, err)
   }
 }
+
+export async function update(repairFormData) {
+  try {
+    const res = await fetch(`${BASE_URL}/${repairFormData._id}`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(repairFormData)
+    })
+    return res.json()
+  } catch (err) {
+    console.log(`🚨`, err)
+  }
+}
