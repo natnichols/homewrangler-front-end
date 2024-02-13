@@ -10,7 +10,7 @@ import styles from './PantryItemDetails'
 
 const PantryItemDetails = (props) => {
   const { pantryItemId } = useParams()
-  const [pantryItem, setPantryItem] = useState(null)
+  const [pantryItem, setPantryItem] = useState({})
 
   useEffect(() => {
     const fetchPantryItem = async () => {
