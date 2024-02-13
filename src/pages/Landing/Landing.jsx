@@ -29,7 +29,7 @@ const Landing = ({ user }) => {
         <h1>HomeWrangler</h1>
         <div>
           <img
-            src='/public/favicon/favicon-cowboy-hat.png'
+            src='/favicon/favicon-cowboy-hat.png'
             alt="Temporary."
             style={{ width: '300px' }} 
           />
