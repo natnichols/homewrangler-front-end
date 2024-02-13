@@ -33,6 +33,7 @@ const PantryItemDetails = (props) => {
             <Link to={`/pantryItems/${pantryItem._id}/edit`} state={pantryItem}>
               <button>Edit</button>
             </Link>
+            <button onClick={() => props.handleDeletePantryItem(pantryItemId)}>Delete</button>
           </>
         )}
       </ul>
