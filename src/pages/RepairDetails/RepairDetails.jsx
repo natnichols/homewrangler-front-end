@@ -26,9 +26,18 @@ const RepairDetails = (props) => {
 
   return (
     <main className={styles.container}>
-      <h2>RepairDetails component</h2>
-        <p>Link to RepairEdit here</p>
-      <h4>end of RepairDetails component</h4>
+      <article>
+        <header>
+          <h1>{repair.name}</h1>
+          <span>
+            <h2>{repair.priority}</h2>
+          </span>
+        </header>
+        <p>{repair.description}</p>
+      </article>
+      <section>
+        <h1>Repair Tasks</h1>
+      </section>
     </main>
   )
 }
