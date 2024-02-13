@@ -10,25 +10,30 @@ const Landing = ({ user }) => {
       {user ? (
       <>
         <br></br>
-        'LOGGED-IN USER SHOULD SEE THIS'
-        <h1>HomeWrangler main landing</h1>
+        {/* 'LOGGED-IN USER SHOULD SEE THIS' */}
         <h2>howdy, {user ? user.name : 'pardner'}</h2>
         <br></br>
-        <button>Shopping List (not active)</button>
+        <NavLink to={`/pantryItems/${user.profile}`}><button>Shopping List</button></NavLink>
         <br></br>
         <NavLink to="/pantryItems"><button>My Pantry</button></NavLink>
         <br></br>
         <br></br>
-        <button>Repairs (not active)</button>
+        <NavLink to="/repairs"><button>Repairs</button></NavLink>
         <br></br>
         <br></br>
-        <button>Budget button (not active)</button>
+        <NavLink to="/budgets"><button>Budget button</button></NavLink>
       </>
       ) : (
       <>
-        NOT-LOGGED IN SHOULD SEE THIS:
+        {/* NOT-LOGGED IN SHOULD SEE THIS: */}
         <h1>HomeWrangler</h1>
-        <h4>(logo will go here)</h4>
+        <div>
+          <img
+            src='/public/favicon/favicon-cowboy-hat.png'
+            alt="Temporary."
+            style={{ width: '300px' }} 
+          />
+        </div>
         <h3>"catchy app slogan goes here"</h3>
         <NavLink to="/auth/login"><button>Log In</button></NavLink>
         <br></br>
