@@ -16,7 +16,6 @@ import RepairAdd from '../../components/RepairAdd/RepairAdd'
 import styles from './Repairs.module.css'
 
 const Repairs = (props) => {
-  console.log('Repair List props:', props)
   return (
     <main className={styles.container}>
       <h1>List of Repairs</h1>

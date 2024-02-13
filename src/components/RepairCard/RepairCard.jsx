@@ -16,7 +16,7 @@ const RepairCard = ({ repair }) => {
             <h2>{repair.priority}</h2>
           </span>
         </header>
-        <p>{repair.description}</p>
+        <p>{repair.repairtasks}</p>
       </article>
     </Link>
   )
