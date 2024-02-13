@@ -41,12 +41,13 @@ Do you have regular items in your pantry that you're tired of rewriting on your 
 ### [View our Planning Materials on Trello](https://trello.com/b/07MzUQgw/homewrangler%F0%9F%A4%A0 "HomeWrangler Trello Board") 🤠📋
 
 ## Ice Box 🧊
-<!-- - [ ] Households -->
-<!-- - [ ] edit profile -->
-<!-- - [ ] budget categories -->
-<!-- - [ ] repair supplies (pantryItem) -->
-<!-- - [ ] repair task cost -->
-<!-- - [ ] amount left (pantryItem) -->
-<!-- - [ ] expiration date (pantryItem) -->
-<!-- - [ ] Weather API -->
+- [ ] Edit profile functionality
+- [ ] Add categories to budgets to allow users to set up multiple budgets for different categories (eg. Groceries, Bills, Vacation)
+- [ ] Add Supplies to Repairs, allowing the user to list supplies they want to add to their shopping list
+- [ ] Add Cost field to Repairs, allowing the user to facotr in the cost of a repair into their budget
+- [ ] Add Amount Left field to Pantry Items, so that the user can keep track of how much they have left of certain items in their pantry
+- [ ] Add Expiration Date field to Pantry Items, so that the user can keep track of when their perishable pantry items are going to expire
+- [ ] Weather API  - incorporate a Weather API to display local weather conditions in the nav bar, so that the user can keep track of weather conditions that may influence when they travel to the grocery store, or complete certain repairs
+- [ ] Households functionality
+  - Users can join a "Household" with other users so they can share shopping lists, assign repair tasks to other household members, and keep track of a household budget
 
