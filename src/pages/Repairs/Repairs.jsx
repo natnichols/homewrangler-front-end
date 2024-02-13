@@ -2,11 +2,11 @@
 import styles from './Repairs.module.css'
 
 //component
-import BudgetAvail from '../../components/BudgetAvail/BudgetAvail';
-import RepairCard from '../../components/RepairCard/RepairCard';
-import RepairAdd from '../../components/RepairAdd/RepairAdd';
+import BudgetAvail from '../../components/BudgetAvail/BudgetAvail'
+import RepairCard from '../../components/RepairCard/RepairCard'
+import RepairAdd from '../../components/RepairAdd/RepairAdd'
 
-const Repairs = () => {
+const Repairs = (props) => {
   return (
     <main className={styles.container}>
       <h1>Repairs component</h1>
@@ -18,4 +18,4 @@ const Repairs = () => {
   )
 }
 
-export default Repairs;
+export default Repairs
