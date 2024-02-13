@@ -1,16 +1,21 @@
 # 🤠 HomeWrangler 🏡
 
-#### 🤠 _Insert catchy app slogan here_
+### _Now what can we help y'all with?_ 🤠
 
-(insert lede here)
+Life is complicated out on the range. 
 
-![Placeholder for Logo OR Screenshot of Landing page](logo/screenshot link here)
+Why waste all yer perfectly good mind juice on simple things like grocery lists or repairs?
+Let us wrangle all that for you in the latest organizational app! **_HomeWrangler_**
 
-(insert app description here)
+![Placeholder for Logo OR Screenshot of Landing page](/src/assets/cowboy-hat-tp-bg-large.png)
+
+Do you have regular items in your pantry that you're tired of rewriting on your grocery list? Do you have a growing list of repairs that you need to take care of? Do you need a place to keep track of how much money that's all gonna cost? HomeWrangler can help you wrangle it all! 
+
+<!-- add slightly more detailed description of how to navigate/use the app -->
 
 ## Ready to join us, partner? [Check Out HomeWrangler Here](link "HomeWrangler") 🤠
 
-<!-- add additional app screenshot? maybe of listings page once I have more listings? -->
+<!-- add additional app screenshot? -->
 
 ## Contributors
 * [Rich Bozek](https://github.com/rbozek "Rich Bozek's GitHub Profile")

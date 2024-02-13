@@ -35,12 +35,28 @@ async function create(pantryItemFormData) {
     return res.json()
   } catch (error) {
     console.log(error)
+  } 
+}
+
+async function update(pantryItemFormData) {
+  try {
+    const res = await fetch(`${BASE_URL}/${pantryItemFormData._id}`, {
+      method: 'PUT',
+      headers: {
+        'Authorization' : `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(pantryItemFormData)
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
   }
-  
 }
 
 export {
   index,
   show,
   create,
+  update,
 }

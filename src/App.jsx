@@ -18,6 +18,7 @@ import PantryItemDetails from './pages/PantryItemDetails/PantryItemDetails'
 // components
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
+import PantryItemForm from './components/PantryItemForm/pantryItemForm'
 
 // services
 import * as authService from './services/authService'
@@ -49,6 +50,18 @@ function App() {
     }
     if (user) fetchAllPantrys()
   }, [user])
+
+  const handlePantryItemForm = async (pantryFormData) => {
+    const newPantryItem = await pantryService.create(pantryFormData)
+    setPantryItems([newPantryItem, ...pantryItems])
+    navigate('/pantryItems')
+  }
+
+  const handleUpdatePantryItem = async (pantryItemFormData) => {
+    const updatedPantryItem = await pantryService.update(pantryItemFormData)
+    setPantryItems(pantryItems.map(pantryItem => pantryItem._id === updatedPantryItem._id ? updatedPantryItem : pantryItem))
+    navigate('pantryItems')
+  }
 
   return (
     <>
@@ -102,8 +115,9 @@ function App() {
             </ProtectedRoute>
           }
         />
+        
         <Route
-          path="/pantryItems/:profileId"
+          path="/pantryItems/shoppingCart/:profileId"
           element={
             <ProtectedRoute user={user}>
               <ShoppingList pantryItems={pantryItems}/>
@@ -114,6 +128,7 @@ function App() {
           path="/pantryItems"
           element={
             <ProtectedRoute user={user}>
+              <PantryItemForm handlePantryItemForm={handlePantryItemForm}/>
               <PantryList pantryItems={pantryItems}/>
             </ProtectedRoute>
           }

@@ -7,7 +7,7 @@ const PantryItemForm = (props) => {
   const [formData, setFormData] = useState({
     name: '',
     amount: '',
-    // category: '',
+    category: 'Fridge',
     price: '',
   })
 
@@ -15,7 +15,7 @@ const PantryItemForm = (props) => {
     //prevent page refashing
     evt.preventDefault()
     //call handleAddPantryItem
-    props.handleAddPantryItem(formData)
+    props.handlePantryItemForm(formData)
 
   }
 

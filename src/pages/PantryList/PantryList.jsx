@@ -9,7 +9,7 @@ const PantryList = (props) => {
     <main>
       <div className={`${styles.container} ${styles.formContainer}`}>
         {/* form for adding new pantry list */}
-        Add New Pantry (Form)
+        Add New Pantry Item (Form)
         {/* pantry list */}
       </div>
       <div className={`${styles.container} ${styles.listContainer}`}>
@@ -20,5 +20,5 @@ const PantryList = (props) => {
     </main>
   );
 }
- 
+
 export default PantryList;
