@@ -9,7 +9,7 @@ const NavBar = ({ user, handleLogout }) => {
   if (user) {
     return (
       <nav>
-          <div className="nav-wrap">
+          <div className={styles.navwrap}>
           <div className={styles.testname}>
 
             <div className={styles.linkbox}>
