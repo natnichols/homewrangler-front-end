@@ -15,6 +15,7 @@ import Repairs from './pages/Repairs/Repairs'
 import Budgets from './pages/Budgets/Budgets'
 import PantryItemDetails from './pages/PantryItemDetails/PantryItemDetails'
 import EditPantryItem from './pages/EditPantryItem/EditPantryItem'
+import RepairDetails from './pages/RepairDetails/RepairDetails'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -164,6 +165,14 @@ function App() {
           element={
             <ProtectedRoute user={user}>
               <Repairs repairs={repairs} />
+            </ProtectedRoute>
+          }
+        />
+        <Route 
+          path="/repairs/:repairId"
+          element={
+            <ProtectedRoute user={user}>
+              <RepairDetails user={user} />
             </ProtectedRoute>
           }
         />
