@@ -4,7 +4,7 @@
 
 (insert lede here)
 
-![Placeholder for Logo OR Screenshot of Landing page](logo/screenshot link here)
+![Placeholder for Logo OR Screenshot of Landing page](/src/assets/cowboy-hat-tp-bg-large.png)
 
 (insert app description here)
 
