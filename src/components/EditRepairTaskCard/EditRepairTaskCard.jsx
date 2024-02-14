@@ -3,15 +3,15 @@ import { useState } from 'react'
 import { useLocation, useParams, useNavigate } from 'react-router-dom'
 
 // services
-import * as repairService from '../services/repairService'
+import * as repairService from '../../services/repairService'
 
 // css
 import styles from './EditRepairTaskCard.module.css'
 
-const EditRepairTaskCard = () => {
-  const navigate = useNavigate()
+const EditRepairTaskCard = ({ repairId, repairTaskId }) => {
+  // const navigate = useNavigate()
   const { state } = useLocation()
-  const { repairId, repairTaskId } = useParams()
+  // const { repairId, repairTaskId } = useParams()
   const [formData, setFormData] = useState(state)
 
   const handleChange = ({ target }) => {
@@ -22,7 +22,7 @@ const EditRepairTaskCard = () => {
   const handleSubmit = async evt => {
     evt.preventDefault()
     await repairService.updateRepairTask(repairId, repairTaskId, formData)
-    navigate(`/repairs/${repairId}`)
+    // navigate(`/repairs/${repairId}`)
   }
 
 
