@@ -15,7 +15,8 @@ const EditRepairTaskCard = () => {
   const [formData, setFormData] = useState(state)
 
   const handleChange = ({ target }) => {
-    setFormData({...formData, [target.name]: target.value })
+    const value = target.type === "checkbox" ? target.checked : target.value
+    setFormData({...formData, [target.name]: value })
   }
 
   const handleSubmit = async evt => {
@@ -37,6 +38,14 @@ const EditRepairTaskCard = () => {
           value={formData.task}
           placeholder="Task"
           onChange={handleChange}
+        />
+        <label htmlFor="done-input">Done?</label>
+        <input 
+          type="checkbox" 
+          name="done" 
+          id="done-input"
+          checked={formData.done}
+          onChange={handleChange} 
         />
         <button type="submit">Submit Changes🪛✏️</button>
       </form>
