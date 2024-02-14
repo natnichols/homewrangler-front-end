@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 //css
 import styles from "./PantryCard.module.css"
 
-const PantryCard = ({pantryItem}) => {
+const PantryCard = ({pantryItem, handleAddToShoppingList, handleDelFromShoppingList}) => {
   return (  
     <main className={styles.container}>
       <div>
@@ -19,6 +19,10 @@ const PantryCard = ({pantryItem}) => {
         {/* <h4>owner: {pantryItem.owner}</h4> */}
 
         { pantryItem.expires ? (<h4>This item will expire!</h4>) : "" }
+        <h3>buttinz for adding/removing from ShoppingList - testing</h3>
+        <button onClick={() => handleAddToShoppingList(pantryItem._id)}>Add to Shopping List</button>
+        <button onClick={() => handleDelFromShoppingList(pantryItem._id)}>Remove from Shopping List</button>
+
       </div>
     </main>
   );
