@@ -8,6 +8,10 @@ import { Link } from 'react-router-dom'
 const RepairTaskCard = ({ repairTask, repairId, user, handleDeleteRepairTask }) => {
   const [showEditRepairTask, setShowEditRepairTask] = useState(false)
 
+  const toggleAddRepairTask = () => {
+    setShowEditRepairTask(!showEditRepairTask)
+  }
+
   return ( 
     <article>
       <header>
