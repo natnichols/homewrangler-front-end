@@ -1,12 +1,5 @@
-.container{
-  color: black;
-}
-
-.formContainer{
-  color: rgb(34, 26, 140);
-}
-
-.listContainer{
-  color: black;
-  
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }

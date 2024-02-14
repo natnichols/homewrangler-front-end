@@ -16,10 +16,10 @@ const Landing = ({ user }) => {
           <img
             src='/favicon/favicon-cowboy-hat.png'
             alt="Temporary."
-            style={{ width: '300px' }} 
+            style={{ width: '200px' }} 
           />
         </div>
-        <NavLink to={`/pantryItems/${user.profile}`}><button>Shopping List</button></NavLink>
+        <NavLink to={`/pantryItems/shoppingList`}><button>Shopping List</button></NavLink>
         <NavLink to="/pantryItems"><button>My Pantry</button></NavLink>
         <br/>
         <NavLink to="/repairs"><button>Repairs</button></NavLink>
