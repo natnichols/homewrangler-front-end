@@ -74,12 +74,17 @@ function App() {
     navigate('/pantryItems')
   }
 
+
   // new Shopping List functions:
-  const handleAddToShoppingList = async () => {
+  const handleAddToShoppingList = async (pantryItemId) => {
+    await pantryService.addToShoppingList(pantryItemId)
     console.log('testing handleAdd button!');
   }
-  const handleDelFromShoppingList = async () => {
+  const handleDelFromShoppingList = async (pantryItemId) => {
+    await pantryService.delFromShoppingList(pantryItemId)
     console.log('testing handleDel button!');
+    // navigate('/pantryItems')
+    // console.log(user.profile.shoppingList)
   }
   
 

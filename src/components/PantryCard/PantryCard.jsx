@@ -20,6 +20,7 @@ const PantryCard = ({pantryItem, handleAddToShoppingList, handleDelFromShoppingL
 
         { pantryItem.expires ? (<h4>This item will expire!</h4>) : "" }
         <h3>buttinz for adding/removing from ShoppingList - testing</h3>
+        {/*  might be 'pantryItemId' instead below */}
         <button onClick={() => handleAddToShoppingList(pantryItem._id)}>Add to Shopping List</button>
         <button onClick={() => handleDelFromShoppingList(pantryItem._id)}>Remove from Shopping List</button>
 
