@@ -19,7 +19,7 @@ const Landing = ({ user }) => {
             style={{ width: '200px' }} 
           />
         </div>
-        <NavLink to={`/pantryItems/shoppingList`}><button>Shopping List</button></NavLink>
+        <NavLink to={`/shoppingList`}><button>Shopping List</button></NavLink>
         <NavLink to="/pantryItems"><button>My Pantry</button></NavLink>
         <br/>
         <NavLink to="/repairs"><button>Repairs</button></NavLink>

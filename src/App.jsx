@@ -249,7 +249,7 @@ function App() {
         />
         {/* VIEW SHOPPING LIST */}
         <Route
-          path="/pantryItems/shoppingList/"
+          path="/shoppingList"
           element={
             <ProtectedRoute user={user}>
               <ShoppingList
