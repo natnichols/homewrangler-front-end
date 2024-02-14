@@ -31,6 +31,7 @@ import * as authService from './services/authService'
 import * as pantryService from './services/pantryService'
 import * as repairService from './services/repairService'
 import * as budgetService from './services/budgetService'
+import * as profileService from './services/profileService'
 
 // styles
 import './App.css'
@@ -40,7 +41,26 @@ function App() {
   const [pantryItems, setPantryItems] = useState([])
   const [repairs, setRepairs] = useState([])
   const [budgets, setBudgets] = useState([])
+  // FOR USE WITH ADD&DEL from SHOPPING-LIST FUNCTIONS:
+  const [profile, setProfile] = useState([])
   const navigate = useNavigate()
+
+
+  // FOR USE WITH ADD&DEL from SHOPPING-LIST FUNCTIONS - populating profile for later
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const profileData = await profileService.getOneProfile(user.profile);
+        setProfile(profileData);
+      } catch (error) {
+        console.error('Error fetching profile:', error);
+      }
+    }
+    fetchProfile()
+  }, [user.profile])
+  // console.log('test single profile: ', profile);
+
+
 
   const handleLogout = () => {
     authService.logout()
@@ -83,13 +103,13 @@ function App() {
   // new Shopping List functions:
   const handleAddToShoppingList = async (pantryItemId) => {
     await pantryService.addToShoppingList(pantryItemId)
-    console.log('testing handleAdd button!');
+    const profileUpdated = await profileService.getOneProfile(user.profile);
+    setProfile(profileUpdated);  
   }
   const handleDelFromShoppingList = async (pantryItemId) => {
     await pantryService.delFromShoppingList(pantryItemId)
-    console.log('testing handleDel button!');
-    // navigate('/pantryItems')
-    // console.log(user.profile.shoppingList)
+    const profileUpdated = await profileService.getOneProfile(user.profile);
+    setProfile(profileUpdated);  
   }
   
 // Repair Functions
@@ -193,6 +213,7 @@ function App() {
             <ProtectedRoute user={user}>
               <PantryList
                 user={user}
+                profile={profile}
                 pantryItems={pantryItems}
                 handlePantryItemAdd={handlePantryItemAdd}
                 handleAddToShoppingList={handleAddToShoppingList}
@@ -221,11 +242,12 @@ function App() {
         />
         {/* VIEW SHOPPING LIST */}
         <Route
-          path="/pantryItems/shoppingList/"
+          path="/shoppingList"
           element={
             <ProtectedRoute user={user}>
               <ShoppingList
                 user={user}
+                profile={profile}
                 pantryItems={pantryItems}
                 handlePantryItemAdd={handlePantryItemAdd}
                 handleAddToShoppingList={handleAddToShoppingList}
