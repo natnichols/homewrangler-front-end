@@ -1,5 +1,5 @@
 // css
-import styles from './RepairTaskCard.module.css'
+// import styles from './RepairTaskCard.module.css'
 
 const RepairTaskCard = ({ repairTask }) => {
   return ( 
