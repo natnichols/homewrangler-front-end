@@ -50,7 +50,7 @@ function App() {
   useEffect( () => {
     const fetchFullPantry = async () => {
       const data = await pantryService.index()
-      console.log(data)
+      // console.log(data)
       setPantryItems(data)
     }
     if (user) fetchFullPantry()
