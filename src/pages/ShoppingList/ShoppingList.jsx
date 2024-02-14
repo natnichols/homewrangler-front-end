@@ -52,6 +52,7 @@ const ShoppingList = (props) => {
             pantryItem={pantryItem}
             handleAddToShoppingList={props.handleAddToShoppingList}
             handleDelFromShoppingList={props.handleDelFromShoppingList}
+            location={'shopping-list'}
             />
         )}
       </div>

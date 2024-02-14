@@ -83,12 +83,21 @@ function App() {
   // new Shopping List functions:
   const handleAddToShoppingList = async (pantryItemId) => {
     await pantryService.addToShoppingList(pantryItemId)
-    console.log('testing handleAdd button!');
+    // console.log('testing handleAdd button!');
   }
   const handleDelFromShoppingList = async (pantryItemId) => {
     await pantryService.delFromShoppingList(pantryItemId)
-    console.log('testing handleDel button!');
-    // navigate('/pantryItems')
+    // const updatedProfile = profile.shoppingList.filter(item => item._id !== pantryItemId)
+
+    // console.log('testing handleDel button!');
+
+    // if (location == 'pantry') { 
+    //   navigate('/pantryItems')
+    // }
+    // if (location == 'shopping-list') { 
+    //   navigate('/pantryItems/shoppingList')
+    // }
+
     // console.log(user.profile.shoppingList)
   }
   
