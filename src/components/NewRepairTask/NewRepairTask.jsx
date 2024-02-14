@@ -20,7 +20,16 @@ const NewRepairTask = (props) => {
   }
 
   return ( 
-
+    <form className={styles.container} onSubmit={handleSubmit}>
+      <textarea 
+        required
+        name="task"
+        value={formData.task}
+        placeholder="Add a Task"
+        onChange={handleChange}
+      />
+      <button type="submit">Create New Repair Task🛠️📝✨</button>
+    </form>
   )
 }
 
