@@ -5,9 +5,10 @@ const RepairTaskCard = ({ repairTask }) => {
   return ( 
     <article>
       <header>
-        {/* put 'done' here? */}
+        {/* keep header? */}
       </header>
-      <li>{repairTask.task}</li>
+      <li>{repairTask.task} - {repairTask.done ? 'done' : 'not done' }</li>
+      {/* want to add checkbox ^^^ */}
     </article>
   )
 }
