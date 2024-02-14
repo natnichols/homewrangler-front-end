@@ -13,7 +13,6 @@ const BudgetAvail = ({budgets}) => {
   return (
     <main className={styles.container}>
       <h2>Budget Avaliable: ${totalAmount}</h2>
-      
     </main>
   )
 }
