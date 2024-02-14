@@ -2,6 +2,10 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 
+// components
+import NewRepairTask from '../../components/NewRepairTask/NewRepairTask'
+import RepairTasks from '../../components/RepairTasks/RepairTasks'
+
 // services
 import * as repairService from '../../services/repairService'
 
@@ -19,6 +23,11 @@ const RepairDetails = (props) => {
     }
     fetchRepair()
   }, [repairId])
+
+  const handleAddRepairTask = async (repairTaskFormData) => {
+    const newRepairTask = await repairService.createRepairTask(repairId, repairTaskFormData)
+    setRepair({ ...repair, repairTasks: [...repair.repairTasks, newRepairTask]})
+  }
 
   if (!repair) {
     return <main className={styles.container}><h2>Loading repair...</h2></main>
@@ -42,6 +51,8 @@ const RepairDetails = (props) => {
       </article>
       <section>
         <h1>Repair Tasks</h1>
+        <NewRepairTask handleAddRepairTask={handleAddRepairTask} />
+        <RepairTasks repairTasks={repair.repairTasks} user={props.user} />
       </section>
     </main>
   )

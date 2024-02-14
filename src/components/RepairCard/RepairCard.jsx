@@ -1,4 +1,5 @@
 // npm modules
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 // components
@@ -7,22 +8,32 @@ import { Link } from 'react-router-dom'
 import styles from './RepairCard.module.css'
 
 const RepairCard = ({ repair }) => {
+  const [showRepairTasks, setShowRepairTasks] = useState(false)
+
+  const toggleRepairTasks = () => {
+    setShowRepairTasks(!showRepairTasks)
+  }
+
   return (
-    <Link to={`/repairs/${repair._id}`}>
+    
       <article className={styles.container}>
         <header>
           <span>
-            <h2>{repair.name}</h2>
+            <Link to={`/repairs/${repair._id}`}>
+              <h2>{repair.name}</h2>
+            </Link>
             <h2>{repair.priority}</h2>
           </span>
         </header>
-        {repair.repairTasks.map(repairTask => (
-        <li key={repairTask._id}>
-          {repairTask.task}
-        </li>
-      ))}
+        <button onClick={toggleRepairTasks}>
+        {showRepairTasks ? "Hide Repair Tasks" : "Show Repair Tasks"}
+        </button>
+        {showRepairTasks && repair.repairTasks.map(repairTask => (
+          <li key={repairTask._id}>
+            {repairTask.task}
+          </li>
+        ))}
       </article>
-    </Link>
   )
 }
 

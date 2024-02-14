@@ -70,3 +70,19 @@ export async function deleteRepair(repairId) {
     console.log(`🚨`, err)
   }
 }
+
+export async function createRepairTask(repairId, repairTaskFormData) {
+  try {
+    const res = await fetch(`${BASE_URL}/${repairId}/repairTasks`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(repairTaskFormData)
+    })
+    return res.json()
+  } catch (err) {
+    console.log(`🚨`, err)
+  }
+}
