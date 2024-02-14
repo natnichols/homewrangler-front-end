@@ -1,6 +1,6 @@
 // npm
 import { useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useParams, useNavigate } from 'react-router-dom'
 
 // services
 import * as repairService from '../services/repairService'
@@ -9,6 +9,11 @@ import * as repairService from '../services/repairService'
 import styles from './EditRepairTaskCard.module.css'
 
 const EditRepairTaskCard = () => {
+  const navigate = useNavigate()
+  const { state } = useLocation()
+  const { repairId, repairTaskId } = useParams()
+  const [formData, setFormData] = useState(state)
+
   return ( 
     console.log()
   )
