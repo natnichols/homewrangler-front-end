@@ -50,7 +50,7 @@ const RepairDetails = (props) => {
       </article>
       <section>
         <h1>Repair Tasks</h1>
-        <NewRepairTask />
+        <NewRepairTask handleAddRepairTask={handleAddRepairTask} />
       </section>
     </main>
   )

@@ -4,8 +4,6 @@ import { useState } from 'react'
 // css
 import styles from './NewRepairTask.module.css'
 
-// components
-
 const NewRepairTask = (props) => {
   const [formData, setFormData] = useState({ task: '' })
 
