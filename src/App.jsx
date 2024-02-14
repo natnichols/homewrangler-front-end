@@ -74,6 +74,16 @@ function App() {
     navigate('/pantryItems')
   }
 
+  // new Shopping List functions:
+  const handleAddToShoppingList = async () => {
+    console.log('testing handleAdd button!');
+  }
+  const handleDelFromShoppingList = async () => {
+    console.log('testing handleDel button!');
+  }
+  
+
+
   useEffect(() => {
     const fetchAllRepairs = async () => {
       const data = await repairService.index()
@@ -144,7 +154,12 @@ function App() {
           path="/pantryItems"
           element={
             <ProtectedRoute user={user}>
-              <PantryList handlePantryItemAdd={handlePantryItemAdd} pantryItems={pantryItems}/>
+              <PantryList
+                pantryItems={pantryItems}
+                handlePantryItemAdd={handlePantryItemAdd}
+                handleAddToShoppingList={handleAddToShoppingList}
+                handleDelFromShoppingList={handleDelFromShoppingList}
+                />
             </ProtectedRoute>
           }
         />
