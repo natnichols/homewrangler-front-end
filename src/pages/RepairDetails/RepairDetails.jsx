@@ -15,6 +15,7 @@ import styles from './RepairDetails.module.css'
 const RepairDetails = (props) => {
   const { repairId } = useParams()
   const [repair, setRepair] = useState(null)
+  const [showAddRepairTask, setShowAddRepairTask] = useState(false)
 
   useEffect(() => {
     const fetchRepair = async () => {
@@ -23,6 +24,10 @@ const RepairDetails = (props) => {
     }
     fetchRepair()
   }, [repairId])
+
+  const toggleAddRepairTask = () => {
+    setShowAddRepairTask(!showAddRepairTask)
+  }
 
   const handleAddRepairTask = async (repairTaskFormData) => {
     const newRepairTask = await repairService.createRepairTask(repairId, repairTaskFormData)
@@ -56,9 +61,12 @@ const RepairDetails = (props) => {
       </article>
       <section>
         <h1>Repair Tasks</h1>
-        <NewRepairTask 
+        <button onClick={toggleAddRepairTask}>
+          {showAddRepairTask ? "Hide Add Repair Task" : "Show Add Repair Task" }
+        </button>
+        {showAddRepairTask && <NewRepairTask 
           handleAddRepairTask={handleAddRepairTask} 
-        />
+        />}
         <RepairTasks 
           repairId={repairId} 
           user={props.user} 
