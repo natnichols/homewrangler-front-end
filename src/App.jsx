@@ -23,6 +23,7 @@ import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import RepairAdd from './components/RepairAdd/RepairAdd'
 import AddAmountForm from './components/AddAmountForm/AddAmountForm'
+import BudgetAvail from './components/BudgetAvail/BudgetAvail'
 
 // services
 import * as authService from './services/authService'
@@ -236,6 +237,7 @@ function App() {
           path="/budgets"
           element={
             <ProtectedRoute user={user}>
+              <BudgetAvail budgets={budgets} />
               <AddAmountForm handleAddBudget={handleAddBudget} />
               <Budgets handleDeleteBudget={handleDeleteBudget} budgets={budgets}/>
             </ProtectedRoute>
