@@ -23,7 +23,7 @@ const NavBar = ({ user, handleLogout }) => {
             &nbsp;&nbsp;&nbsp;&nbsp;
             <div className={styles.linkbox}>
               <NavLink
-                to={`/pantryItems/shoppingList`}
+                to={`/shoppingList`}
                 className={styles.link}
               >🛒
               </NavLink>
