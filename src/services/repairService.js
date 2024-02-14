@@ -86,3 +86,7 @@ export async function createRepairTask(repairId, repairTaskFormData) {
     console.log(`🚨`, err)
   }
 }
+
+export async function updateRepairTask(repairId, repairTaskId, repairTaskFormData) {
+  
+}
