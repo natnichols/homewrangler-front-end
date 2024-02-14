@@ -9,6 +9,10 @@ import * as profileService from '../../services/profileService'
 import styles from './Profile.module.css'
 
 const Profile = ({ user }) => {
+  console.log('test props.user ', user);
+  console.log('test props.user.profile ', user.profile);
+  // console.log('test props.user.profile._id ', user.profile._id);
+  // console.log('test props.user.profile.shoppingList ', user.profile.shoppingList);
   const { profileId } = useParams()
   const [profile, setProfile] = useState(null)
 
@@ -20,7 +24,11 @@ const Profile = ({ user }) => {
     fetchProfile()
   }, [profileId])
 
-  // console.log('test single profile: ', profile);
+  console.log('test single profile: ', profile);
+  // console.log('test props.user ', user);
+  // console.log('test props.user.profile ', user.profile);
+  // console.log('test props.user.profile._id ', user.profile._id);
+  // console.log('test props.user.profile.shoppingList ', user.profile.shoppingList);
 
   if (!profile) {
     return <main className={styles.container}><h2>Loading profile.</h2></main>

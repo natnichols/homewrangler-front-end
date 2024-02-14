@@ -102,3 +102,17 @@ export async function updateRepairTask(repairId, repairTaskId, repairTaskFormDat
     console.log(`🚨`, err)
   }
 }
+
+export async function deleteRepairTask(repairId, repairTaskId) {
+  try {
+    const res = await fetch(`${BASE_URL}/${repairId}/repairTasks/${repairTaskId}`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`
+      },
+    })
+    return res.json()
+  } catch (err) {
+    console.log(`🚨`, err)
+  }
+}
