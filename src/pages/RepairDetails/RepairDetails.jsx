@@ -15,6 +15,7 @@ import styles from './RepairDetails.module.css'
 const RepairDetails = (props) => {
   const { repairId } = useParams()
   const [repair, setRepair] = useState(null)
+  const [showEditRepairTask, setShowEditRepairTask] = useState(false)
 
   useEffect(() => {
     const fetchRepair = async () => {
