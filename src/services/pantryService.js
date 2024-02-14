@@ -76,7 +76,7 @@ async function addToShoppingList(pantryItemId){
         'Authorization' : `Bearer ${tokenService.getToken()}`,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(pantryItemId)
+      body: JSON.stringify({pantryItemId : pantryItemId})
     })
     return res.json()
   } catch (error) {
