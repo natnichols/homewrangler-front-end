@@ -32,9 +32,22 @@ async function create(budgetFormData) {
   }
 }
 
+async function deleteBudget(budgetId){
+  try {
+    const res = await fetch(`${BASE_URL}/${budgetId}`, {
+      method: "DELETE",
+      headers: {'Authorization' : `Bearer ${tokenService.getToken()}`}
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export {
   index,
   create,
+  deleteBudget,
   }
 
 

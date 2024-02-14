@@ -13,7 +13,9 @@ const Budgets = (props) => {
 
       <h1>Budgets</h1>
       {props.budgets.map(budget =>
-        <p key={budget._id}>budget added: ${budget.amount}</p>
+        <p key={budget._id}>budget added: ${budget.amount}
+          <button onClick={() => props.handleDeleteBudget(budget._id)}>Delete</button>
+        </p>
       )}
     </main>
   );

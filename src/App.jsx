@@ -111,6 +111,12 @@ function App() {
     navigate('/budgets')
   }
 
+  const handleDeleteBudget = async (budgetId) => {
+    const deleteBudget = await budgetService.deleteBudget(budgetId)
+    setBudgets(budgets.filter(b => b._id !== deleteBudget._id))
+    navigate('/budgets')
+  }
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -231,7 +237,7 @@ function App() {
           element={
             <ProtectedRoute user={user}>
               <AddAmountForm handleAddBudget={handleAddBudget} />
-              <Budgets budgets={budgets}/>
+              <Budgets handleDeleteBudget={handleDeleteBudget} budgets={budgets}/>
             </ProtectedRoute>
           }
         />
