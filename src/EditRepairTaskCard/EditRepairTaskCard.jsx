@@ -18,12 +18,16 @@ const EditRepairTaskCard = () => {
     setFormData({...formData, [target.name]: target.value })
   }
 
-  // handleSubmit
+  const handleSubmit = async evt => {
+    evt.preventDefault()
+    await repairService.updateRepairTask(repairId, repairTaskId, formData)
+    navigate(`/repairs/${repairId}`)
+  }
 
 
   return ( 
     <main className={styles.container}>
-      <form /*onSubmit={handleSubmit}*/>
+      <form onSubmit={handleSubmit}>
         <h1>Edit Repair Task</h1>
         <label htmlFor="task-input">Task</label>
         <textarea 
