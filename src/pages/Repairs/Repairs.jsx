@@ -14,10 +14,11 @@ import BudgetAvail from '../../components/BudgetAvail/BudgetAvail'
 import styles from './Repairs.module.css'
 
 const Repairs = (props) => {
-  const [showAddRepair, setshowAddRepair] = useState(false)
+  const [showAddRepair, setShowAddRepair] = useState(false)
+  // const [showEditRepairTask]
 
   const toggleAddForm = () => {
-    setshowAddRepair(!showAddRepair)
+    setShowAddRepair(!showAddRepair)
   }
   
   return (
