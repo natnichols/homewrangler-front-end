@@ -223,7 +223,12 @@ function App() {
           path="/pantryItems/shoppingList/"
           element={
             <ProtectedRoute user={user}>
-              <ShoppingList pantryItems={pantryItems}/>
+              <ShoppingList
+                pantryItems={pantryItems}
+                handlePantryItemAdd={handlePantryItemAdd}
+                handleAddToShoppingList={handleAddToShoppingList}
+                handleDelFromShoppingList={handleDelFromShoppingList}
+              />
             </ProtectedRoute>
           }
         />
