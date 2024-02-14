@@ -22,8 +22,8 @@ const RepairAdd = (props) => {
 
   return (
     <main className={styles.container}>
-      <h2>Add a New Repair</h2>
       <form onSubmit={handleSubmit}>
+        <h2>Add a New Repair</h2>
         <label htmlFor="name-input">Name</label>
         <input 
           required
