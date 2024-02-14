@@ -27,6 +27,7 @@ import RepairAdd from './components/RepairAdd/RepairAdd'
 import * as authService from './services/authService'
 import * as pantryService from './services/pantryService'
 import * as repairService from './services/repairService'
+import * as budgetService from './services/budgetService'
 
 // styles
 import './App.css'
@@ -35,6 +36,7 @@ function App() {
   const [user, setUser] = useState(authService.getUser())
   const [pantryItems, setPantryItems] = useState([])
   const [repairs, setRepairs] = useState([])
+  const [budgets, setBudgets] = useState([])
   const navigate = useNavigate()
 
   const handleLogout = () => {
@@ -50,7 +52,6 @@ function App() {
   useEffect( () => {
     const fetchFullPantry = async () => {
       const data = await pantryService.index()
-      console.log(data)
       setPantryItems(data)
     }
     if (user) fetchFullPantry()
@@ -93,6 +94,15 @@ function App() {
     setRepairs(repairs.map(repair => repair._id === updatedRepair._id ? updatedRepair : repair ))
     navigate('/repairs')
   }
+
+  useEffect (() => {
+    const fetchAllBudgets = async () => {
+      const data = await budgetService.index()
+      console.log('Budget data', data)
+      setBudgets(data)
+    }
+    if(user) fetchAllBudgets()
+  },[user])
 
   return (
     <>
@@ -213,7 +223,7 @@ function App() {
           path="/budgets"
           element={
             <ProtectedRoute user={user}>
-              <Budgets />
+              <Budgets budgets={budgets}/>
             </ProtectedRoute>
           }
         />
