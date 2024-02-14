@@ -137,24 +137,9 @@ function App() {
           }
           />
 
+
         {/* PANTRY ROUTES */}
-        <Route
-          path="/pantryItems/:pantryItemId"
-          element={
-            <ProtectedRoute user={user}>
-              <PantryItemDetails handleDeletePantryItem={handleDeletePantryItem} user={user} />
-            </ProtectedRoute>
-          }
-        />
-        
-        <Route
-          path="/pantryItems/shoppingCart/:profileId"
-          element={
-            <ProtectedRoute user={user}>
-              <ShoppingList pantryItems={pantryItems}/>
-            </ProtectedRoute>
-          }
-        />
+        {/* VIEW PANTRY */}
         <Route
           path="/pantryItems"
           element={
@@ -163,6 +148,16 @@ function App() {
             </ProtectedRoute>
           }
         />
+        {/* VIEW PANTRY ITEM DETAILS */}
+        <Route
+          path="/pantryItems/:pantryItemId"
+          element={
+            <ProtectedRoute user={user}>
+              <PantryItemDetails handleDeletePantryItem={handleDeletePantryItem} user={user} />
+            </ProtectedRoute>
+          }
+        />
+        {/* EDIT PANTRY ITEM */}
         <Route
           path="/pantryItems/:pantryItemId/edit"
           element={
@@ -171,7 +166,16 @@ function App() {
             </ProtectedRoute>
           }
         />
-        
+        {/* VIEW SHOPPING LIST */}
+        <Route
+          path="/pantryItems/shoppingList/:profileId"
+          element={
+            <ProtectedRoute user={user}>
+              <ShoppingList pantryItems={pantryItems}/>
+            </ProtectedRoute>
+          }
+        />
+
 
         {/* REPAIR ROUTES */}
         <Route
