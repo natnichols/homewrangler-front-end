@@ -94,6 +94,11 @@ function App() {
     navigate('/repairs')
   }
 
+  const handleDeleteRepair = async (repairId) => {
+    const deletedRepair = await repairService.deleteRepair(repairId)
+    setRepairs(repairs.filter(repair => repair._id !== deletedRepair._id))
+  }
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -186,7 +191,7 @@ function App() {
           path="/repairs/:repairId"
           element={
             <ProtectedRoute user={user}>
-              <RepairDetails user={user} />
+              <RepairDetails user={user} handleDeleteRepair={handleDeleteRepair} />
             </ProtectedRoute>
           }
         />
