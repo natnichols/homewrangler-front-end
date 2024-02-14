@@ -1,8 +1,8 @@
 //npm 
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
 // services
-import * as profileService from '../../services/profileService'
+// import * as profileService from '../../services/profileService'
 
 //css
 import styles from './ShoppingList.module.css'
@@ -38,7 +38,7 @@ const ShoppingList = (props) => {
             handleAddToShoppingList={props.handleAddToShoppingList}
             handleDelFromShoppingList={props.handleDelFromShoppingList}
             // location={'shopping-list'}
-            />
+          />
         )}
       </div>
 
