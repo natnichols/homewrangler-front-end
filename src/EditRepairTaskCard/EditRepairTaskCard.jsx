@@ -8,10 +8,10 @@ import * as repairService from '../services/repairService'
 // css
 import styles from './EditRepairTaskCard.module.css'
 
-const EditRepairTask = () => {
+const EditRepairTaskCard = () => {
   return ( 
-
+    console.log()
   )
 }
 
-export default EditRepairTask
+export default EditRepairTaskCard
