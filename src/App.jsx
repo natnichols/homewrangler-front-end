@@ -16,6 +16,7 @@ import ShoppingList from './pages/ShoppingList/ShoppingList'
 import Repairs from './pages/Repairs/Repairs'
 import RepairDetails from './pages/RepairDetails/RepairDetails'
 import RepairEdit from './pages/RepairEdit/RepairEdit'
+import EditRepairTaskCard from './EditRepairTaskCard/EditRepairTaskCard'
 import Budgets from './pages/Budgets/Budgets'
 
 // components
@@ -228,12 +229,20 @@ function App() {
             </ProtectedRoute>
           }
         />
-        {/* is below route needed? */}
+        {/* are below routes needed? */}
         <Route 
           path="/repairs/new"
           element={
             <ProtectedRoute user={user}>
               <RepairAdd handleAddRepair={handleAddRepair} />
+            </ProtectedRoute>
+          }
+        />
+        <Route 
+          path="/repairs/:repairId/repairTasks/:repairTaskId"
+          element={
+            <ProtectedRoute>
+              <EditRepairTaskCard />
             </ProtectedRoute>
           }
         />
