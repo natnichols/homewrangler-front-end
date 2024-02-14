@@ -12,9 +12,10 @@ const RepairTasks = (props) => {
       {props.repairTasks.map(repairTask => (
         <RepairTaskCard 
           key={repairTask._id}
-          repairTask={repairTask}
-          user={props.user}
           repairId={props.repairId}
+          user={props.user}
+          repairTask={repairTask}
+          handleDeleteRepairTask={props.handleDeleteRepairTask}
         />
       ))}
     </>

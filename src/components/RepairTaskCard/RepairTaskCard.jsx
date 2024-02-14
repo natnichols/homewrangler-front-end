@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 // css
 // import styles from './RepairTaskCard.module.css'
 
-const RepairTaskCard = ({ repairTask, repairId, user }) => {
+const RepairTaskCard = ({ repairTask, repairId, user, handleDeleteRepairTask }) => {
   return ( 
     <article>
       <header>
@@ -14,7 +14,9 @@ const RepairTaskCard = ({ repairTask, repairId, user }) => {
               <Link to={`/repairs/${repairId}/repairTasks/${repairTask._id}`} state={repairTask}>
                 ✏️
               </Link>
-              <button>🗑️</button>
+              <button onClick={() => handleDeleteRepairTask(repairId, repairTask._id)}>
+                🗑️
+              </button>
             </>
           }
         </span>
