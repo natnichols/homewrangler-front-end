@@ -14,11 +14,12 @@ html, body {
   
   display: flex;
   /* align-items: center; */
-  flex-direction: column;
+  justify-content: center;
+  /* flex-direction: column; */
   
   margin: 0;
   min-height: 100vh;
-  max-width: 800px;
+  max-width: 740px;
   
   background-color: #c2b280;
   font-family: Verdana, system-ui, Arial, sans-serif;
