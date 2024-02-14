@@ -192,6 +192,7 @@ function App() {
           element={
             <ProtectedRoute user={user}>
               <PantryList
+                user={user}
                 pantryItems={pantryItems}
                 handlePantryItemAdd={handlePantryItemAdd}
                 handleAddToShoppingList={handleAddToShoppingList}
@@ -224,6 +225,7 @@ function App() {
           element={
             <ProtectedRoute user={user}>
               <ShoppingList
+                user={user}
                 pantryItems={pantryItems}
                 handlePantryItemAdd={handlePantryItemAdd}
                 handleAddToShoppingList={handleAddToShoppingList}
