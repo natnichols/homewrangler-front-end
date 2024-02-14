@@ -27,7 +27,12 @@ const PantryList = (props) => {
 
       <div className={`${styles.container} ${styles.listContainer}`}>
         {props.pantryItems.map(pantryItem => 
-          <PantryCard key={pantryItem._id} pantryItem={pantryItem}/>
+          <PantryCard
+            key={pantryItem._id}
+            pantryItem={pantryItem}
+            handleAddToShoppingList={props.handleAddToShoppingList}
+            handleDelFromShoppingList={props.handleDelFromShoppingList}
+            />
         )}
       </div>
     </main>

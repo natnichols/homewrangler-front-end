@@ -50,7 +50,7 @@ function App() {
   useEffect( () => {
     const fetchFullPantry = async () => {
       const data = await pantryService.index()
-      console.log(data)
+      // console.log(data)
       setPantryItems(data)
     }
     if (user) fetchFullPantry()
@@ -73,6 +73,21 @@ function App() {
     setPantryItems(pantryItems.filter(p => p._id !== deletedPantryItem._id))
     navigate('/pantryItems')
   }
+
+
+  // new Shopping List functions:
+  const handleAddToShoppingList = async (pantryItemId) => {
+    await pantryService.addToShoppingList(pantryItemId)
+    console.log('testing handleAdd button!');
+  }
+  const handleDelFromShoppingList = async (pantryItemId) => {
+    await pantryService.delFromShoppingList(pantryItemId)
+    console.log('testing handleDel button!');
+    // navigate('/pantryItems')
+    // console.log(user.profile.shoppingList)
+  }
+  
+
 
   useEffect(() => {
     const fetchAllRepairs = async () => {
@@ -143,7 +158,23 @@ function App() {
           }
           />
 
+
         {/* PANTRY ROUTES */}
+        {/* VIEW PANTRY */}
+        <Route
+          path="/pantryItems"
+          element={
+            <ProtectedRoute user={user}>
+              <PantryList
+                pantryItems={pantryItems}
+                handlePantryItemAdd={handlePantryItemAdd}
+                handleAddToShoppingList={handleAddToShoppingList}
+                handleDelFromShoppingList={handleDelFromShoppingList}
+                />
+            </ProtectedRoute>
+          }
+        />
+        {/* VIEW PANTRY ITEM DETAILS */}
         <Route
           path="/pantryItems/:pantryItemId"
           element={
@@ -152,23 +183,7 @@ function App() {
             </ProtectedRoute>
           }
         />
-        
-        <Route
-          path="/pantryItems/shoppingCart/:profileId"
-          element={
-            <ProtectedRoute user={user}>
-              <ShoppingList pantryItems={pantryItems}/>
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/pantryItems"
-          element={
-            <ProtectedRoute user={user}>
-              <PantryList handlePantryItemAdd={handlePantryItemAdd} pantryItems={pantryItems}/>
-            </ProtectedRoute>
-          }
-        />
+        {/* EDIT PANTRY ITEM */}
         <Route
           path="/pantryItems/:pantryItemId/edit"
           element={
@@ -177,7 +192,16 @@ function App() {
             </ProtectedRoute>
           }
         />
-        
+        {/* VIEW SHOPPING LIST */}
+        <Route
+          path="/pantryItems/shoppingList/"
+          element={
+            <ProtectedRoute user={user}>
+              <ShoppingList pantryItems={pantryItems}/>
+            </ProtectedRoute>
+          }
+        />
+
 
         {/* REPAIR ROUTES */}
         <Route
