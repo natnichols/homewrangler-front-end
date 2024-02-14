@@ -61,9 +61,12 @@ const RepairDetails = (props) => {
       </article>
       <section>
         <h1>Repair Tasks</h1>
-        <NewRepairTask 
+        <button onClick={toggleAddRepairTask}>
+          {showAddRepairTask ? "Hide Add Repair Task" : "Show Add Repair Task" }
+        </button>
+        {showAddRepairTask && <NewRepairTask 
           handleAddRepairTask={handleAddRepairTask} 
-        />
+        />}
         <RepairTasks 
           repairId={repairId} 
           user={props.user} 
