@@ -9,18 +9,25 @@ import * as profileService from '../../services/profileService'
 import styles from './Profile.module.css'
 
 const Profile = ({ user }) => {
-  const { profileId } = useParams()
+  // removed! no need to do by URL anymore.
+  // const { profileId } = useParams()
+
+  // will provide profile id:
+  // console.log('test user.profile: ', user.profile);
+  // will not work - 'profile' property is already an id
+  // console.log('test user.profile._id: ', user.profile._id);
+
   const [profile, setProfile] = useState(null)
 
   useEffect(() => {
     const fetchProfile = async () => {
-      const profileData = await profileService.getOneProfile(profileId)
+      const profileData = await profileService.getOneProfile(user.profile)
       setProfile(profileData)
     }
     fetchProfile()
-  }, [profileId])
+  }, [user.profile])
 
-  // console.log('test single profile: ', profile);
+  console.log('test single profile: ', profile);
 
   if (!profile) {
     return <main className={styles.container}><h2>Loading profile.</h2></main>
