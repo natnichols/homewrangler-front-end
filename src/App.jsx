@@ -240,9 +240,10 @@ function App() {
               <BudgetAvail budgets={budgets} />
               <AddAmountForm handleAddBudget={handleAddBudget} />
               <Budgets handleDeleteBudget={handleDeleteBudget} budgets={budgets}/>
+              {/* <Budgets handleDeleteBudget={handleDeleteBudget} budgets={budgets.filter(budget => budget.owner._id === user.profile._id)} /> */}
             </ProtectedRoute>
           }
-        />
+        />eee
 
 
       </Routes>
