@@ -16,6 +16,7 @@ import ShoppingList from './pages/ShoppingList/ShoppingList'
 import Repairs from './pages/Repairs/Repairs'
 import RepairDetails from './pages/RepairDetails/RepairDetails'
 import RepairEdit from './pages/RepairEdit/RepairEdit'
+import EditRepairTaskCard from './EditRepairTaskCard/EditRepairTaskCard'
 import Budgets from './pages/Budgets/Budgets'
 
 // components
@@ -51,6 +52,7 @@ function App() {
     setUser(authService.getUser())
   }
 
+// Pantry Functions
   useEffect( () => {
     const fetchFullPantry = async () => {
       const data = await pantryService.index()
@@ -77,6 +79,20 @@ function App() {
     navigate('/pantryItems')
   }
 
+
+  // new Shopping List functions:
+  const handleAddToShoppingList = async (pantryItemId) => {
+    await pantryService.addToShoppingList(pantryItemId)
+    console.log('testing handleAdd button!');
+  }
+  const handleDelFromShoppingList = async (pantryItemId) => {
+    await pantryService.delFromShoppingList(pantryItemId)
+    console.log('testing handleDel button!');
+    // navigate('/pantryItems')
+    // console.log(user.profile.shoppingList)
+  }
+  
+// Repair Functions
   useEffect(() => {
     const fetchAllRepairs = async () => {
       const data = await repairService.index()
@@ -97,6 +113,13 @@ function App() {
     navigate('/repairs')
   }
 
+  const handleDeleteRepair = async (repairId) => {
+    const deletedRepair = await repairService.deleteRepair(repairId)
+    setRepairs(repairs.filter(repair => repair._id !== deletedRepair._id))
+    navigate('/repairs')
+  }
+  
+  // Budget Functions
   useEffect (() => {
     const fetchAllBudgets = async () => {
       const data = await budgetService.index()
@@ -161,7 +184,23 @@ function App() {
           }
           />
 
+
         {/* PANTRY ROUTES */}
+        {/* VIEW PANTRY */}
+        <Route
+          path="/pantryItems"
+          element={
+            <ProtectedRoute user={user}>
+              <PantryList
+                pantryItems={pantryItems}
+                handlePantryItemAdd={handlePantryItemAdd}
+                handleAddToShoppingList={handleAddToShoppingList}
+                handleDelFromShoppingList={handleDelFromShoppingList}
+                />
+            </ProtectedRoute>
+          }
+        />
+        {/* VIEW PANTRY ITEM DETAILS */}
         <Route
           path="/pantryItems/:pantryItemId"
           element={
@@ -170,23 +209,7 @@ function App() {
             </ProtectedRoute>
           }
         />
-        
-        <Route
-          path="/pantryItems/shoppingCart/:profileId"
-          element={
-            <ProtectedRoute user={user}>
-              <ShoppingList pantryItems={pantryItems}/>
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/pantryItems"
-          element={
-            <ProtectedRoute user={user}>
-              <PantryList handlePantryItemAdd={handlePantryItemAdd} pantryItems={pantryItems}/>
-            </ProtectedRoute>
-          }
-        />
+        {/* EDIT PANTRY ITEM */}
         <Route
           path="/pantryItems/:pantryItemId/edit"
           element={
@@ -195,7 +218,16 @@ function App() {
             </ProtectedRoute>
           }
         />
-        
+        {/* VIEW SHOPPING LIST */}
+        <Route
+          path="/pantryItems/shoppingList/"
+          element={
+            <ProtectedRoute user={user}>
+              <ShoppingList pantryItems={pantryItems}/>
+            </ProtectedRoute>
+          }
+        />
+
 
         {/* REPAIR ROUTES */}
         <Route
@@ -210,7 +242,7 @@ function App() {
           path="/repairs/:repairId"
           element={
             <ProtectedRoute user={user}>
-              <RepairDetails user={user} />
+              <RepairDetails user={user} handleDeleteRepair={handleDeleteRepair} />
             </ProtectedRoute>
           }
         />
@@ -222,12 +254,20 @@ function App() {
             </ProtectedRoute>
           }
         />
-        {/* is below route needed? */}
+        {/* are below routes needed? */}
         <Route 
           path="/repairs/new"
           element={
             <ProtectedRoute user={user}>
               <RepairAdd handleAddRepair={handleAddRepair} />
+            </ProtectedRoute>
+          }
+        />
+        <Route 
+          path="/repairs/:repairId/repairTasks/:repairTaskId"
+          element={
+            <ProtectedRoute>
+              <EditRepairTaskCard />
             </ProtectedRoute>
           }
         />
@@ -243,11 +283,9 @@ function App() {
               {/* <Budgets handleDeleteBudget={handleDeleteBudget} budgets={budgets.filter(budget => budget.owner._id === user.profile._id)} /> */}
             </ProtectedRoute>
           }
-        />eee
-
-
+        />
+        
       </Routes>
-      
     </>
   )
 }

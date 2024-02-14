@@ -13,12 +13,13 @@ html, body {
   -webkit-text-size-adjust: 100%;
   
   display: flex;
-  /* align-items: center;
-  flex-direction: column; */
+  /* align-items: center; */
+  justify-content: center;
+  /* flex-direction: column; */
   
   margin: 0;
   min-height: 100vh;
-  max-width: 800px;
+  max-width: 740px;
   
   background-color: #c2b280;
   font-family: Verdana, system-ui, Arial, sans-serif;
@@ -47,4 +48,22 @@ a:visited {
 }
 
 
+button {
+  display: inline-block;
+  background: white;
+  text-decoration: none;
+  color: #1b1b1b;
+  font-size: 16px;
+  padding: 5px;
+  border: 2px solid #9f9168;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background: #cacaca;
+}
+button:active {
+  background: #525252;
+  color: #ffffff;
+}
 

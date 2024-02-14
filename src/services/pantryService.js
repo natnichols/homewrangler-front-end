@@ -66,10 +66,43 @@ async function deletePantryItem(pantryItemId){
   }
 }
 
+
+//new Shopping List functions
+async function addToShoppingList(pantryItemId){
+  try {
+    const res = await fetch(`${BASE_URL}/shoppingList/add/${pantryItemId}`, {
+      method: 'POST',
+      headers: {
+        'Authorization' : `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({pantryItemId : pantryItemId})
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+async function delFromShoppingList(pantryItemId){
+  try {
+    const res = await fetch(`${BASE_URL}/shoppingList/remove/${pantryItemId}`, {
+      method: "DELETE",
+      headers: {'Authorization' : `Bearer ${tokenService.getToken()}`}
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+
 export {
   index,
   show,
   create,
   update,
-  deletePantryItem
+  deletePantryItem,
+  addToShoppingList,
+  delFromShoppingList
 }

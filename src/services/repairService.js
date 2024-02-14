@@ -56,3 +56,49 @@ export async function update(repairFormData) {
     console.log(`🚨`, err)
   }
 }
+
+export async function deleteRepair(repairId) {
+  try {
+    const res = await fetch(`${BASE_URL}/${repairId}`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+      }
+    })
+    return res.json()
+  } catch (err) {
+    console.log(`🚨`, err)
+  }
+}
+
+export async function createRepairTask(repairId, repairTaskFormData) {
+  try {
+    const res = await fetch(`${BASE_URL}/${repairId}/repairTasks`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(repairTaskFormData)
+    })
+    return res.json()
+  } catch (err) {
+    console.log(`🚨`, err)
+  }
+}
+
+export async function updateRepairTask(repairId, repairTaskId, repairTaskFormData) {
+  try {
+    const res = await fetch(`${BASE_URL}/${repairId}/repairTasks/${repairTaskId}`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(repairTaskFormData)
+    })
+    return res.json()
+  } catch (err) {
+    console.log(`🚨`, err)
+  }
+}
