@@ -66,10 +66,30 @@ async function deletePantryItem(pantryItemId){
   }
 }
 
+async function addToShoppingList(){
+  try {
+    
+  } catch (error) {
+    
+  }
+}
+
+async function delFromShoppingList(){
+  try {
+    
+  } catch (error) {
+    
+  }
+}
+
+
+
 export {
   index,
   show,
   create,
   update,
-  deletePantryItem
+  deletePantryItem,
+  addToShoppingList,
+  delFromShoppingList
 }
