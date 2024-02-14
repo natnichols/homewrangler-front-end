@@ -14,6 +14,7 @@ const RepairTasks = (props) => {
           key={repairTask._id}
           repairTask={repairTask}
           user={props.user}
+          repairId={props.repairId}
         />
       ))}
     </>
