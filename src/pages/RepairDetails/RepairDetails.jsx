@@ -23,6 +23,11 @@ const RepairDetails = (props) => {
     fetchRepair()
   }, [repairId])
 
+  const handleAddRepairTask = async (repairTaskFormData) => {
+    const newRepairTask = await repairService.createRepairTask(repairId, repairTaskFormData)
+    setRepair({ ...repair, repairTasks: [...repair.repairTasks, newRepairTask]})
+  }
+
   if (!repair) {
     return <main className={styles.container}><h2>Loading repair...</h2></main>
   }
