@@ -4,6 +4,7 @@ import { useParams, Link } from 'react-router-dom'
 
 // components
 import NewRepairTask from '../../components/NewRepairTask/NewRepairTask'
+import RepairTasks from '../../components/RepairTasks/RepairTasks'
 
 // services
 import * as repairService from '../../services/repairService'
