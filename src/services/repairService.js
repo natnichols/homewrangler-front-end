@@ -56,3 +56,17 @@ export async function update(repairFormData) {
     console.log(`🚨`, err)
   }
 }
+
+export async function deleteRepair(repairId) {
+  try {
+    const res = await fetch(`${BASE_URL}/${repairId}`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+      }
+    })
+    return res.json()
+  } catch (err) {
+    console.log(`🚨`, err)
+  }
+}
