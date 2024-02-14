@@ -139,6 +139,7 @@ function App() {
     const deleteBudget = await budgetService.deleteBudget(budgetId)
     setBudgets(budgets.filter(b => b._id !== deleteBudget._id))
     navigate('/budgets')
+  }
 
   return (
     <>
@@ -282,10 +283,8 @@ function App() {
             </ProtectedRoute>
           }
         />
-
-
+        
       </Routes>
-      
     </>
   )
 }
