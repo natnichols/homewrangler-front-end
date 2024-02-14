@@ -14,8 +14,9 @@ const EditRepairTaskCard = () => {
   const { repairId, repairTaskId } = useParams()
   const [formData, setFormData] = useState(state)
 
-  // handleChange
-
+  const handleChange = ({ target }) => {
+    setFormData({...formData, [target.name]: target.value })
+  }
 
   // handleSubmit
 
@@ -31,7 +32,7 @@ const EditRepairTaskCard = () => {
           id="task-input"
           value={formData.task}
           placeholder="Task"
-          // onChange={handleChange}
+          onChange={handleChange}
         />
         <button type="submit">Submit Changes🪛✏️</button>
       </form>
