@@ -1,10 +1,13 @@
 // npm modules
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 // css
 // import styles from './RepairTaskCard.module.css'
 
 const RepairTaskCard = ({ repairTask, repairId, user, handleDeleteRepairTask }) => {
+  const [showEditRepairTask, setShowEditRepairTask] = useState(false)
+
   return ( 
     <article>
       <header>
