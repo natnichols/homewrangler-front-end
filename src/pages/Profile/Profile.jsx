@@ -16,7 +16,6 @@ const Profile = ({ user }) => {
   // console.log('test user.profile: ', user.profile);
   // will not work - 'profile' property is already an id
   // console.log('test user.profile._id: ', user.profile._id);
-
   const [profile, setProfile] = useState(null)
 
   useEffect(() => {
@@ -27,7 +26,7 @@ const Profile = ({ user }) => {
     fetchProfile()
   }, [user.profile])
 
-  console.log('test single profile: ', profile);
+  console.log('test single profile: ', profile)
 
   if (!profile) {
     return <main className={styles.container}><h2>Loading profile.</h2></main>
