@@ -88,5 +88,17 @@ export async function createRepairTask(repairId, repairTaskFormData) {
 }
 
 export async function updateRepairTask(repairId, repairTaskId, repairTaskFormData) {
-  
+  try {
+    const res = await fetch(`${BASE_URL}/${repairId}/repairTasks/${repairTaskId}`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(repairTaskFormData)
+    })
+    return res.json()
+  } catch (err) {
+    console.log(`🚨`, err)
+  }
 }
