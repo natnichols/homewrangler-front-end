@@ -17,6 +17,9 @@ const RepairTaskCard = ({ repairTask, repairId, user, handleDeleteRepairTask }) 
               <Link to={`/repairs/${repairId}/repairTasks/${repairTask._id}`} state={repairTask}>
                 ✏️
               </Link>
+              <button>
+                📝
+              </button>
               <button onClick={() => handleDeleteRepairTask(repairId, repairTask._id)}>
                 🗑️
               </button>
