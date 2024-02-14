@@ -9,11 +9,51 @@ const RepairEdit = () => {
   const { state } = useLocation()
   const [formData, setFormData] = useState(state)
 
+  const handleChange = evt => {
+    setFormData({...formData, [evt.target.name]: evt.target.value })
+  }
+
+  const handleSubmit = evt => {
+    evt.preventDefault()
+    // placeholder line
+  }
+
   return (
     <main className={styles.container}>
-      <h2>RepairEdit component</h2>
-
-      <h4>end of RepairEdit component</h4>
+      <form onSubmit={handleSubmit}>
+        <h2>Edit Repair</h2>
+        <label htmlFor="name-input">Name</label>
+        <input 
+          required
+          type="text" 
+          name="name"
+          id="name-input"
+          value={formData.name}
+          placeholder="Name"
+          onChange={handleChange}
+        />
+        <label htmlFor="priority-input">Priority</label>
+        <input
+          required
+          type="text"
+          name="priority"
+          id="priority-input"
+          value={formData.priority}
+          placeholder="Priority"
+          onChange={handleChange}
+        />
+        <label htmlFor="description-input">Description</label>
+        <input 
+          required
+          type="text" 
+          name="description"
+          id="description-input"
+          value={formData.description}
+          placeholder="Description"
+          onChange={handleChange}
+        />
+        <button type="submit">Add Repair 🔧✨</button>
+      </form>
     </main>
   )
 }
