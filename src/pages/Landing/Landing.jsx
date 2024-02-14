@@ -12,15 +12,18 @@ const Landing = ({ user }) => {
         <br></br>
         {/* 'LOGGED-IN USER SHOULD SEE THIS' */}
         <h2>howdy, {user ? user.name : 'pardner'}</h2>
-        <br></br>
+        <div>
+          <img
+            src='/favicon/favicon-cowboy-hat.png'
+            alt="Temporary."
+            style={{ width: '300px' }} 
+          />
+        </div>
         <NavLink to={`/pantryItems/${user.profile}`}><button>Shopping List</button></NavLink>
-        <br></br>
         <NavLink to="/pantryItems"><button>My Pantry</button></NavLink>
-        <br></br>
-        <br></br>
+        <br/>
         <NavLink to="/repairs"><button>Repairs</button></NavLink>
-        <br></br>
-        <br></br>
+        <br/>
         <NavLink to="/budgets"><button>Budget button</button></NavLink>
       </>
       ) : (
