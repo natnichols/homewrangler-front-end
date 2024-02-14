@@ -66,22 +66,35 @@ async function deletePantryItem(pantryItemId){
   }
 }
 
-async function addToShoppingList(){
+
+//new Shopping List functions
+async function addToShoppingList(pantryItemId){
   try {
-    
+    const res = await fetch(`${BASE_URL}/${pantryItemId}`, {
+      method: 'POST',
+      headers: {
+        'Authorization' : `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(pantryItemId)
+    })
+    return res.json()
   } catch (error) {
-    
+    console.log(error)
   }
 }
 
-async function delFromShoppingList(){
+async function delFromShoppingList(pantryItemId){
   try {
-    
+    const res = await fetch(`${BASE_URL}/${pantryItemId}`, {
+      method: "DELETE",
+      headers: {'Authorization' : `Bearer ${tokenService.getToken()}`}
+    })
+    return res.json()
   } catch (error) {
-    
+    console.log(error)
   }
 }
-
 
 
 export {
