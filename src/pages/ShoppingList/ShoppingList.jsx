@@ -17,17 +17,26 @@ const ShoppingList = (props) => {
   // console.log('test props.user.profile._id ', props.user.profile._id);
   // console.log('test props.user.profile.shoppingList ', props.user.profile.shoppingList);
 
-  const [profile, setProfile] = useState()
+  const [profile, setProfile] = useState(null)
 
   useEffect(() => {
     const fetchProfile = async () => {
-      const profileData = await profileService.getOneProfile(props.user.profile)
-      setProfile(profileData)
+      try {
+        const profileData = await profileService.getOneProfile(props.user.profile);
+        setProfile(profileData);
+      } catch (error) {
+        console.error('Error fetching profile:', error);
+      }
     }
     fetchProfile()
   }, [props.user.profile])
 
   console.log('test single profile: ', profile);
+
+
+  if (!profile) {
+    return <main className={styles.container}><h2>Loading...</h2></main>
+  }
 
   return (
     <main className={styles.container}>
