@@ -52,7 +52,7 @@ const RepairDetails = (props) => {
       <section>
         <h1>Repair Tasks</h1>
         <NewRepairTask handleAddRepairTask={handleAddRepairTask} />
-        <RepairTasks repairTasks={repair.repairTasks} user={props.user} />
+        <RepairTasks repairTasks={repair.repairTasks} user={props.user} repairId={repairId} />
       </section>
     </main>
   )
