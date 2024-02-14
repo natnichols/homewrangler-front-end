@@ -1,5 +1,5 @@
 // npm modules
-import { NavLink, useParams } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 // services
@@ -35,7 +35,7 @@ const Profile = ({ user }) => {
 
   return (
     <main className={styles.container}>
-      <h1>Single profile component.</h1>
+      <h1>{profile.name}'s Profile</h1>
         <p>
           <img
             src={profile.photo}

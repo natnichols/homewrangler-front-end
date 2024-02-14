@@ -168,7 +168,7 @@ function App() {
 
         {/* PROFILE ROUTES */}
         <Route
-          path="/profiles/:profileId"
+          path="/profiles/profile"
           element={
             <ProtectedRoute user={user}>
               <Profile user={user} />
