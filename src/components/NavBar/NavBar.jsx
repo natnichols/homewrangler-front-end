@@ -14,7 +14,7 @@ const NavBar = ({ user, handleLogout }) => {
 
             <div className={styles.linkbox}>
               <NavLink
-                to={`/profiles/${user.profile}`}
+                to={`/profiles/profile`}
                 className={styles.link}
               >🤠
               </NavLink>

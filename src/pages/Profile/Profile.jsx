@@ -1,5 +1,5 @@
 // npm modules
-import { NavLink, useParams } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 // services
@@ -9,26 +9,24 @@ import * as profileService from '../../services/profileService'
 import styles from './Profile.module.css'
 
 const Profile = ({ user }) => {
-  console.log('test props.user ', user);
-  console.log('test props.user.profile ', user.profile);
-  // console.log('test props.user.profile._id ', user.profile._id);
-  // console.log('test props.user.profile.shoppingList ', user.profile.shoppingList);
-  const { profileId } = useParams()
+  // removed! no need to do by URL anymore.
+  // const { profileId } = useParams()
+
+  // will provide profile id:
+  // console.log('test user.profile: ', user.profile);
+  // will not work - 'profile' property is already an id
+  // console.log('test user.profile._id: ', user.profile._id);
   const [profile, setProfile] = useState(null)
 
   useEffect(() => {
     const fetchProfile = async () => {
-      const profileData = await profileService.getOneProfile(profileId)
+      const profileData = await profileService.getOneProfile(user.profile)
       setProfile(profileData)
     }
     fetchProfile()
-  }, [profileId])
+  }, [user.profile])
 
-  console.log('test single profile: ', profile);
-  // console.log('test props.user ', user);
-  // console.log('test props.user.profile ', user.profile);
-  // console.log('test props.user.profile._id ', user.profile._id);
-  // console.log('test props.user.profile.shoppingList ', user.profile.shoppingList);
+  console.log('test single profile: ', profile)
 
   if (!profile) {
     return <main className={styles.container}><h2>Loading profile.</h2></main>
@@ -36,7 +34,7 @@ const Profile = ({ user }) => {
 
   return (
     <main className={styles.container}>
-      <h1>Single profile component.</h1>
+      <h1>{profile.name}'s Profile</h1>
         <p>
           <img
             src={profile.photo}
