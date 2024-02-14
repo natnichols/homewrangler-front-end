@@ -16,6 +16,8 @@ const PantryList = (props) => {
     setShowItemAdd(!showItemAdd);
   };
 
+  const filteredPantryItems = props.pantryItems.filter(pantryItem => pantryItem.owner._id === props.profile._id);
+
   return (  
     <main>
       <h1>My Pantry</h1>
@@ -26,7 +28,7 @@ const PantryList = (props) => {
       {showItemAdd && <PantryItemAdd handlePantryItemAdd={props.handlePantryItemAdd} /> }
 
       <div className={`${styles.container} ${styles.listContainer}`}>
-        {props.pantryItems.map(pantryItem => 
+        {filteredPantryItems.map(pantryItem => 
           <PantryCard
             key={pantryItem._id}
             pantryItem={pantryItem}
