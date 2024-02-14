@@ -273,7 +273,7 @@ function App() {
         <Route 
           path="/repairs/:repairId/repairTasks/:repairTaskId"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute user={user}>
               <EditRepairTaskCard />
             </ProtectedRoute>
           }

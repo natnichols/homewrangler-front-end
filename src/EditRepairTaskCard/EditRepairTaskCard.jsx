@@ -1,6 +1,6 @@
 // npm
 import { useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useParams, useNavigate } from 'react-router-dom'
 
 // services
 import * as repairService from '../services/repairService'
@@ -9,8 +9,38 @@ import * as repairService from '../services/repairService'
 import styles from './EditRepairTaskCard.module.css'
 
 const EditRepairTaskCard = () => {
+  const navigate = useNavigate()
+  const { state } = useLocation()
+  const { repairId, repairTaskId } = useParams()
+  const [formData, setFormData] = useState(state)
+
+  const handleChange = ({ target }) => {
+    setFormData({...formData, [target.name]: target.value })
+  }
+
+  const handleSubmit = async evt => {
+    evt.preventDefault()
+    await repairService.updateRepairTask(repairId, repairTaskId, formData)
+    navigate(`/repairs/${repairId}`)
+  }
+
+
   return ( 
-    console.log()
+    <main className={styles.container}>
+      <form onSubmit={handleSubmit}>
+        <h1>Edit Repair Task</h1>
+        <label htmlFor="task-input">Task</label>
+        <textarea 
+          required
+          name="task" 
+          id="task-input"
+          value={formData.task}
+          placeholder="Task"
+          onChange={handleChange}
+        />
+        <button type="submit">Submit Changes🪛✏️</button>
+      </form>
+    </main>
   )
 }
 
