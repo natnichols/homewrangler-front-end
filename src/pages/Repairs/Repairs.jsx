@@ -14,16 +14,16 @@ import BudgetAvail from '../../components/BudgetAvail/BudgetAvail'
 import styles from './Repairs.module.css'
 
 const Repairs = (props) => {
-  const [showAddRepair, setshowAddRepair] = useState(false)
+  const [showAddRepair, setShowAddRepair] = useState(false)
 
-  const toggleAddForm = () => {
-    setshowAddRepair(!showAddRepair)
+  const toggleAddRepairForm = () => {
+    setShowAddRepair(!showAddRepair)
   }
   
   return (
     <main className={styles.container}>
       <h1>List of Repairs</h1>
-      <button onClick={toggleAddForm}>
+      <button onClick={toggleAddRepairForm}>
         {showAddRepair ? "Hide Add Form" : "Show Add Form"}
       </button>
       {showAddRepair && <RepairAdd handleAddRepair={props.handleAddRepair} /> }

@@ -16,7 +16,7 @@ import ShoppingList from './pages/ShoppingList/ShoppingList'
 import Repairs from './pages/Repairs/Repairs'
 import RepairDetails from './pages/RepairDetails/RepairDetails'
 import RepairEdit from './pages/RepairEdit/RepairEdit'
-import EditRepairTaskCard from './EditRepairTaskCard/EditRepairTaskCard'
+import EditRepairTaskCard from './components/EditRepairTaskCard/EditRepairTaskCard'
 import Budgets from './pages/Budgets/Budgets'
 
 // components
