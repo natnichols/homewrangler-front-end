@@ -11,9 +11,9 @@ import EditRepairTaskCard from '../../EditRepairTaskCard/EditRepairTaskCard'
 const RepairTaskCard = ({ repairTask, repairId, user, handleDeleteRepairTask }) => {
   const [showEditRepairTask, setShowEditRepairTask] = useState(false)
 
-  const toggleAddRepairTask = () => {
-    setShowEditRepairTask(!showEditRepairTask)
-  }
+  // const toggleEditRepairTask = () => {
+  //   setShowEditRepairTask(!showEditRepairTask)
+  // }
 
   return ( 
     <article>
@@ -24,14 +24,15 @@ const RepairTaskCard = ({ repairTask, repairId, user, handleDeleteRepairTask }) 
               <Link to={`/repairs/${repairId}/repairTasks/${repairTask._id}`} state={repairTask}>
                 ✏️
               </Link>
-              <button>
-                📝
-              </button>
+              {/* <button onClick={toggleEditRepairTask}>
+                {showEditRepairTask ? "" : "📝"}
+              </button> */}
               <button onClick={() => handleDeleteRepairTask(repairId, repairTask._id)}>
                 🗑️
               </button>
             </>
           }
+          {/* {showEditRepairTask && <EditRepairTaskCard  /> } */}
         </span>
       </header>
       <li>{repairTask.task} - {repairTask.done ? 'done' : 'not done' }</li>
