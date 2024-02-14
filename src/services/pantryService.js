@@ -70,7 +70,7 @@ async function deletePantryItem(pantryItemId){
 //new Shopping List functions
 async function addToShoppingList(pantryItemId){
   try {
-    const res = await fetch(`${BASE_URL}/${pantryItemId}`, {
+    const res = await fetch(`${BASE_URL}/shoppingList/add/${pantryItemId}`, {
       method: 'POST',
       headers: {
         'Authorization' : `Bearer ${tokenService.getToken()}`,
@@ -86,7 +86,7 @@ async function addToShoppingList(pantryItemId){
 
 async function delFromShoppingList(pantryItemId){
   try {
-    const res = await fetch(`${BASE_URL}/${pantryItemId}`, {
+    const res = await fetch(`${BASE_URL}/shoppingList/remove/${pantryItemId}`, {
       method: "DELETE",
       headers: {'Authorization' : `Bearer ${tokenService.getToken()}`}
     })
