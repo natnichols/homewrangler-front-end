@@ -17,7 +17,7 @@ const ShoppingList = (props) => {
   // console.log('test props.user.profile._id ', props.user.profile._id);
   // console.log('test props.user.profile.shoppingList ', props.user.profile.shoppingList);
 
-  const [profile, setProfile] = useState(null)
+  const [profile, setProfile] = useState()
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -34,10 +34,10 @@ const ShoppingList = (props) => {
       <h1>My Shopping List</h1>
 
       <div className={`${styles.container} ${styles.listContainer}`}>
-        {/* {props.pantryItems
-          .filter(pantryItem => user.profile.shoppingList.includes(pantryItem._id))
-          .map(pantryItem =>  */}
-        {props.pantryItems.map(pantryItem => 
+        {/* {props.pantryItems.map(pantryItem =>  */}
+        {props.pantryItems
+          .filter(pantryItem => profile.shoppingList.includes(pantryItem._id))
+          .map(pantryItem => 
           <PantryCard
             key={pantryItem._id}
             pantryItem={pantryItem}
