@@ -97,6 +97,7 @@ function App() {
   const handleDeleteRepair = async (repairId) => {
     const deletedRepair = await repairService.deleteRepair(repairId)
     setRepairs(repairs.filter(repair => repair._id !== deletedRepair._id))
+    navigate('/repairs')
   }
 
   return (
