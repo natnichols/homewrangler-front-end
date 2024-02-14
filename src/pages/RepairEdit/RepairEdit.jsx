@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom'
 // css
 import styles from './RepairEdit.module.css'
 
-const RepairEdit = () => {
+const RepairEdit = (props) => {
   const { state } = useLocation()
   const [formData, setFormData] = useState(state)
 
@@ -15,7 +15,7 @@ const RepairEdit = () => {
 
   const handleSubmit = evt => {
     evt.preventDefault()
-    // placeholder line
+    props.handleUpdateRepair(formData)
   }
 
   return (
@@ -52,7 +52,7 @@ const RepairEdit = () => {
           placeholder="Description"
           onChange={handleChange}
         />
-        <button type="submit">Add Repair 🔧✨</button>
+        <button type="submit">Edit Repair 🔧✏️</button>
       </form>
     </main>
   )

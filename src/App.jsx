@@ -91,7 +91,7 @@ function App() {
   const handleUpdateRepair = async (repairFormData) => {
     const updatedRepair = await repairService.update(repairFormData)
     setRepairs(repairs.map(repair => repair._id === updatedRepair._id ? updatedRepair : repair ))
-    navigate('/repairs/:repairId')
+    navigate('/repairs')
   }
 
   return (
@@ -193,7 +193,7 @@ function App() {
         <Route 
           path="/repairs/:repairId/edit"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute user={user}>
               <RepairEdit handleUpdateRepair={handleUpdateRepair} />
             </ProtectedRoute>
           }
