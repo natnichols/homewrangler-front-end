@@ -14,8 +14,28 @@ const EditRepairTaskCard = () => {
   const { repairId, repairTaskId } = useParams()
   const [formData, setFormData] = useState(state)
 
+  // handleChange
+
+
+  // handleSubmit
+
+
   return ( 
-    console.log()
+    <main className={styles.container}>
+      <form /*onSubmit={handleSubmit}*/>
+        <h1>Edit Repair Task</h1>
+        <label htmlFor="task-input">Task</label>
+        <textarea 
+          required
+          name="task" 
+          id="task-input"
+          value={formData.task}
+          placeholder="Task"
+          // onChange={handleChange}
+        />
+        <button type="submit">Submit Changes🪛✏️</button>
+      </form>
+    </main>
   )
 }
 
