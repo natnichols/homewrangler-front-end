@@ -29,6 +29,11 @@ const RepairDetails = (props) => {
     setRepair({ ...repair, repairTasks: [...repair.repairTasks, newRepairTask]})
   }
 
+  const handleDeleteRepairTask = async (repairId, repairTaskId) => {
+    await repairService.deleteRepairTask(repairId, repairTaskId)
+    setRepair({...repair, repairTasks: repair.repairTasks.filter(repairTask => repairTask._id !== repairTaskId) })
+  }
+
   if (!repair) {
     return <main className={styles.container}><h2>Loading repair...</h2></main>
   }
@@ -51,8 +56,15 @@ const RepairDetails = (props) => {
       </article>
       <section>
         <h1>Repair Tasks</h1>
-        <NewRepairTask handleAddRepairTask={handleAddRepairTask} />
-        <RepairTasks repairTasks={repair.repairTasks} user={props.user} repairId={repairId} />
+        <NewRepairTask 
+          handleAddRepairTask={handleAddRepairTask} 
+        />
+        <RepairTasks 
+          repairId={repairId} 
+          user={props.user} 
+          repairTasks={repair.repairTasks} 
+          handleDeleteRepairTask={handleDeleteRepairTask}
+        />
       </section>
     </main>
   )
