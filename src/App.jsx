@@ -31,6 +31,7 @@ import * as authService from './services/authService'
 import * as pantryService from './services/pantryService'
 import * as repairService from './services/repairService'
 import * as budgetService from './services/budgetService'
+import * as profileService from './services/profileService'
 
 // styles
 import './App.css'
@@ -40,7 +41,26 @@ function App() {
   const [pantryItems, setPantryItems] = useState([])
   const [repairs, setRepairs] = useState([])
   const [budgets, setBudgets] = useState([])
+  // FOR USE WITH ADD&DEL from SHOPPING-LIST FUNCTIONS:
+  const [profile, setProfile] = useState([])
   const navigate = useNavigate()
+
+
+  // FOR USE WITH ADD&DEL from SHOPPING-LIST FUNCTIONS - populating profile for later
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const profileData = await profileService.getOneProfile(user.profile);
+        setProfile(profileData);
+      } catch (error) {
+        console.error('Error fetching profile:', error);
+      }
+    }
+    fetchProfile()
+  }, [user.profile])
+  // console.log('test single profile: ', profile);
+
+
 
   const handleLogout = () => {
     authService.logout()
@@ -87,17 +107,15 @@ function App() {
   }
   const handleDelFromShoppingList = async (pantryItemId) => {
     await pantryService.delFromShoppingList(pantryItemId)
+      // navigate('/pantryItems')
     // const updatedProfile = profile.shoppingList.filter(item => item._id !== pantryItemId)
-
     // console.log('testing handleDel button!');
-
     // if (location == 'pantry') { 
     //   navigate('/pantryItems')
     // }
     // if (location == 'shopping-list') { 
     //   navigate('/pantryItems/shoppingList')
     // }
-
     // console.log(user.profile.shoppingList)
   }
   
@@ -202,6 +220,7 @@ function App() {
             <ProtectedRoute user={user}>
               <PantryList
                 user={user}
+                profile={profile}
                 pantryItems={pantryItems}
                 handlePantryItemAdd={handlePantryItemAdd}
                 handleAddToShoppingList={handleAddToShoppingList}
@@ -235,6 +254,7 @@ function App() {
             <ProtectedRoute user={user}>
               <ShoppingList
                 user={user}
+                profile={profile}
                 pantryItems={pantryItems}
                 handlePantryItemAdd={handlePantryItemAdd}
                 handleAddToShoppingList={handleAddToShoppingList}

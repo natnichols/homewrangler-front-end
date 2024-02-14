@@ -17,24 +17,9 @@ const ShoppingList = (props) => {
   // console.log('test props.user.profile._id ', props.user.profile._id);
   // console.log('test props.user.profile.shoppingList ', props.user.profile.shoppingList);
 
-  const [profile, setProfile] = useState(null)
+  console.log('test single profile ON SHOPPING LIST PAGE! ', props.profile);
 
-  useEffect(() => {
-    const fetchProfile = async () => {
-      try {
-        const profileData = await profileService.getOneProfile(props.user.profile);
-        setProfile(profileData);
-      } catch (error) {
-        console.error('Error fetching profile:', error);
-      }
-    }
-    fetchProfile()
-  }, [props.user.profile])
-
-  console.log('test single profile: ', profile);
-
-
-  if (!profile) {
+  if (!props.profile) {
     return <main className={styles.container}><h2>Loading...</h2></main>
   }
 
@@ -45,14 +30,14 @@ const ShoppingList = (props) => {
       <div className={`${styles.container} ${styles.listContainer}`}>
         {/* {props.pantryItems.map(pantryItem =>  */}
         {props.pantryItems
-          .filter(pantryItem => profile.shoppingList.includes(pantryItem._id))
+          .filter(pantryItem => props.profile.shoppingList.includes(pantryItem._id))
           .map(pantryItem => 
           <PantryCard
             key={pantryItem._id}
             pantryItem={pantryItem}
             handleAddToShoppingList={props.handleAddToShoppingList}
             handleDelFromShoppingList={props.handleDelFromShoppingList}
-            location={'shopping-list'}
+            // location={'shopping-list'}
             />
         )}
       </div>
