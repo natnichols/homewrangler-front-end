@@ -9,6 +9,8 @@ const ShoppingList = () => {
     <main className={styles.container}>
       <h1>ShoppingList component</h1>
 
+
+
         {/* <BudgetAvail/> */}
 
       <h4>end of ShoppingList component</h4>
