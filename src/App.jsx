@@ -188,7 +188,7 @@ function App() {
         />
         {/* VIEW SHOPPING LIST */}
         <Route
-          path="/pantryItems/shoppingList/:profileId"
+          path="/pantryItems/shoppingList/"
           element={
             <ProtectedRoute user={user}>
               <ShoppingList pantryItems={pantryItems}/>
