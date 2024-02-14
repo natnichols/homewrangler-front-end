@@ -22,6 +22,7 @@ import Budgets from './pages/Budgets/Budgets'
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import RepairAdd from './components/RepairAdd/RepairAdd'
+import AddAmountForm from './components/AddAmountForm/AddAmountForm'
 
 // services
 import * as authService from './services/authService'
@@ -103,6 +104,12 @@ function App() {
     }
     if(user) fetchAllBudgets()
   },[user])
+
+  const handleAddBudget = async (budgetFormData) => {
+    const newBudget = await budgetService.create(budgetFormData)
+    setBudgets([newBudget, ...budgets])
+    navigate('/budgets')
+  }
 
   return (
     <>
@@ -223,6 +230,7 @@ function App() {
           path="/budgets"
           element={
             <ProtectedRoute user={user}>
+              <AddAmountForm handleAddBudget={handleAddBudget} />
               <Budgets budgets={budgets}/>
             </ProtectedRoute>
           }

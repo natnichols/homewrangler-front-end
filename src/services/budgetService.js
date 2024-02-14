@@ -16,7 +16,7 @@ async function index() {
   }
 }
 
-async function create(amount) {
+async function create(budgetFormData) {
   try {
     const res = await fetch(BASE_URL, {
       method: 'POST',
@@ -24,7 +24,7 @@ async function create(amount) {
         'Authorization': `Bearer ${tokenService.getToken()}`,
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ amount })
+      body: JSON.stringify(budgetFormData)
     })
     return res.json()
   } catch (error) {
