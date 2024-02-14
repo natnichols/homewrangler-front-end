@@ -1,21 +1,24 @@
-//css
+import { useState, useEffect } from 'react'
+
 import styles from './Budgets.module.css'
 
-// components
-import BudgetChange from '../../components/BudgetChange/BudgetChange';
-import BudgetAvail from '../../components/BudgetAvail/BudgetAvail';
 
-const Budgets = () => {
-  return (
+
+const Budgets = (props) => {
+  return (  
     <main className={styles.container}>
-      <h1>Budget component</h1>
+      <h1>total Budget Avaliable</h1>
 
-        <BudgetChange />
-        <BudgetAvail />
+      <h2>Add budget (Form)</h2>
 
-      <h4>end of Budget component</h4>
+      <h1>Budgets</h1>
+      {props.budgets.map(budget =>
+        <p key={budget._id}>budget added: ${budget.amount}
+          <button onClick={() => props.handleDeleteBudget(budget._id)}>Delete</button>
+        </p>
+      )}
     </main>
-  )
+  );
 }
 
 export default Budgets;

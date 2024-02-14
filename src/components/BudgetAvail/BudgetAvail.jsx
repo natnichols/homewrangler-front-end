@@ -1,14 +1,16 @@
 //css
 import styles from './BudgetAvail.module.css'
 
-const BudgetAvail = () => {
+const BudgetAvail = ({budgets}) => {
+  const totalAmount = budgets.reduce((total, budget) => total + budget.amount, 0);
   return (
     <main className={styles.container}>
-      <h3>BudgetAvail component</h3>
-
-      <h4>end of BudgetAvail component</h4>
+      <h2>Budget Avaliable: ${totalAmount}</h2>
+      
     </main>
   )
 }
 
-export default BudgetAvail;
+export default BudgetAvail
+
+
