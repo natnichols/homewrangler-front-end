@@ -33,7 +33,7 @@ const RepairDetails = (props) => {
           {repair.owner._id === props.user.profile &&
             <>
               <Link to={`/repairs/${repairId}/edit`} state={repair}><button>✏️</button></Link>
-              <button>🗑️</button>
+              <button onClick={() => props.handleDeleteRepair(repairId)}>🗑️</button>
             </>
           }
           </span>
