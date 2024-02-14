@@ -13,7 +13,7 @@ const NewRepairTask = (props) => {
 
   const handleSubmit = evt => {
     evt.preventDefault()
-    // placeholder line
+    props.handleAddRepairTask(formData)
     setFormData({ task: '' })
   }
 
@@ -26,7 +26,7 @@ const NewRepairTask = (props) => {
         placeholder="Add a Task"
         onChange={handleChange}
       />
-      <button type="submit">Create New Repair Task🛠️📝✨</button>
+      <button type="submit">🛠️✨</button>
     </form>
   )
 }
