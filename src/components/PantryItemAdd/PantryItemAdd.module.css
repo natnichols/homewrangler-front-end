@@ -1,8 +1,8 @@
-
+/* 
 .container {
   max-width: 500px;
 }
-.container input, textarea, select, button { 
+.container input, textarea, select { 
   width: 100%;
   padding: 14px;
   font-size: 14px;
@@ -11,25 +11,25 @@
   margin: 7px 0px 14px 0px;
   border: 1px solid var(--border);
   font-family: canada-type-gibson, sans-serif;
-}
+} */
 
 
-.container label {
+/* .container label {
   font-weight: 600;
   margin: 7px 0px 14px 0px;
-}
+} */
 
-.container button {
+/* .container button {
   color: white;
   font-weight: 600;
   margin: 21px 0px 21px 0px;
-  /* background: var(--primary); */
+  background: var(--primary);
   background-color: rgb(28, 173, 125);
-}
+} */
 
 
 
-input:focus, select:focus, textarea:focus {
+/* input:focus, select:focus, textarea:focus {
   outline: none;
   border: 1px solid var(--primary);
-}
+} */
