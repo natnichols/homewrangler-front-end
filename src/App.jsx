@@ -23,11 +23,14 @@ import Budgets from './pages/Budgets/Budgets'
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import RepairAdd from './components/RepairAdd/RepairAdd'
+import AddAmountForm from './components/AddAmountForm/AddAmountForm'
+import BudgetAvail from './components/BudgetAvail/BudgetAvail'
 
 // services
 import * as authService from './services/authService'
 import * as pantryService from './services/pantryService'
 import * as repairService from './services/repairService'
+import * as budgetService from './services/budgetService'
 
 // styles
 import './App.css'
@@ -36,6 +39,7 @@ function App() {
   const [user, setUser] = useState(authService.getUser())
   const [pantryItems, setPantryItems] = useState([])
   const [repairs, setRepairs] = useState([])
+  const [budgets, setBudgets] = useState([])
   const navigate = useNavigate()
 
   const handleLogout = () => {
@@ -48,10 +52,10 @@ function App() {
     setUser(authService.getUser())
   }
 
+// Pantry Functions
   useEffect( () => {
     const fetchFullPantry = async () => {
       const data = await pantryService.index()
-      // console.log(data)
       setPantryItems(data)
     }
     if (user) fetchFullPantry()
@@ -88,8 +92,7 @@ function App() {
     // console.log(user.profile.shoppingList)
   }
   
-
-
+// Repair Functions
   useEffect(() => {
     const fetchAllRepairs = async () => {
       const data = await repairService.index()
@@ -115,6 +118,27 @@ function App() {
     setRepairs(repairs.filter(repair => repair._id !== deletedRepair._id))
     navigate('/repairs')
   }
+  
+  // Budget Functions
+  useEffect (() => {
+    const fetchAllBudgets = async () => {
+      const data = await budgetService.index()
+      console.log('Budget data', data)
+      setBudgets(data)
+    }
+    if(user) fetchAllBudgets()
+  },[user])
+
+  const handleAddBudget = async (budgetFormData) => {
+    const newBudget = await budgetService.create(budgetFormData)
+    setBudgets([newBudget, ...budgets])
+    navigate('/budgets')
+  }
+
+  const handleDeleteBudget = async (budgetId) => {
+    const deleteBudget = await budgetService.deleteBudget(budgetId)
+    setBudgets(budgets.filter(b => b._id !== deleteBudget._id))
+    navigate('/budgets')
 
   return (
     <>
@@ -252,7 +276,9 @@ function App() {
           path="/budgets"
           element={
             <ProtectedRoute user={user}>
-              <Budgets />
+              <BudgetAvail budgets={budgets} />
+              <AddAmountForm handleAddBudget={handleAddBudget} />
+              <Budgets handleDeleteBudget={handleDeleteBudget} budgets={budgets}/>
             </ProtectedRoute>
           }
         />
