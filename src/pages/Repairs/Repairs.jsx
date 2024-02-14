@@ -31,7 +31,7 @@ const Repairs = (props) => {
       {props.repairs.map(repair => (
         <RepairCard key={repair._id} repair={repair} />
       ))}
-      <BudgetAvail />
+      {/* <BudgetAvail /> */}
     </main>
   )
 }
