@@ -81,6 +81,9 @@ a {
 button {
   display: inline-block;
 
+  margin: 2px;
+  padding: 6px;
+
   border: 2px solid #283618;
   border-radius: 5px;
   padding: 5px;

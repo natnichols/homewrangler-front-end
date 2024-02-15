@@ -10,13 +10,13 @@ const Landing = ({ user }) => {
       {user ? (
       <>
         <br></br>
-        {/* 'LOGGED-IN USER SHOULD SEE THIS' */}
-        <h2>howdy, {user ? user.name : 'pardner'}</h2>
+        {/* 'LOGGED-IN USER WILL SEE THIS' */}
+        <h2>Well howdy, {user ? user.name : 'pardner'}!</h2>
         <div>
           <img
             src='/src/assets/hw-logo-border-brown.png'
             alt="Logo."
-            style={{ width: '300px' }} 
+            style={{ width: '400px', maxWidth: '100%' }} 
           />
         </div>
         <NavLink to={`/shoppingList`}><button>Shopping List</button></NavLink>
