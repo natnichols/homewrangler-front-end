@@ -306,7 +306,7 @@ function App() {
           path="/budgets"
           element={
             <ProtectedRoute user={user}>
-              <BudgetAvail budgets={budgets} />
+              <BudgetAvail budgets={budgets} profile={profile}/>
               <AddAmountForm handleAddBudget={handleAddBudget} />
               <Budgets handleDeleteBudget={handleDeleteBudget} profile={profile} budgets={budgets}/>
               {/* <Budgets handleDeleteBudget={handleDeleteBudget} budgets={budgets.filter(budget => budget.owner._id === user.profile._id)} /> */}
