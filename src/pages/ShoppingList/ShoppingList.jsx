@@ -10,6 +10,7 @@ import styles from './ShoppingList.module.css'
 //components
 // import BudgetAvail from '../../components/BudgetAvail/BudgetAvail';
 import PantryCard from '../../components/PantryCard/PantryCard';
+import ShoppingListCard from '../../components/ShoppingListCard/ShoppingListCard';
 
 const ShoppingList = (props) => {
   // console.log('test props.user ', props.user);
@@ -32,7 +33,7 @@ const ShoppingList = (props) => {
         {props.pantryItems
           .filter(pantryItem => props.profile.shoppingList.includes(pantryItem._id))
           .map(pantryItem => 
-          <PantryCard
+          <ShoppingListCard
             key={pantryItem._id}
             pantryItem={pantryItem}
             handleAddToShoppingList={props.handleAddToShoppingList}
