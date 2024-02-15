@@ -16,6 +16,7 @@ const PantryList = (props) => {
     setShowItemAdd(!showItemAdd);
   };
 
+  // set this variable to use down below for mapping items - will show ONLY owner's items.
   const filteredPantryItems = props.pantryItems.filter(pantryItem => pantryItem.owner._id === props.profile._id);
 
   return (  
@@ -28,6 +29,7 @@ const PantryList = (props) => {
       {showItemAdd && <PantryItemAdd handlePantryItemAdd={props.handlePantryItemAdd} /> }
 
       <div className={`${styles.container} ${styles.listContainer}`}>
+        {/* using variable from above to map thru ONLY owner's items */}
         {filteredPantryItems.map(pantryItem => 
           <PantryCard
             key={pantryItem._id}

@@ -41,12 +41,12 @@ function App() {
   const [pantryItems, setPantryItems] = useState([])
   const [repairs, setRepairs] = useState([])
   const [budgets, setBudgets] = useState([])
-  // FOR USE WITH ADD&DEL from SHOPPING-LIST FUNCTIONS:
+  // next line - setting profile in state (initially for use with handleAdd & handleDel from shopping cart) - can pass "profile={profile}" down to any component now
   const [profile, setProfile] = useState([])
   const navigate = useNavigate()
 
 
-  // FOR USE WITH ADD&DEL from SHOPPING-LIST FUNCTIONS - populating profile for later
+  // to auto-update profile data in state if anything changes (initially for use with handleAdd & handleDel from shopping cart)
   useEffect(() => {
     const fetchProfile = async () => {
       try {
@@ -57,7 +57,7 @@ function App() {
       }
     }
     fetchProfile()
-  }, [user.profile])
+  }, [user])
   // console.log('test single profile: ', profile);
 
 
