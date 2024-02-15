@@ -87,7 +87,9 @@ const PantryItemAdd = (props) => {
         />
         Also add to Shopping List? (checkbox)
         <br/>
-        <button className={styles.button} type="submit">Add to Pantry</button>
+        <div style={{ width: 'fit-content' }}>
+          <button className={styles.button} type="submit">Add to Pantry</button>
+        </div>
       </form>
     </main>
   )

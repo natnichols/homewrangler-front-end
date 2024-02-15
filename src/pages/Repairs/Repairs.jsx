@@ -25,9 +25,11 @@ const Repairs = (props) => {
   return (
     <main className={styles.container}>
       <h1>List of Repairs</h1>
-      <button onClick={toggleAddRepairForm}>
-        {showAddRepair ? "Hide Add Form" : "Show Add Form"}
-      </button>
+      <div style={{ width: 'fit-content' }}>
+        <button onClick={toggleAddRepairForm}>
+          {showAddRepair ? "Hide Add Form" : "Show Add Form"}
+        </button>
+      </div>
       {showAddRepair && <RepairAdd handleAddRepair={props.handleAddRepair} /> }
       {filteredRepairs.map(repair => (
         <RepairCard 

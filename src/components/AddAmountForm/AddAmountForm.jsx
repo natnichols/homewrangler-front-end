@@ -31,7 +31,9 @@ const AddAmountForm = (props) => {
           value={formData.amount}
           onChange={handleChange}
         />
-        <button type="submit">Adjust Budget</button>
+        <div style={{ width: 'fit-content' }}>
+          <button type="submit">Adjust Budget</button>
+        </div>
       </form>
     </main>
   )

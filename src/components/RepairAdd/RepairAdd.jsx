@@ -67,7 +67,9 @@ const RepairAdd = (props) => {
           placeholder="Description"
           onChange={handleChange}
         />
-        <button type="submit">Add Repair 🔧✨</button>
+        <div style={{ width: 'fit-content' }}>
+          <button type="submit">Add Repair 🔧✨</button>
+        </div>
       </form>
     </main>
   )
