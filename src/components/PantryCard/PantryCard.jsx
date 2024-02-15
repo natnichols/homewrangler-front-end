@@ -13,9 +13,9 @@ const PantryCard = ({pantryItem, handleAddToShoppingList, handleDelFromShoppingL
             {pantryItem.name}
           </Link>
           &nbsp;&nbsp;
-          <Link href="#" onClick={() => handleAddToShoppingList(pantryItem._id)}>🛒➕</Link>
+          <Link href="#" title="add to shopping list" onClick={() => handleAddToShoppingList(pantryItem._id)}>🛒➕</Link>
           &nbsp;
-          <Link href="#" onClick={() => handleDelFromShoppingList(pantryItem._id)}>➖</Link>        
+          <Link href="#" title="remove pantry item" onClick={() => handleDelFromShoppingList(pantryItem._id)}>➖</Link>        
           &nbsp;&nbsp;
           { pantryItem.price ? ('$' + pantryItem.price + '\u00A0\u00A0') : ''}
           {/* { pantryItem.category ? (pantryItem.category + '\u00A0\u00A0') : ''} */}
