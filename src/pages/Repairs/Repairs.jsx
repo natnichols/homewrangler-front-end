@@ -16,7 +16,7 @@ import styles from './Repairs.module.css'
 const Repairs = (props) => {
   const [showAddRepair, setShowAddRepair] = useState(false)
 
-  // const filteredRepairs = props.repairs.filter(repair => repair.owner._id === props.profile._id)
+  const filteredRepairs = props.repairs.filter(repair => repair.owner._id === props.profile._id)
 
   const toggleAddRepairForm = () => {
     setShowAddRepair(!showAddRepair)
@@ -30,12 +30,15 @@ const Repairs = (props) => {
       </button>
       {showAddRepair && <RepairAdd handleAddRepair={props.handleAddRepair} /> }
       {/* use below for filtered list - buggy */}
-      {/* {filteredRepairs.map(repair => (
+      {filteredRepairs.map(repair => (
+        <RepairCard 
+          key={repair._id} 
+          repair={repair} 
+        />
+      ))}
+      {/* {props.repairs.map(repair => (
         <RepairCard key={repair._id} repair={repair} />
       ))} */}
-      {props.repairs.map(repair => (
-        <RepairCard key={repair._id} repair={repair} />
-      ))}
       {/* <BudgetAvail /> */}
     </main>
   )
