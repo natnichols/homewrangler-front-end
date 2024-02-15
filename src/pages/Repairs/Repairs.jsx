@@ -29,16 +29,12 @@ const Repairs = (props) => {
         {showAddRepair ? "Hide Add Form" : "Show Add Form"}
       </button>
       {showAddRepair && <RepairAdd handleAddRepair={props.handleAddRepair} /> }
-      {/* use below for filtered list - buggy */}
       {filteredRepairs.map(repair => (
         <RepairCard 
           key={repair._id} 
           repair={repair} 
         />
       ))}
-      {/* {props.repairs.map(repair => (
-        <RepairCard key={repair._id} repair={repair} />
-      ))} */}
       {/* <BudgetAvail /> */}
     </main>
   )
