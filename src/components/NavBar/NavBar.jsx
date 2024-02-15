@@ -17,11 +17,16 @@ const NavBar = ({ user, handleLogout }) => {
                 title='Profile'
                 to={`/profiles/profile`}
                 className={styles.link}
-              >🤠
+              >
+                <img
+                  src='src/assets/cowboy-hat-tp-bg-small.png'
+                  alt="Cowboy hat."
+                  style={{ width: '40px' }} 
+                />
               </NavLink>
             </div>
 
-            &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;
             <div className={styles.linkbox}>
               <NavLink
                 title='Shipping List'
@@ -31,7 +36,7 @@ const NavBar = ({ user, handleLogout }) => {
               </NavLink>
             </div>
 
-            &nbsp;
+            
             <div className={styles.linkbox}>
               <NavLink
                 title='Pantry'
@@ -43,7 +48,7 @@ const NavBar = ({ user, handleLogout }) => {
               </NavLink>
             </div>
 
-            &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;
             <div className={styles.linkbox}>
               <NavLink
                 title='Repair'
@@ -52,7 +57,7 @@ const NavBar = ({ user, handleLogout }) => {
               >🔧
               </NavLink>
             </div>
-            &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;
             <div className={styles.linkbox}>
               <NavLink
                 title='Budget'
@@ -61,7 +66,7 @@ const NavBar = ({ user, handleLogout }) => {
               >💰
               </NavLink>
             </div>
-            &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;
             
             <NavLink
               to=""

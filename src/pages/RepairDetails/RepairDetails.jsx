@@ -61,9 +61,11 @@ const RepairDetails = (props) => {
       </article>
       <section>
         <h1>Repair Tasks</h1>
-        <button onClick={toggleAddRepairTask}>
-          {showAddRepairTask ? "Hide Add Repair Task" : "Show Add Repair Task" }
-        </button>
+        <div style={{ width: 'fit-content' }}>
+          <button onClick={toggleAddRepairTask}>
+            {showAddRepairTask ? "Hide Add Repair Task" : "Show Add Repair Task" }
+          </button>
+        </div>
         {showAddRepairTask && <NewRepairTask 
           handleAddRepairTask={handleAddRepairTask} 
         />}

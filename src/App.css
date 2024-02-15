@@ -5,7 +5,7 @@
 }
 
 html{
-
+  /* width: 50%; */
 }
 
 body {
@@ -36,6 +36,24 @@ body {
   font-size: 16px;
 }
 
+.position-handle-nav{
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  z-index: 1000;
+}
+.position-handle-remainder{
+  /* make sure to check this value against height in NavBar.css */
+  margin-top: 90px;
+  max-width: 600px;
+}
+
+
+h1, h2, h3, h4 {
+  margin: 0px;
+}
 h1 {
   font-size: 1.8em;
 }
@@ -49,6 +67,10 @@ h4 {
   font-size: 1.2em;
 }
 
+p {
+  margin: 0px;
+}
+
 a {
   /* color: #BC6C25; */
   color: #606C38;
@@ -57,9 +79,11 @@ a {
   font-weight: 700;
 }
 
-
 button {
   display: inline-block;
+
+  margin: 2px;
+  padding: 6px;
 
   border: 2px solid #283618;
   border-radius: 5px;

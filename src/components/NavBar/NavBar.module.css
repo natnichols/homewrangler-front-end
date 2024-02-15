@@ -1,26 +1,8 @@
-/* .navwrap {
-  display: flex;
-  justify-content: space-evenly;
-
-  width: 100%;
-  margin: 5px;
-  display: flex;
-  width: 800px;
-  background-color: #28251c;
-} */
-
 .navwrapouter {
-  /* display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-evenly; */
+  /* NOTE: moved position & size props up to app.css to handle all other elements disappearing under nav bar: */
 
-  /* align-items: center; */
-
-  width: 100vw;
   margin: 0px;
-  padding: 4px 0px 4px 0px;
-
+  /* padding: 4px 0px 4px 0px; */
   
   background-color: #DDA15E;
   font-size: 2em;
@@ -32,9 +14,11 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-evenly;
-  width: 500px;
-
-  margin: auto;
+  max-width: 560px;
+  height: 70px;
+  
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -42,15 +26,18 @@
   text-decoration: none;
   margin: 0px;
   padding: 2px;
-  border: 1px solid  #7f7455;
+  border: 2px solid  #7f7455;
   border-radius: 5px;
-  /* background-color: aqua; */
+  background-color: #BC6C25;
+}
+.linkbox:hover {
+  background-color: #86984a;
 }
 .linkbox:active {
   text-decoration: none;
   margin: 0px;
   /* border: 2px solid black; */
-  background-color: #5c543a;
+  background-color: #283618;
 }
 
 .link {
