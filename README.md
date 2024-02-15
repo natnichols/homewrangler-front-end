@@ -25,6 +25,7 @@ Do you have regular items in your pantry that you're tired of rewriting on your 
 ## Attributions 🎉
 * **Decoupled MERN Stack with JWT Auth Template** is from [GA's SEI Github (Private Repository)](https://github.com/SEI-Remote/decoupled-mern-jwt-auth-template-front-end "SEI-Remote Decoupled MERN Stack with JWT Auth Template - Front End GitHub Repo")
 <!--! * ai art for logo -->
+<!-- color palette generator -->
 
 ## Technologies used 🧰
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
