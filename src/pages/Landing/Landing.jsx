@@ -14,9 +14,9 @@ const Landing = ({ user }) => {
         <h2>howdy, {user ? user.name : 'pardner'}</h2>
         <div>
           <img
-            src='/favicon/favicon-cowboy-hat.png'
-            alt="Temporary."
-            style={{ width: '200px' }} 
+            src='/src/assets/hw-logo-border-brown.png'
+            alt="Logo."
+            style={{ width: '300px' }} 
           />
         </div>
         <NavLink to={`/shoppingList`}><button>Shopping List</button></NavLink>
