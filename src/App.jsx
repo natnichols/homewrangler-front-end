@@ -220,7 +220,7 @@ function App() {
                 handlePantryItemAdd={handlePantryItemAdd}
                 handleAddToShoppingList={handleAddToShoppingList}
                 handleDelFromShoppingList={handleDelFromShoppingList}
-                />
+              />
             </ProtectedRoute>
           }
         />
@@ -265,7 +265,12 @@ function App() {
           path="/repairs"
           element={
             <ProtectedRoute user={user}>
-              <Repairs handleAddRepair={handleAddRepair} repairs={repairs} />
+              <Repairs 
+                user={user}
+                profile={profile}
+                repairs={repairs} 
+                handleAddRepair={handleAddRepair} 
+              />
             </ProtectedRoute>
           }
         />
