@@ -8,10 +8,10 @@ import * as repairService from '../../services/repairService'
 // css
 import styles from './EditRepairTaskCard.module.css'
 
-const EditRepairTaskCard = ({ repairId, repairTaskId }) => {
-  // const navigate = useNavigate()
+const EditRepairTaskCard = () => {
+  const navigate = useNavigate()
   const { state } = useLocation()
-  // const { repairId, repairTaskId } = useParams()
+  const { repairId, repairTaskId } = useParams()
   const [formData, setFormData] = useState(state)
 
   const handleChange = ({ target }) => {
@@ -22,7 +22,7 @@ const EditRepairTaskCard = ({ repairId, repairTaskId }) => {
   const handleSubmit = async evt => {
     evt.preventDefault()
     await repairService.updateRepairTask(repairId, repairTaskId, formData)
-    // navigate(`/repairs/${repairId}`)
+    navigate(`/repairs/${repairId}`)
   }
 
 
