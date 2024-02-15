@@ -28,28 +28,28 @@ const PantryItemAdd = (props) => {
 
   return (  
     <main className={styles.container}>
-      <form onSubmit={handleSubmit} >
-        <label htmlFor="name-input">Name:</label>
+      <form className={styles.form} onSubmit={handleSubmit} >
+        {/* <label htmlFor="name-input">Name:</label> */}
         <input 
           required
           type="text" 
           name="name"
           id="name-input"
-          placeholder="Name"
+          placeholder="Item name"
           value={formData.name}
           onChange={handleChange}
         />
-        <label htmlFor="amount-input">Amount:</label>
+        {/* <label htmlFor="amount-input">Amount:</label> */}
         <input 
           // required
           type="text" 
           name="amount"
           id="amount-input"
-          placeholder="amount"
+          placeholder="Quantity"
           value={formData.amount}
           onChange={handleChange}
         />
-        <label htmlFor="category-input">Category:</label>
+        {/* <label htmlFor="category-input">Category:</label> */}
         <select 
           // required 
           name="category"
@@ -65,17 +65,18 @@ const PantryItemAdd = (props) => {
           <option value="Household">Household</option>
           <option value="Repairs">Repairs</option>
         </select>
-        <label htmlFor="price-input">Price:</label>
+        {/* <label htmlFor="price-input">Price:</label> */}
         <input 
           // required
           type="text" 
           name="price"
           id="price-input"
-          placeholder="price"
+          placeholder="approx cost"
           value={formData.price}
           onChange={handleChange}
         />
-        <label htmlFor="expires-input">Expires?</label>
+        {/* <label htmlFor="expires-input">Expires?</label> */}
+        Expires?
         <input
           // required
           type="checkbox"
@@ -84,7 +85,9 @@ const PantryItemAdd = (props) => {
           checked={formData.expires}
           onChange={handleChange}
         />
-        <button type="submit">Submit</button>
+        Also add to Shopping List? (checkbox)
+        <br/>
+        <button className={styles.button} type="submit">Add to Pantry</button>
       </form>
     </main>
   )
