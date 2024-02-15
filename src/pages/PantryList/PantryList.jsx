@@ -24,7 +24,7 @@ const PantryList = (props) => {
       <h1>My Pantry</h1>
 
       <button onClick={toggleAddForm}>
-        {showItemAdd ? "Hide Add Form" : "Show Add Form"}
+        {showItemAdd ? "Collapse This Form" : "Add New Item(s)"}
       </button>
       {showItemAdd && <PantryItemAdd handlePantryItemAdd={props.handlePantryItemAdd} /> }
 

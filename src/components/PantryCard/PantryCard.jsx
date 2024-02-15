@@ -17,10 +17,11 @@ const PantryCard = ({pantryItem, handleAddToShoppingList, handleDelFromShoppingL
           &nbsp;
           <Link href="#" onClick={() => handleDelFromShoppingList(pantryItem._id)}>➖</Link>        
           &nbsp;&nbsp;
-          ${pantryItem.price} - {pantryItem.category} - qty: {pantryItem.amount}
-          &nbsp;
-          { pantryItem.expires ? (' *Perishable!*') : "" }
-          <br/>
+          { pantryItem.price ? ('$' + pantryItem.price + '\u00A0\u00A0') : ''}
+          {/* { pantryItem.category ? (pantryItem.category + '\u00A0\u00A0') : ''} */}
+          { pantryItem.amount ? ('qty:' + pantryItem.amount + '\u00A0\u00A0') : ''}
+          { pantryItem.expires ? ('⚠️Perishable!⚠️') : ''}
+
         </p>
         {/* <button onClick={() => handleAddToShoppingList(pantryItem._id)}>🛒➕</button>
         <button onClick={() => handleDelFromShoppingList(pantryItem._id)}>🛒➖</button> */}
