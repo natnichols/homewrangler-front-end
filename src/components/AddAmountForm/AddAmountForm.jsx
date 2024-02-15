@@ -27,11 +27,11 @@ const AddAmountForm = (props) => {
           type="number"
           name="amount"
           id="amount-input"
-          placeholder="10"
+          placeholder="Input + or - number eg. 10 or -10"
           value={formData.amount}
           onChange={handleChange}
         />
-        <button type="submit">Add Budget</button>
+        <button type="submit">Adjust Budget</button>
       </form>
     </main>
   )
