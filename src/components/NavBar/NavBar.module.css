@@ -9,20 +9,32 @@
   background-color: #28251c;
 } */
 
-.testname {
-  display: flex;
+.navwrapouter {
+  /* display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-evenly;
+  justify-content: space-evenly; */
 
-  align-items: center;
+  /* align-items: center; */
 
-  max-width: 500px;
+  width: 100vw;
   margin: 0px;
-  padding: 4px 12px;
+  padding: 4px 0px 4px 0px;
 
-  background-color: #9f9168;
+  
+  background-color: #DDA15E;
   font-size: 2em;
+}
+
+.navwrapinner{
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 500px;
+
+  margin: auto;
 }
 
 
