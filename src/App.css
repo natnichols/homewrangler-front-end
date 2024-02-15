@@ -16,6 +16,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   
+  /* width: 100%; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,12 +25,14 @@ body {
   margin: 0;
   /* min-height: 100vh; */
   
-  /* background-color: #c2b280; */
-  background-color: #edd087;
+
+  background-color: #FEFAE0;
+  /* background-color: #DDA15E; */
   font-family: Verdana, system-ui, Arial, sans-serif;
   /* maybe Gill Sans for tight-formatted lists:
   font-family: Gill Sans; */
-  color: rgba(81, 81, 81, 0.87);
+  color: #525252;
+  /* color: #BC6C25; */
   font-size: 16px;
 }
 
@@ -46,28 +49,38 @@ h4 {
   font-size: 1.2em;
 }
 
-a,
-a:visited {
-  color: #6c738f;
+a {
+  /* color: #BC6C25; */
+  color: #606C38;
+  /* text-decoration: underline; */
+  /* font-weight: 500; */
+  font-weight: 700;
 }
 
 
 button {
   display: inline-block;
-  background: white;
-  text-decoration: none;
-  color: #1b1b1b;
-  font-size: 16px;
-  padding: 5px;
-  border: 2px solid #9f9168;
+
+  border: 2px solid #283618;
   border-radius: 5px;
+  padding: 5px;
+
+  /* background: #606C38; */
+  background: #BC6C25;
+
+  color: #FEFAE0;
+  font-size: 16px;
+  text-decoration: none;
+
   cursor: pointer;
+  /* margin: auto; */
 }
 button:hover {
-  background: #cacaca;
+  background: #86984a;
 }
 button:active {
-  background: #525252;
+  background: #283618;
+  border: 2px solid #606C38;
   color: #ffffff;
 }
 
