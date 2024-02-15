@@ -5,7 +5,7 @@
 }
 
 html{
-
+  /* width: 50%; */
 }
 
 body {
@@ -35,6 +35,21 @@ body {
   /* color: #BC6C25; */
   font-size: 16px;
 }
+
+.position-handle-nav{
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  z-index: 1000;
+}
+.position-handle-remainder{
+  /* make sure to check this value against height in NavBar.css */
+  margin-top: 70px;
+}
+
+
 
 h1 {
   font-size: 1.8em;

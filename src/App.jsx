@@ -165,7 +165,11 @@ function App() {
 
   return (
     <>
-      <NavBar user={user} handleLogout={handleLogout} />
+      <div className='position-handle-nav'>
+        <NavBar user={user} handleLogout={handleLogout} />
+      </div>
+
+      <div className='position-handle-remainder'>
       <Routes>
         {/* LANDING ROUTES */}
         <Route path="/" element={<Landing user={user} />} />
@@ -320,8 +324,10 @@ function App() {
             </ProtectedRoute>
           }
         />
-        
       </Routes>
+
+      {/* end of giant position-handle-remainder wrapper: */}
+      </div>
     </>
   )
 }

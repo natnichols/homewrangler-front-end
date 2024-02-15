@@ -21,7 +21,7 @@ const NavBar = ({ user, handleLogout }) => {
               </NavLink>
             </div>
 
-            &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;
             <div className={styles.linkbox}>
               <NavLink
                 title='Shipping List'
@@ -31,7 +31,7 @@ const NavBar = ({ user, handleLogout }) => {
               </NavLink>
             </div>
 
-            &nbsp;
+            
             <div className={styles.linkbox}>
               <NavLink
                 title='Pantry'
@@ -43,7 +43,7 @@ const NavBar = ({ user, handleLogout }) => {
               </NavLink>
             </div>
 
-            &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;
             <div className={styles.linkbox}>
               <NavLink
                 title='Repair'
@@ -52,7 +52,7 @@ const NavBar = ({ user, handleLogout }) => {
               >🔧
               </NavLink>
             </div>
-            &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;
             <div className={styles.linkbox}>
               <NavLink
                 title='Budget'
@@ -61,7 +61,7 @@ const NavBar = ({ user, handleLogout }) => {
               >💰
               </NavLink>
             </div>
-            &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;
             
             <NavLink
               to=""

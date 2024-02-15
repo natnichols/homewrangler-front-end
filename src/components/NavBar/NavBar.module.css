@@ -1,23 +1,12 @@
-/* .navwrap {
-  display: flex;
-  justify-content: space-evenly;
-
-  width: 100%;
-  margin: 5px;
-  display: flex;
-  width: 800px;
-  background-color: #28251c;
-} */
-
 .navwrapouter {
-  /* display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-evenly; */
+  /* moved up to app.css to handle all other elements disappearing under nav bar: */
+  /* position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  z-index: 1000; */
 
-  /* align-items: center; */
-
-  width: 100vw;
   margin: 0px;
   padding: 4px 0px 4px 0px;
 
@@ -32,9 +21,12 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-evenly;
-  width: 500px;
+  max-width: 560px;
+  height: 70px;
+  
 
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
