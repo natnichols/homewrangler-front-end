@@ -24,6 +24,7 @@ Do you have regular items in your pantry that you're tired of rewriting on your 
 
 ## Attributions 🎉
 * **Decoupled MERN Stack with JWT Auth Template** is from [GA's SEI Github (Private Repository)](https://github.com/SEI-Remote/decoupled-mern-jwt-auth-template-front-end "SEI-Remote Decoupled MERN Stack with JWT Auth Template - Front End GitHub Repo")
+<!--! * ai art for logo -->
 
 ## Technologies used 🧰
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
@@ -37,6 +38,9 @@ Do you have regular items in your pantry that you're tired of rewriting on your 
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)
 <!-- [![Netlify Status](https://api.netlify.com/api/v1/badges/b63fcb9f-8d85-417b-b49e-8514fce38d4b/deploy-status)](https://app.netlify.com/sites/homewrangler/deploys) -->
+<!-- React -->
+<!-- Fly.io -->
+<!-- auth? JWT? -->
 <!--! *** add REACT + any other necessary badges ^^^ -->
 
 ### Please check out [homewrangler-back-end](https://github.com/natnichols/homewrangler-back-end "homewrangler-back-end GitHub Repo") to view the Back-End Repository for HomeWrangler!
