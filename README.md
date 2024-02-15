@@ -42,6 +42,7 @@ Do you have regular items in your pantry that you're tired of rewriting on your 
 ### [View our Planning Materials on Trello](https://trello.com/b/07MzUQgw/homewrangler%F0%9F%A4%A0 "HomeWrangler Trello Board") 🤠📋
 
 ## Ice Box 🧊
+- [ ] Dark Mode
 - [ ] Edit profile functionality
 - [ ] Add categories to budgets to allow users to set up multiple budgets for different categories (eg. Groceries, Bills, Vacation)
 - [ ] Add Supplies to Repairs, allowing the user to list supplies they want to add to their shopping list
