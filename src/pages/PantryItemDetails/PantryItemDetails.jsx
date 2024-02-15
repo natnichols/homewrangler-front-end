@@ -23,11 +23,11 @@ const PantryItemDetails = (props) => {
 
   return (  
     <main className={styles.container}>
-      <ul>Details
-        <li>Name: {pantryItem.name} </li>
-        <li>Amount: {pantryItem.amount}</li>
-        <li>Category: {pantryItem.category}</li>
+      <ul>{pantryItem.name}
+        {/* <li>Name: {pantryItem.name} </li> */}
         <li>Price: {pantryItem.price}</li>
+        <li>Category: {pantryItem.category}</li>
+        <li>Qty: {pantryItem.amount}</li>
         
         {pantryItem.owner && pantryItem.owner._id === props.user.profile && (
           <>

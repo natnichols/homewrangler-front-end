@@ -1,4 +1,4 @@
-.container {
+/* .container {
   height: 100%;
   display: flex;
   overflow: hidden;
@@ -44,4 +44,4 @@
 input:focus, select:focus {
   outline: none;
   border: 1px solid var(--primary);
-}
+} */
