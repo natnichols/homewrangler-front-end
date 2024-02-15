@@ -57,7 +57,7 @@ function App() {
       }
     }
     fetchProfile()
-  }, [user.profile])
+  }, [user])
   // console.log('test single profile: ', profile);
 
 
