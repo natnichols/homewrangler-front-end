@@ -47,7 +47,11 @@ const Profile = ({ user }) => {
         <NavLink to="/auth/change-password">
           <button>change password</button>
         </NavLink>
-        <button>edit profile (not active - stretch)</button>
+        
+        {/* ** ICE BOX ** */}
+        {/* <div style={{ width: 'fit-content' }}>
+          <button>edit profile (not active - stretch)</button>
+        </div> */}
 
       <h4>end of Profile component</h4>
     </main>
