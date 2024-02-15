@@ -10,7 +10,8 @@ const BudgetAvail = (props) => {
   
   const filteredBudgets = props.budgets.filter(budget => budget.owner._id === props.profile._id)
 
-  const totalAmount = filteredBudgets.reduce((total, budget) => total + budget.amount, 0);
+  const totalAmount = filteredBudgets.reduce((total, budget) => total + budget.amount, 0)
+  
   return (
     <main className={styles.container}>
       <h2>Budget Avaliable: ${totalAmount}</h2>
