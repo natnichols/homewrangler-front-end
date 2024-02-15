@@ -50,8 +50,10 @@ function App() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const profileData = await profileService.getOneProfile(user.profile);
-        setProfile(profileData);
+        if (user) {
+            const profileData = await profileService.getOneProfile(user.profile);
+            setProfile(profileData);
+          }
       } catch (error) {
         console.error('Error fetching profile:', error);
       }
