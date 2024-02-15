@@ -23,9 +23,11 @@ const PantryList = (props) => {
     <main>
       <h1>My Pantry</h1>
 
-      <button onClick={toggleAddForm}>
-        {showItemAdd ? "Collapse This Form" : "Add New Item(s)"}
-      </button>
+      <div style={{ width: 'fit-content' }}>
+        <button onClick={toggleAddForm}>
+          {showItemAdd ? "Collapse This Form" : "Add New Item(s)"}
+        </button>
+      </div>
       {showItemAdd && <PantryItemAdd handlePantryItemAdd={props.handlePantryItemAdd} /> }
 
       <div className={`${styles.container} ${styles.listContainer}`}>

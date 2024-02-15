@@ -31,10 +31,14 @@ const PantryItemDetails = (props) => {
         
         {pantryItem.owner && pantryItem.owner._id === props.user.profile && (
           <>
-            <Link to={`/pantryItems/${pantryItem._id}/edit`} state={pantryItem}>
-              <button>Edit</button>
-            </Link>
-            <button onClick={() => props.handleDeletePantryItem(pantryItemId)}>Delete</button>
+            <div style={{ width: 'fit-content' }}>
+              <Link to={`/pantryItems/${pantryItem._id}/edit`} state={pantryItem}>
+                <button>Edit</button>
+              </Link>
+            </div>
+            <div style={{ width: 'fit-content' }}>
+              <button onClick={() => props.handleDeletePantryItem(pantryItemId)}>Delete</button>
+            </div>
           </>
         )}
       </ul>

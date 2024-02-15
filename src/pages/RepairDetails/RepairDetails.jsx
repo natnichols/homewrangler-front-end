@@ -51,8 +51,8 @@ const RepairDetails = (props) => {
           <span>
           {repair.owner._id === props.user.profile &&
             <>
-              <Link to={`/repairs/${repairId}/edit`} state={repair}><button>✏️</button></Link>
-              <button onClick={() => props.handleDeleteRepair(repairId)}>🗑️</button>
+              <Link to={`/repairs/${repairId}/edit`} state={repair}><button title="edit repair item" >✏️</button></Link>
+              <button title="remove repair item" onClick={() => props.handleDeleteRepair(repairId)}>🗑️</button>
             </>
           }
           </span>
@@ -61,9 +61,11 @@ const RepairDetails = (props) => {
       </article>
       <section>
         <h1>Repair Tasks</h1>
-        <button onClick={toggleAddRepairTask}>
-          {showAddRepairTask ? "Hide Add Repair Task" : "Show Add Repair Task" }
-        </button>
+        <div style={{ width: 'fit-content' }}>
+          <button onClick={toggleAddRepairTask}>
+            {showAddRepairTask ? "Hide Add Repair Task" : "Show Add Repair Task" }
+          </button>
+        </div>
         {showAddRepairTask && <NewRepairTask 
           handleAddRepairTask={handleAddRepairTask} 
         />}

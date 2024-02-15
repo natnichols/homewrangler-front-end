@@ -78,7 +78,9 @@ const EditPantryItem = (props) => {
           checked={formData.expires}
           onChange={handleChange}
         />
-        <button type="submit">Update</button>
+        <div style={{ width: 'fit-content' }}>
+          <button type="submit">Update</button>
+        </div>
       </form>
     </main>
   )

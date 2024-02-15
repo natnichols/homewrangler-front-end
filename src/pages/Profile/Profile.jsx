@@ -34,12 +34,14 @@ const Profile = ({ user }) => {
 
   return (
     <main className={styles.container}>
-      <h1>{profile.name}'s Profile</h1>
+      <h1>HomeWrangler</h1>
+      <br></br>
+      <h4>Cowpoke info:</h4>
         <p>
           <img
             src={profile.photo}
             alt="No profile photo! But that's ok. You look great."
-            style={{ width: '300px' }}
+            style={{ width: '400px', maxWidth: '100%' }}
           />
         </p>
         <p>Name: {profile.name}</p>
@@ -47,9 +49,19 @@ const Profile = ({ user }) => {
         <NavLink to="/auth/change-password">
           <button>change password</button>
         </NavLink>
-        <button>edit profile (not active - stretch)</button>
-
-      <h4>end of Profile component</h4>
+        
+        {/* ** ICE BOX ** */}
+        {/* <div style={{ width: 'fit-content' }}>
+          <button>edit profile (not active - stretch)</button>
+        </div> */}
+      <br></br>
+      <h4>Gather 'round the campfire:</h4>
+      <p>HomeWrangler was created to make daily household tasks simpler to keep track of. (more info)</p>
+      <br></br>
+      <h4>carrier pigeon:</h4>
+      <p>Nat: email ( at ) email.com</p>
+      <p>Shawn: email ( at ) email.com</p>
+      <p>Rich: rbozek ( at ) gmail.com</p>
     </main>
   )
 }

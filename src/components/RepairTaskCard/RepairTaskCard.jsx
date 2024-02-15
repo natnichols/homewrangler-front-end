@@ -21,13 +21,13 @@ const RepairTaskCard = ({ repairTask, repairId, user, handleDeleteRepairTask }) 
         <span>
           {repairTask.owner._id === user.profile &&
             <>
-              <Link to={`/repairs/${repairId}/repairTasks/${repairTask._id}`} state={repairTask}>
+              <Link title='edit repair task' to={`/repairs/${repairId}/repairTasks/${repairTask._id}`} state={repairTask}>
                 ✏️
               </Link>
               {/* <button onClick={toggleEditRepairTask}>
                 {showEditRepairTask ? "" : "📝"}
               </button> */}
-              <button onClick={() => handleDeleteRepairTask(repairId, repairTask._id)}>
+              <button title="remove repair task" onClick={() => handleDeleteRepairTask(repairId, repairTask._id)}>
                 🗑️
               </button>
             </>
