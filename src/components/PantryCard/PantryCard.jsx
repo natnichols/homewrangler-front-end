@@ -8,19 +8,22 @@ const PantryCard = ({pantryItem, handleAddToShoppingList, handleDelFromShoppingL
   return (  
     <main className={styles.container}>
       <div>
-        <span>
+        <p>
           <Link to={`/pantryItems/${pantryItem._id}`}>
-            <h1>{pantryItem.name}</h1>
+            {pantryItem.name}
           </Link>
-        </span>
-        <h4>Amount: {pantryItem.amount}</h4>
-        <h4>Category: {pantryItem.category}</h4>
-        <h4>price: {pantryItem.price}</h4>
-
-        { pantryItem.expires ? (<h4>This item will expire!</h4>) : "" }
-        
-        <button onClick={() => handleAddToShoppingList(pantryItem._id)}>Add to Shopping List</button>
-        <button onClick={() => handleDelFromShoppingList(pantryItem._id)}>Remove from Shopping List</button>
+          &nbsp;&nbsp;
+          <Link href="#" onClick={() => handleAddToShoppingList(pantryItem._id)}>🛒➕</Link>
+          &nbsp;
+          <Link href="#" onClick={() => handleDelFromShoppingList(pantryItem._id)}>➖</Link>        
+          &nbsp;&nbsp;
+          ${pantryItem.price} - {pantryItem.category} - qty: {pantryItem.amount}
+          &nbsp;
+          { pantryItem.expires ? (' *Perishable!*') : "" }
+          <br/>
+        </p>
+        {/* <button onClick={() => handleAddToShoppingList(pantryItem._id)}>🛒➕</button>
+        <button onClick={() => handleDelFromShoppingList(pantryItem._id)}>🛒➖</button> */}
 
       </div>
     </main>
