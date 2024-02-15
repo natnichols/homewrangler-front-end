@@ -50,8 +50,10 @@ function App() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const profileData = await profileService.getOneProfile(user.profile);
-        setProfile(profileData);
+        if (user) {
+            const profileData = await profileService.getOneProfile(user.profile);
+            setProfile(profileData);
+          }
       } catch (error) {
         console.error('Error fetching profile:', error);
       }
@@ -306,9 +308,10 @@ function App() {
           path="/budgets"
           element={
             <ProtectedRoute user={user}>
-              <BudgetAvail budgets={budgets} />
+              <BudgetAvail budgets={budgets} profile={profile}/>
               <AddAmountForm handleAddBudget={handleAddBudget} />
-              <Budgets handleDeleteBudget={handleDeleteBudget} budgets={budgets}/>
+              <Budgets handleDeleteBudget={handleDeleteBudget} profile={profile} budgets={budgets}/>
+              {/* <Budgets handleDeleteBudget={handleDeleteBudget} budgets={budgets.filter(budget => budget.owner._id === user.profile._id)} /> */}
             </ProtectedRoute>
           }
         />
