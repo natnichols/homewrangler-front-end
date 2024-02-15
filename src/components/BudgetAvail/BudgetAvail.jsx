@@ -25,14 +25,15 @@ export default BudgetAvail
 // import styles from './BudgetAvail.module.css'
 
 
-// const BudgetAvail = ({budgets}) => {
+// const BudgetAvail = (props) => {
 //   // Check if budgets is defined before using reduce
-//   if (!budgets || budgets.length === 0) {
+//   if (!props.budgets || props.budgets.length === 0) {
 //     return <div>No budgets available</div>
 //   }
   
+//   const filteredBudgets = props.budgets.filter(budget => budget.owner._id === props.profile._id)
 
-//   const totalAmount = budgets.reduce((total, budget) => total + budget.amount, 0);
+//   const totalAmount = filteredBudgets.reduce((total, budget) => total + budget.amount, 0);
 //   return (
 //     <main className={styles.container}>
 //       <h2>Budget Avaliable: ${totalAmount}</h2>
