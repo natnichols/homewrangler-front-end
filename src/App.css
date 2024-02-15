@@ -4,7 +4,11 @@
   box-sizing: inherit;
 }
 
-html, body {
+html{
+
+}
+
+body {
   box-sizing: border-box;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,15 +17,15 @@ html, body {
   -webkit-text-size-adjust: 100%;
   
   display: flex;
-  /* align-items: center; */
+  align-items: center;
   justify-content: center;
-  /* flex-direction: column; */
+  flex-direction: column;
   
   margin: 0;
-  min-height: 100vh;
-  max-width: 740px;
+  /* min-height: 100vh; */
   
-  background-color: #c2b280;
+  /* background-color: #c2b280; */
+  background-color: #edd087;
   font-family: Verdana, system-ui, Arial, sans-serif;
   /* maybe Gill Sans for tight-formatted lists:
   font-family: Gill Sans; */
@@ -38,13 +42,13 @@ h2 {
 h3 {
   font-size: 1.4em;
 }
-h3 {
+h4 {
   font-size: 1.2em;
 }
 
 a,
 a:visited {
-  color: #ff4f1f
+  color: #6c738f;
 }
 
 
