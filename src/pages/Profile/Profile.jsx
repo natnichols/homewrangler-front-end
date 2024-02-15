@@ -34,7 +34,9 @@ const Profile = ({ user }) => {
 
   return (
     <main className={styles.container}>
-      <h1>The Wrangler</h1>
+      <h1>HomeWrangler</h1>
+      <br></br>
+      <h4>Cowpoke info:</h4>
         <p>
           <img
             src={profile.photo}
@@ -52,13 +54,14 @@ const Profile = ({ user }) => {
         {/* <div style={{ width: 'fit-content' }}>
           <button>edit profile (not active - stretch)</button>
         </div> */}
-
-      <h4>about HomeWrangler:</h4>
-      <p>info or description?</p>
-      <h4>contact:</h4>
+      <br></br>
+      <h4>Gather 'round the campfire:</h4>
+      <p>HomeWrangler was created to make daily household tasks simpler to keep track of. (more info)</p>
+      <br></br>
+      <h4>carrier pigeon:</h4>
       <p>Nat: email ( at ) email.com</p>
       <p>Shawn: email ( at ) email.com</p>
-      <p>Rich: email ( at ) email.com</p>
+      <p>Rich: rbozek ( at ) gmail.com</p>
     </main>
   )
 }

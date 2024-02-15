@@ -23,7 +23,6 @@
   max-width: 560px;
   height: 70px;
   
-
   margin-left: auto;
   margin-right: auto;
 }
@@ -33,9 +32,12 @@
   text-decoration: none;
   margin: 0px;
   padding: 2px;
-  border: 1px solid  #7f7455;
+  border: 2px dashed  #7f7455;
   border-radius: 5px;
   /* background-color: aqua; */
+}
+.linkbox:hover {
+  
 }
 .linkbox:active {
   text-decoration: none;
