@@ -34,7 +34,8 @@ const RepairAdd = (props) => {
           placeholder="Name"
           onChange={handleChange}
         />
-        <label htmlFor="priority-input">Priority</label>
+
+        {/* <label htmlFor="priority-input">Priority</label>
         <input 
           type="text"
           name="priority"
@@ -42,7 +43,21 @@ const RepairAdd = (props) => {
           value={formData.priority}
           placeholder="Priority"
           onChange={handleChange}
-        />
+        /> */}
+        <label htmlFor="priority-input">Priority:</label>
+        <select 
+          // required 
+          name="priority"
+          id="priority-input"
+          value={formData.priority}
+          onChange={handleChange}
+        >
+          <option value="!" title="Low Priority" >!</option>
+          <option value="!!" title="Mid Priority" >!!</option>
+          <option value="!!!" title="High Priority" >!!!</option>
+          
+        </select>
+
         <label htmlFor="description-input">Description</label>
         <input 
           type="text" 
