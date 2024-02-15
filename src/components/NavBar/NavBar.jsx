@@ -21,7 +21,7 @@ const NavBar = ({ user, handleLogout }) => {
                 <img
                   src='src/assets/cowboy-hat-tp-bg-small.png'
                   alt="Cowboy hat."
-                  style={{ width: '40px', maxWidth: '100%' }} 
+                  style={{ width: '40px' }} 
                 />
               </NavLink>
             </div>

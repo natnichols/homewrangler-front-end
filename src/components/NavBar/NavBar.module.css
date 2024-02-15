@@ -1,14 +1,8 @@
 .navwrapouter {
-  /* moved up to app.css to handle all other elements disappearing under nav bar: */
-  /* position: fixed; 
-  top: 0;
-  left: 0;
-  width: 100%;
-  max-width: 100%;
-  z-index: 1000; */
+  /* NOTE: moved position & size props up to app.css to handle all other elements disappearing under nav bar: */
 
   margin: 0px;
-  padding: 4px 0px 4px 0px;
+  /* padding: 4px 0px 4px 0px; */
   
   background-color: #DDA15E;
   font-size: 2em;
@@ -32,18 +26,18 @@
   text-decoration: none;
   margin: 0px;
   padding: 2px;
-  border: 2px dashed  #7f7455;
+  border: 2px solid  #7f7455;
   border-radius: 5px;
-  /* background-color: aqua; */
+  background-color: #BC6C25;
 }
 .linkbox:hover {
-  
+  background-color: #86984a;
 }
 .linkbox:active {
   text-decoration: none;
   margin: 0px;
   /* border: 2px solid black; */
-  background-color: #5c543a;
+  background-color: #283618;
 }
 
 .link {
