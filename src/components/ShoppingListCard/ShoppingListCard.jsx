@@ -8,22 +8,20 @@ const ShoppingListCard = ({pantryItem,  handleDelFromShoppingList}) => {
   return (  
     <main className={styles.container}>
       <div>
-        <span>
+        <p>
           <Link to={`/pantryItems/${pantryItem._id}`}>
-            <h1>{pantryItem.name}</h1>
+            {pantryItem.name}
           </Link>
-        </span>
-        <h4>Amount: {pantryItem.amount}</h4>
-        <h4>Category: {pantryItem.category}</h4>
-        <h4>price: {pantryItem.price}</h4>
-        {/* <h4>owner: {pantryItem.owner}</h4> */}
-
-        { pantryItem.expires ? (<h4>This item will expire!</h4>) : "" }
-        <h3>buttinz for adding/removing from ShoppingList - testing</h3>
-        {/*  might be 'pantryItemId' instead below */}
-        {/* <button onClick={() => handleAddToShoppingList(pantryItem._id)}>Add to Shopping List</button> */}
-        <button onClick={() => handleDelFromShoppingList(pantryItem._id)}>Remove from Shopping List</button>
-
+          &nbsp;&nbsp;
+          <Link href="#" onClick={() => handleDelFromShoppingList(pantryItem._id)}>🛒➖</Link>        
+          &nbsp;&nbsp;
+          { pantryItem.category ? (pantryItem.category + '\u00A0\u00A0') : ''}
+          { pantryItem.price ? ('$' + pantryItem.price + '\u00A0\u00A0') : ''}
+          { pantryItem.amount ? ('qty:' + pantryItem.amount + '\u00A0\u00A0') : ''}
+          { pantryItem.expires ? ('⚠️Perishable!⚠️') : ''}
+        </p>
+        {/* <button onClick={() => handleAddToShoppingList(pantryItem._id)}>🛒➕</button>
+        <button onClick={() => handleDelFromShoppingList(pantryItem._id)}>🛒➖</button> */}
       </div>
     </main>
   );

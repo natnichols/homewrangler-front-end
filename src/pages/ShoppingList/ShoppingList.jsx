@@ -9,7 +9,6 @@ import styles from './ShoppingList.module.css'
 
 //components
 // import BudgetAvail from '../../components/BudgetAvail/BudgetAvail';
-import PantryCard from '../../components/PantryCard/PantryCard';
 import ShoppingListCard from '../../components/ShoppingListCard/ShoppingListCard';
 
 const ShoppingList = (props) => {
@@ -36,16 +35,14 @@ const ShoppingList = (props) => {
           <ShoppingListCard
             key={pantryItem._id}
             pantryItem={pantryItem}
-            handleAddToShoppingList={props.handleAddToShoppingList}
+            // handleAddToShoppingList={props.handleAddToShoppingList}
             handleDelFromShoppingList={props.handleDelFromShoppingList}
-            // location={'shopping-list'}
           />
         )}
       </div>
 
         {/* <BudgetAvail/> */}
 
-      <h4>end of ShoppingList component</h4>
     </main>
   )
 }
