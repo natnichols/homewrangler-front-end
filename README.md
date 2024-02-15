@@ -39,9 +39,11 @@ Do you have regular items in your pantry that you're tired of rewriting on your 
 <!-- [![Netlify Status](https://api.netlify.com/api/v1/badges/b63fcb9f-8d85-417b-b49e-8514fce38d4b/deploy-status)](https://app.netlify.com/sites/homewrangler/deploys) -->
 <!--! *** add REACT + any other necessary badges ^^^ -->
 
+### Please check out [homewrangler-back-end](https://github.com/natnichols/homewrangler-back-end "homewrangler-back-end GitHub Repo") to view the Back-End Repository for HomeWrangler!
 ### [View our Planning Materials on Trello](https://trello.com/b/07MzUQgw/homewrangler%F0%9F%A4%A0 "HomeWrangler Trello Board") 🤠📋
 
 ## Ice Box 🧊
+- [ ] Dark Mode
 - [ ] Edit profile functionality
 - [ ] Add categories to budgets to allow users to set up multiple budgets for different categories (eg. Groceries, Bills, Vacation)
 - [ ] Add Supplies to Repairs, allowing the user to list supplies they want to add to their shopping list
