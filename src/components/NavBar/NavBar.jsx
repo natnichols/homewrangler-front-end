@@ -14,6 +14,7 @@ const NavBar = ({ user, handleLogout }) => {
 
             <div className={styles.linkbox}>
               <NavLink
+                title='Profile'
                 to={`/profiles/profile`}
                 className={styles.link}
               >🤠
@@ -23,6 +24,7 @@ const NavBar = ({ user, handleLogout }) => {
             &nbsp;&nbsp;&nbsp;&nbsp;
             <div className={styles.linkbox}>
               <NavLink
+                title='Shipping List'
                 to={`/shoppingList`}
                 className={styles.link}
               >🛒
@@ -32,6 +34,7 @@ const NavBar = ({ user, handleLogout }) => {
             &nbsp;
             <div className={styles.linkbox}>
               <NavLink
+                title='Pantry'
                 to="/pantryItems"
                 className={styles.link}
                 // Not working yet:
@@ -43,6 +46,7 @@ const NavBar = ({ user, handleLogout }) => {
             &nbsp;&nbsp;&nbsp;&nbsp;
             <div className={styles.linkbox}>
               <NavLink
+                title='Repair'
                 to="/repairs"
                 className={styles.link}
               >🔧
@@ -51,6 +55,7 @@ const NavBar = ({ user, handleLogout }) => {
             &nbsp;&nbsp;&nbsp;&nbsp;
             <div className={styles.linkbox}>
               <NavLink
+                title='Budget'
                 to="/budgets"
                 className={styles.link}
               >💰
