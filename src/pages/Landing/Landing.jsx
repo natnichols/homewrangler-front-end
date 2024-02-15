@@ -24,7 +24,7 @@ const Landing = ({ user }) => {
         <br/>
         <NavLink to="/repairs"><button>Repairs</button></NavLink>
         <br/>
-        <NavLink to="/budgets"><button>Budget button</button></NavLink>
+        <NavLink to="/budgets"><button>Budgets</button></NavLink>
       </>
       ) : (
       <>
@@ -32,19 +32,17 @@ const Landing = ({ user }) => {
         <h1>HomeWrangler</h1>
         <div>
           <img
-            src='/favicon/favicon-cowboy-hat.png'
-            alt="Temporary."
-            style={{ width: '300px' }} 
+            src='/src/assets/hw-logo-border-brown.png'
+            alt="Logo."
+            style={{ width: '400px', maxWidth: '100%' }} 
           />
         </div>
-        <h3>"catchy app slogan goes here"</h3>
+        <h3>Take control of yer household, pardner.</h3>
         <NavLink to="/auth/login"><button>Log In</button></NavLink>
-        <br></br>
         <NavLink to="/auth/signup"><button>Sign Up</button></NavLink>
       </>
       )}
 
-      <h4>(end of Landing component)</h4>
     </main>
   )
 }

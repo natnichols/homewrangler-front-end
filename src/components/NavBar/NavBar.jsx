@@ -17,7 +17,12 @@ const NavBar = ({ user, handleLogout }) => {
                 title='Profile'
                 to={`/profiles/profile`}
                 className={styles.link}
-              >🤠
+              >
+                <img
+                  src='src/assets/cowboy-hat-tp-bg-small.png'
+                  alt="Cowboy hat."
+                  style={{ width: '40px', maxWidth: '100%' }} 
+                />
               </NavLink>
             </div>
 
