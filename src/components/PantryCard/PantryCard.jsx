@@ -9,6 +9,8 @@ const PantryCard = ({pantryItem, handleAddToShoppingList, handleDelFromShoppingL
     <main className={styles.container}>
       <div>
         <p>
+
+
           🛒&nbsp;
           <Link href="#" title="add to shopping list" onClick={() => handleAddToShoppingList(pantryItem._id)}>➕</Link>
           &nbsp;
