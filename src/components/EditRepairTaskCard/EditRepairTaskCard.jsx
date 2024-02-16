@@ -33,7 +33,7 @@ const EditRepairTaskCard = () => {
         <br></br>
 
         <label htmlFor="task-input">Task:</label>
-        
+        <br></br>
         <textarea 
           required
           name="task" 
@@ -42,6 +42,7 @@ const EditRepairTaskCard = () => {
           placeholder="Task"
           onChange={handleChange}
         />
+        <br></br>
         <label htmlFor="done-input">Done?</label>
         <br></br>
         <input 
@@ -52,7 +53,10 @@ const EditRepairTaskCard = () => {
           onChange={handleChange} 
         />
         <br></br>
-        <button type="submit">Submit Changes🪛✏️</button>
+        <br></br>
+        <div style={{ width: 'fit-content', marginLeft: 'auto', marginRight: 'auto' }}>
+          <button type="submit">Submit Changes🪛✏️</button>
+        </div>
       </form>
     </main>
   )
