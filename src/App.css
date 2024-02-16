@@ -4,7 +4,7 @@
   box-sizing: inherit;
 }
 
-html{
+html {
   /* keep for future ice-box ref (along with body width below) */
   /* width: 50%; */
 }
@@ -37,14 +37,14 @@ body {
   /* color: #BC6C25; */
 }
 
-.position-handle-nav{
+.position-handle-nav {
   position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
 }
-.position-handle-remainder{
+.position-handle-remainder {
   /* make sure to check this value against height in NavBar.css - they work together */
   margin-top: 90px;
 
