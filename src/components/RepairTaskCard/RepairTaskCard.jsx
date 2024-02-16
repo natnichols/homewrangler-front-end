@@ -18,7 +18,14 @@ const RepairTaskCard = ({ repairTask, repairId, user, handleDeleteRepairTask }) 
   return ( 
     <main>
       <span>
-        &bull; {repairTask.task} - {repairTask.done ? 'done' : 'not done' }
+        {/* &bull; {repairTask.task} - {repairTask.done ? 'done' : 'not done' } */}
+
+        {repairTask.done ? (
+          <del>{repairTask.task}</del>
+        ) : (
+          <>{repairTask.task}</>
+        )}
+
         {/* want to add checkbox ^^^ */}
         {repairTask.owner._id === user.profile &&
           <>
