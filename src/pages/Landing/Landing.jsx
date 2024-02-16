@@ -4,6 +4,9 @@ import { NavLink } from 'react-router-dom'
 // css
 import styles from './Landing.module.css'
 
+// images
+import hwLogoBrown from '../../assets/hw-logo-border-brown.png'
+
 const Landing = ({ user }) => {
   return (
     <main className={styles.container}>
@@ -14,7 +17,7 @@ const Landing = ({ user }) => {
         <h2>Well howdy, {user ? user.name : 'pardner'}!</h2>
         <div>
           <img
-            src='/src/assets/hw-logo-border-brown.png'
+            src={hwLogoBrown}
             alt="Logo."
             style={{ width: '400px', maxWidth: '100%' }} 
           />
@@ -32,7 +35,7 @@ const Landing = ({ user }) => {
         <h1>HomeWrangler</h1>
         <div>
           <img
-            src='/src/assets/hw-logo-border-brown.png'
+            src={hwLogoBrown}
             alt="Logo."
             style={{ width: '400px', maxWidth: '100%' }} 
           />
