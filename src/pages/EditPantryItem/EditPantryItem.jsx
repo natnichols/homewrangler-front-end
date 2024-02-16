@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useLocation } from "react-router-dom"
-import { Link } from "react-router-dom"
+// for use with ice-box button at bottom
+// import { Link } from "react-router-dom"
 
 
 import styles from './EditPantryItem.module.css'
@@ -23,6 +24,9 @@ const EditPantryItem = (props) => {
 
   return (  
     <main className={styles.container}>
+      <h2 style={{ width: 'fit-content', marginLeft: 'auto', marginRight: 'auto' }}>
+        Edit Details
+      </h2>
       <form onSubmit={handleSubmit} >
         <label htmlFor="name-input">Name:</label>
         <input 
@@ -80,7 +84,7 @@ const EditPantryItem = (props) => {
           onChange={handleChange}
         />
 
-        <div style={{ width: 'fit-content' }}>
+        <div style={{ width: 'fit-content', marginLeft: 'auto', marginRight: 'auto' }}>
           <button type="submit">Update</button>
         </div>
       </form>

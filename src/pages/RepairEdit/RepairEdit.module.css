@@ -1,45 +1,26 @@
 .container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-.container p {
-  margin: 2px;
-}
-
-/* .container {
   height: 100%;
   display: flex;
-  overflow: hidden;
   padding: 28px 21px;
   align-items: center;
   flex-direction: column;
+  text-align: center;
+  justify-content: center;
 }
 
-.container input, textarea, select, button { 
+.container input, textarea, select { 
   width: 100%;
   padding: 14px;
   font-size: 14px;
   resize: vertical;
   border-radius: 5px;
   margin: 7px 0px 14px 0px;
-  border: 1px solid var(--border);
-  font-family: canada-type-gibson, sans-serif;
+  border: 1px solid #343434;
 }
 
 .container label {
   font-weight: 600;
   margin: 7px 0px 14px 0px;
-}
-
-.container button {
-  color: white;
-  font-weight: 600;
-  margin: 21px 0px 0px 0px;
-  background: var(--primary);
 }
 
 .container a {
@@ -51,8 +32,3 @@
   text-align: center;
   color: rgb(200, 200, 200);
 }
-
-input:focus, select:focus {
-  outline: none;
-  border: 1px solid var(--primary);
-} */
