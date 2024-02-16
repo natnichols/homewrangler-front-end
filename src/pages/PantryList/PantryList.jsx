@@ -44,7 +44,7 @@ const PantryList = (props) => {
             pantryItem={pantryItem}
             handleAddToShoppingList={props.handleAddToShoppingList}
             handleDelFromShoppingList={props.handleDelFromShoppingList}
-            />
+          />
         )}
       </div>
     </main>
