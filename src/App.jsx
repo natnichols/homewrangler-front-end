@@ -98,12 +98,12 @@ function App() {
   // new Shopping List functions:
   const handleAddToShoppingList = async (pantryItemId) => {
     await pantryService.addToShoppingList(pantryItemId)
-    const profileUpdated = await profileService.getOneProfile(user.profile);
+    const profileUpdated = await profileService.getOneProfile(user.profile)
     setProfile(profileUpdated)
   }
   const handleDelFromShoppingList = async (pantryItemId) => {
     await pantryService.delFromShoppingList(pantryItemId)
-    const profileUpdated = await profileService.getOneProfile(user.profile);
+    const profileUpdated = await profileService.getOneProfile(user.profile)
     setProfile(profileUpdated)
   }
   
