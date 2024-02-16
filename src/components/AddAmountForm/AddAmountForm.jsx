@@ -1,7 +1,7 @@
-//npm modules
-import { useState } from "react"
+// npm modules
+import { useState } from 'react'
 
-//css
+// css
 import styles from './AddAmountForm.module.css'
 
 const AddAmountForm = (props) => {
