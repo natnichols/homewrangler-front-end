@@ -17,38 +17,27 @@ const PantryList = (props) => {
   const toggleAddForm = () => {
     setShowItemAdd(!showItemAdd)
   }
-  // useEffect(() => {
-  //   const fetchBudgets = async () => {
-  //     try {
-  //       const data = await budgetService.index()
-  //       setBudgets(data)
-  //     } catch (error) {
-  //       console.error('Error fetching budgets:', error)
-  //     }
-  //   }
-
-  //   fetchBudgets()
-  // }, [])
 
   // set this variable to use down below for mapping items - will show ONLY owner's items.
   const filteredPantryItems = props.pantryItems.filter(pantryItem => pantryItem.owner._id === props.profile._id)
 
-  // const totalAmount = budgets.reduce((total, budget) => total + budget.amount, 0)
-
   return (  
     <main>
-      {/* {props.BudgetAvail.totalAmount}
-      <BudgetAvail totalAmount={totalAmount} /> */}
-      <BudgetAvail budgets={props.budgets} profile={props.profile}/>
-      <h1>My Pantry</h1>
-      <div style={{ width: 'fit-content' }}>
-        <button onClick={toggleAddForm}>
-          {showItemAdd ? "Collapse This Form" : "Add New Item(s)"}
-        </button>
-      </div>
-      {showItemAdd && <PantryItemAdd handlePantryItemAdd={props.handlePantryItemAdd} /> }
+      <header className={styles.container}>
+        <h1>My Pantry</h1>
+        <br></br>
+        <BudgetAvail budgets={props.budgets} profile={props.profile}/>
+        <br></br>
+        <div style={{ width: 'fit-content' }}>
+          <button onClick={toggleAddForm}>
+            {showItemAdd ? "Collapse This Form" : "Add New Item(s)"}
+          </button>
+        </div>
+        {showItemAdd && <PantryItemAdd handlePantryItemAdd={props.handlePantryItemAdd} /> }
+      </header>
+      <br></br>
 
-      <div className={`${styles.container} ${styles.listContainer}`}>
+      <div className={`${styles.listContainer}`}>
         {/* using variable from above to map thru ONLY owner's items */}
         {filteredPantryItems.map(pantryItem => 
           <PantryCard
