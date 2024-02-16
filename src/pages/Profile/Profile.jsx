@@ -68,8 +68,8 @@ const Profile = ({ user }) => {
       </p>
       <br></br>
       <h4>carrier pigeon:</h4>
-      <p>Nat: email ( at ) email.com</p>
-      <p>Shawn: email ( at ) email.com</p>
+      <p>Nat: natalie.e.nichols ( at ) gmail.com</p>
+      <p>Shawn: shawnkang0818 ( at ) gmail.com</p>
       <p>Rich: rbozek ( at ) gmail.com</p>
     </main>
   )
