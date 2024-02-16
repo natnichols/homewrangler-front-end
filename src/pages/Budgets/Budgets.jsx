@@ -18,7 +18,7 @@ const Budgets = (props) => {
       <AddAmountForm handleAddBudget={props.handleAddBudget} />
 
       <br></br>
-
+      <h3>Ledger</h3>
       {filteredBudgets.map(budget =>
         <p key={budget._id}>
           {budget.amount > 0
