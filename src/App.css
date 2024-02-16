@@ -36,6 +36,7 @@ body {
   font-size: 16px;
 }
 
+
 .position-handle-nav{
   position: fixed; 
   top: 0;
@@ -52,6 +53,7 @@ body {
   padding-left: 10px;
   padding-right: 10px;
 }
+
 
 
 h1, h2, h3, h4 {
@@ -109,4 +111,13 @@ button:active {
   background: #283618;
   border: 2px solid #606C38;
   color: #ffffff;
+}
+
+@media screen and (max-width: 540px) {
+  body {
+    font-size: 14px;
+  }
+  .position-handle-remainder{
+    max-width: 360px;
+  }
 }
