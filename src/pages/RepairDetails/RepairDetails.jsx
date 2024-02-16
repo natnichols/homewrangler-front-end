@@ -58,6 +58,7 @@ const RepairDetails = (props) => {
           </span>
         </header>
         <h3>Description: {repair.description}</h3>
+        <h3>Approximate Cost: ${repair.cost}</h3>
       </article>
       <section>
         <h1>Repair Tasks</h1>
