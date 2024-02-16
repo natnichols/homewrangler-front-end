@@ -41,7 +41,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  max-width: 100%;
+  /* max-width: 100%; */
   z-index: 1000;
 }
 .position-handle-remainder{
@@ -49,6 +49,8 @@ body {
   margin-top: 90px;
   margin-bottom: 30px;
   max-width: 600px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 
