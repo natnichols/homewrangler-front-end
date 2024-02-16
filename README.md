@@ -50,9 +50,9 @@ Do you have regular items in your pantry that you're tired of rewriting on your 
 ## Ice Box 🧊
 - [ ] Dark Mode
 - [ ] Edit profile functionality
-- [ ] Add categories to budgets to allow users to set up multiple budgets for different categories (eg. Groceries, Bills, Vacation)
+- [ ] Add Cost field to Repairs, allowing the user to factor in the cost of a repair into their budget
 - [ ] Add Supplies to Repairs, allowing the user to list supplies they want to add to their shopping list
-- [ ] Add Cost field to Repairs, allowing the user to facotr in the cost of a repair into their budget
+- [ ] Add categories to budgets to allow users to set up multiple budgets for different categories (eg. Groceries, Bills, Vacation)
 - [ ] Add Amount Left field to Pantry Items, so that the user can keep track of how much they have left of certain items in their pantry
 - [ ] Add Expiration Date field to Pantry Items, so that the user can keep track of when their perishable pantry items are going to expire
 - [ ] Weather API  - incorporate a Weather API to display local weather conditions in the nav bar, so that the user can keep track of weather conditions that may influence when they travel to the grocery store, or complete certain repairs
