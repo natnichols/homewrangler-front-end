@@ -5,15 +5,15 @@
 Life is complicated out on the range. 
 
 Why waste all yer perfectly good mind juice on simple things like grocery lists or repairs?
-Let us wrangle all that for you in the latest organizational app! **_HomeWrangler_**
+Let us wrangle all that for you in the latest organizational app, **_HomeWrangler_**!
 
 ![Placeholder for Logo OR Screenshot of Landing page](/src/assets/hw-logo-border-white.png)
 
-Do you have regular items in your pantry that you're tired of rewriting on your grocery list? Do you have a growing list of repairs that you need to take care of? Do you need a place to keep track of how much money that's all gonna cost? HomeWrangler can help you wrangle it all! 
+The goal of HomeWrangler is to help you spend **_less time & mental energy_** on those repetitive-yet-necessary household tasks. Groceries and home repairs can be logged with a few taps of a button. When you realize you're running low on milk, simply look in your digital pantry and add it to your shopping list. When you're at the hardware store, just look at your to-do list to see what you need. Decide how much money you want to set aside & reference it easily when shopping. HomeWrangler can help you wrangle it all! 
 
-<!--! add slightly more detailed description of how to navigate/use the app -->
+Our vision is to make y'all's life easier. We have more features planned for the future, so grab your saddle and join the posse!
 
-## Ready to join us, partner? [Check Out HomeWrangler Here](link "HomeWrangler") 🤠
+## Ready to join us, partner? [Check Out HomeWrangler Here](https://homewrangler.netlify.app/ "HomeWrangler") 🤠
 
 <!--! add additional app screenshot? -->
 
@@ -50,9 +50,9 @@ Do you have regular items in your pantry that you're tired of rewriting on your 
 ## Ice Box 🧊
 - [ ] Dark Mode
 - [ ] Edit profile functionality
-- [ ] Add categories to budgets to allow users to set up multiple budgets for different categories (eg. Groceries, Bills, Vacation)
+- [ ] Add Cost field to Repairs, allowing the user to factor in the cost of a repair into their budget
 - [ ] Add Supplies to Repairs, allowing the user to list supplies they want to add to their shopping list
-- [ ] Add Cost field to Repairs, allowing the user to facotr in the cost of a repair into their budget
+- [ ] Add categories to budgets to allow users to set up multiple budgets for different categories (eg. Groceries, Bills, Vacation)
 - [ ] Add Amount Left field to Pantry Items, so that the user can keep track of how much they have left of certain items in their pantry
 - [ ] Add Expiration Date field to Pantry Items, so that the user can keep track of when their perishable pantry items are going to expire
 - [ ] Weather API  - incorporate a Weather API to display local weather conditions in the nav bar, so that the user can keep track of weather conditions that may influence when they travel to the grocery store, or complete certain repairs
