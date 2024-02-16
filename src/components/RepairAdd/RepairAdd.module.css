@@ -3,15 +3,26 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-top: 10px;
 }
 
-
-.container input, select { 
+.container .input-container {
+  text-align: center;
   width: 200px;
-  padding: 14px;
+  margin-bottom: 14px;
+}
+
+.container input, .container select { 
+  width: 100%;
+  padding: 8px;
   resize: vertical;
   border-radius: 5px;
   border: 1px solid black;
+}
+
+.container p {
+  text-align: center;
+  padding-top: 4px;
 }
 
 /* input:focus, select:focus {

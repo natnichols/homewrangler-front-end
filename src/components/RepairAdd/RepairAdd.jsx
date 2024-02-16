@@ -23,45 +23,52 @@ const RepairAdd = (props) => {
   return (
     <main className={styles.container}>
       <form onSubmit={handleSubmit}>
-        {/* <h2>Add a New Repair</h2> */}
-        {/* <label htmlFor="name-input">Name</label> */}
-        <input 
-          required
-          type="text" 
-          name="name"
-          id="name-input"
-          value={formData.name}
-          placeholder="Name"
-          onChange={handleChange}
-        />
 
-        {/* <label htmlFor="priority-input1" style={{ display: 'inline-block', marginRight: '10px' }}>Priority:</label> */}
-        <select 
-          required 
-          name="priority"
-          id="priority-input1"
-          value={formData.priority}
-          onChange={handleChange}
-          // style={{ display: 'inline-block' }}
-        >
-          <option value="!" title="Low Priority" >!</option>
-          <option value="!!" title="Mid Priority" >!!</option>
-          <option value="!!!" title="High Priority" >!!!</option>
-          
-        </select>
+        <div className="input-container">
+          {/* <label htmlFor="name-input">Name</label> */}
+          <input 
+            required
+            type="text" 
+            name="name"
+            id="name-input"
+            value={formData.name}
+            placeholder="Name"
+            onChange={handleChange}
+          />
+        </div>
 
-        {/* <label htmlFor="description-input">Description</label> */}
-        <input 
-          type="text" 
-          name="description"
-          id="description-input"
-          value={formData.description}
-          placeholder="Description"
-          onChange={handleChange}
-        />
-        <div style={{ width: 'fit-content' }}>
+          <p>Priority:</p>
+        <div className="input-container">
+          {/* <label htmlFor="priority-input1" style={{ display: 'inline-block', marginRight: '10px' }}>Priority:</label> */}
+          <select 
+            required 
+            name="priority"
+            id="priority-input1"
+            value={formData.priority}
+            onChange={handleChange}
+          >
+            <option value="!" title="Low Priority" >!</option>
+            <option value="!!" title="Mid Priority" >!!</option>
+            <option value="!!!" title="High Priority" >!!!</option>
+          </select>
+        </div>
+
+        <div className="input-container">
+          {/* <label htmlFor="description-input">Description</label> */}
+          <input 
+            type="text" 
+            name="description"
+            id="description-input"
+            value={formData.description}
+            placeholder="Description"
+            onChange={handleChange}
+          />
+        </div>
+
+        <div style={{ width: 'fit-content' , marginLeft: 'auto', marginRight: 'auto' }}>
           <button type="submit">Add Repair 🔧✨</button>
         </div>
+
       </form>
     </main>
   )

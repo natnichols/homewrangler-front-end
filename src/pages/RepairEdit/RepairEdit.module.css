@@ -39,8 +39,8 @@
   text-align: center;
   color: rgb(200, 200, 200);
 }
-
+/* 
 input:focus, select:focus {
   outline: none;
   border: 1px solid var(--primary);
-}
+} */
