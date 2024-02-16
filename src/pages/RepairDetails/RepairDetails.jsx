@@ -72,9 +72,7 @@ const RepairDetails = (props) => {
         </button>
       </div>
 
-      {showAddRepairTask && <NewRepairTask 
-        handleAddRepairTask={handleAddRepairTask} 
-      />}
+      {showAddRepairTask && <NewRepairTask handleAddRepairTask={handleAddRepairTask} />}
 
       <RepairTasks 
         repairId={repairId} 
