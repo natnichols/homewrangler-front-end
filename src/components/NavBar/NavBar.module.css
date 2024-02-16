@@ -5,7 +5,7 @@
   font-size: 2em;
 }
 
-.navwrapinner{
+.navwrapinner {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -47,7 +47,7 @@
   .navwrapouter {
     font-size: 1.6em;
   }
-  .navwrapinner{
+  .navwrapinner {
     max-width: 360px;
   }
 }
