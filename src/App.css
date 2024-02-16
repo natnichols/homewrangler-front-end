@@ -47,6 +47,7 @@ body {
 .position-handle-remainder{
   /* make sure to check this value against height in NavBar.css */
   margin-top: 90px;
+  margin-bottom: 30px;
   max-width: 600px;
 }
 
@@ -107,4 +108,5 @@ button:active {
   border: 2px solid #606C38;
   color: #ffffff;
 }
+
 
