@@ -23,8 +23,8 @@ const RepairAdd = (props) => {
   return (
     <main className={styles.container}>
       <form onSubmit={handleSubmit}>
-        <h2>Add a New Repair</h2>
-        <label htmlFor="name-input">Name</label>
+        {/* <h2>Add a New Repair</h2> */}
+        {/* <label htmlFor="name-input">Name</label> */}
         <input 
           required
           type="text" 
@@ -35,22 +35,14 @@ const RepairAdd = (props) => {
           onChange={handleChange}
         />
 
-        {/* <label htmlFor="priority-input">Priority</label>
-        <input 
-          type="text"
-          name="priority"
-          id="priority-input"
-          value={formData.priority}
-          placeholder="Priority"
-          onChange={handleChange}
-        /> */}
-        <label htmlFor="priority-input1">Priority:</label>
+        {/* <label htmlFor="priority-input1" style={{ display: 'inline-block', marginRight: '10px' }}>Priority:</label> */}
         <select 
           required 
           name="priority"
           id="priority-input1"
           value={formData.priority}
           onChange={handleChange}
+          // style={{ display: 'inline-block' }}
         >
           <option value="!" title="Low Priority" >!</option>
           <option value="!!" title="Mid Priority" >!!</option>
@@ -58,7 +50,7 @@ const RepairAdd = (props) => {
           
         </select>
 
-        <label htmlFor="description-input">Description</label>
+        {/* <label htmlFor="description-input">Description</label> */}
         <input 
           type="text" 
           name="description"

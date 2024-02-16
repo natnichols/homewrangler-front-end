@@ -47,7 +47,7 @@ const Profile = ({ user }) => {
         <p>Name: {profile.name}</p>
         <p>Email: {user.email}</p>
         <NavLink to="/auth/change-password">
-          <button>change password</button>
+          <button>Change Password</button>
         </NavLink>
         
         {/* ** ICE BOX ** */}
