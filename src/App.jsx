@@ -203,7 +203,7 @@ function App() {
               <Profiles />
             </ProtectedRoute>
           }
-          />
+        />
 
 
         {/* PANTRY ROUTES */}
