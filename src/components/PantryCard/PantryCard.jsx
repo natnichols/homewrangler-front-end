@@ -4,18 +4,28 @@ import { Link } from "react-router-dom"
 //css
 import styles from "./PantryCard.module.css"
 
-const PantryCard = ({pantryItem, handleAddToShoppingList, handleDelFromShoppingList}) => {
+const PantryCard = ({pantryItem, handleAddToShoppingList, handleDelFromShoppingList, user, profile}) => {
+  // console.log('test ', profile.shoppingList)
+  // console.log('test ', user)
+
   return (  
     <main className={styles.container}>
       <div>
         <p>
-
-
           🛒&nbsp;
-          <Link href="#" title="add to shopping list" onClick={() => handleAddToShoppingList(pantryItem._id)}>➕</Link>
-          &nbsp;
-          <Link href="#" title="remove pantry item" onClick={() => handleDelFromShoppingList(pantryItem._id)}>➖</Link>
-          &nbsp;&nbsp;
+          { profile.shoppingList.includes(pantryItem._id)
+            ?
+            <>
+              <Link href="#" title="remove pantry item" onClick={() => handleDelFromShoppingList(pantryItem._id)}>➖</Link>
+              &nbsp;&nbsp;
+            </>
+            : 
+            <>
+              <Link href="#" title="add to shopping list" onClick={() => handleAddToShoppingList(pantryItem._id)}>➕</Link>
+              &nbsp;&nbsp;
+            </>
+          }
+          
           <strong>{pantryItem.name}</strong>
           &nbsp;&nbsp;
           { pantryItem.price ? ('$' + pantryItem.price + '\u00A0\u00A0') : ''}

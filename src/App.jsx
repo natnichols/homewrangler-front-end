@@ -221,7 +221,7 @@ function App() {
                 budgets={budgets}
                 user={user}
                 profile={profile}
-                pantryItems={pantryItems }
+                pantryItems={pantryItems}
                 handlePantryItemAdd={handlePantryItemAdd}
                 handleAddToShoppingList={handleAddToShoppingList}
                 handleDelFromShoppingList={handleDelFromShoppingList}

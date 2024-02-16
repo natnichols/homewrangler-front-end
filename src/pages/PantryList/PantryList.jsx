@@ -42,6 +42,7 @@ const PantryList = (props) => {
         {filteredPantryItems.map(pantryItem => 
           <PantryCard
             key={pantryItem._id}
+            profile={props.profile}
             pantryItem={pantryItem}
             handleAddToShoppingList={props.handleAddToShoppingList}
             handleDelFromShoppingList={props.handleDelFromShoppingList}
