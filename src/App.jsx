@@ -138,7 +138,6 @@ function App() {
   useEffect (() => {
     const fetchAllBudgets = async () => {
       const data = await budgetService.index()
-      console.log('Budget data', data)
       setBudgets(data)
     }
     if(user) fetchAllBudgets()
