@@ -23,6 +23,7 @@ const RepairCard = ({ repair }) => {
           &nbsp;&nbsp;
           <h4>( {repair.priority} )</h4>
         </div>
+        <p>Approx. Cost: ${repair.cost}</p>
 
         { repair.repairTasks.length
         ?

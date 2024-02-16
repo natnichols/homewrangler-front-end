@@ -9,6 +9,7 @@ const RepairAdd = (props) => {
     name: '',
     priority: '!',
     description: '',
+    cost: '',
   })
 
   const handleSubmit = evt => {
@@ -61,6 +62,17 @@ const RepairAdd = (props) => {
             id="description-input"
             value={formData.description}
             placeholder="Description"
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="input-container">
+          <input 
+            type="number" 
+            name="cost"
+            id="cost-input"
+            value={formData.cost}
+            placeholder="Approximate Cost"
             onChange={handleChange}
           />
         </div>
