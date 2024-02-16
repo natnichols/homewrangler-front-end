@@ -37,7 +37,11 @@ const RepairCard = ({ repair }) => {
 
         {showRepairTasks && repair.repairTasks.map(repairTask => (
           <li key={repairTask._id}>
-            {repairTask.task}
+            {repairTask.done ? (
+              <del>{repairTask.task}</del>
+            ) : (
+              <>{repairTask.task}</>
+            )}
           </li>
         ))}
       </main>
