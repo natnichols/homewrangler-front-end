@@ -21,11 +21,6 @@ const Landing = ({ user }) => {
             alt="Logo."
             style={{ width: '400px', maxWidth: '100%' }} 
           />
-          <img
-            src='/src/assets/hw-logo-border-brown.png'
-            alt="Logo."
-            style={{ width: '400px', maxWidth: '100%' }} 
-          />
         </div>
         <NavLink to={`/shoppingList`}><button>Shopping List</button></NavLink>
         <NavLink to="/pantryItems"><button>My Pantry</button></NavLink>
@@ -40,7 +35,7 @@ const Landing = ({ user }) => {
         <h1>HomeWrangler</h1>
         <div>
           <img
-            src='/src/assets/hw-logo-border-brown.png'
+            src={hwLogoBrown}
             alt="Logo."
             style={{ width: '400px', maxWidth: '100%' }} 
           />
