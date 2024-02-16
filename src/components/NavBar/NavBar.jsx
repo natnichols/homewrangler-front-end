@@ -1,7 +1,11 @@
 // npm modules
 import { NavLink } from 'react-router-dom'
 
+// styles
 import styles from './NavBar.module.css'
+
+// image
+import cowboyHatSmall from '../../assets/cowboy-hat-tp-bg-small.png'
 
 const NavBar = ({ user, handleLogout }) => {
   // this test was for passing profile ID to Single Profile component
@@ -19,7 +23,7 @@ const NavBar = ({ user, handleLogout }) => {
                 className={styles.link}
               >
                 <img
-                  src='src/assets/cowboy-hat-tp-bg-small.png'
+                  src={cowboyHatSmall}
                   alt="Cowboy hat."
                   style={{ width: '40px' }} 
                 />

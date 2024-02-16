@@ -47,20 +47,29 @@ const Profile = ({ user }) => {
         <p>Name: {profile.name}</p>
         <p>Email: {user.email}</p>
         <NavLink to="/auth/change-password">
-          <button>change password</button>
+          <button>Change Password</button>
         </NavLink>
         
         {/* ** ICE BOX ** */}
         {/* <div style={{ width: 'fit-content' }}>
-          <button>edit profile (not active - stretch)</button>
+          <button>edit profile</button>
         </div> */}
       <br></br>
       <h4>Gather 'round the campfire:</h4>
-      <p>HomeWrangler was created to make daily household tasks simpler to keep track of. (more info)</p>
+
+      <p style={{ textAlign: 'center', marginBottom: '8px' }}>
+        Life is complicated out on the range. Why waste all yer perfectly good mind juice on simple things like grocery lists or repairs? Let us wrangle it for ya.
+      </p>
+      <p style={{ textAlign: 'center', marginBottom: '8px' }}>
+        The goal of HomeWrangler is to help you spend <span style={{ fontStyle: 'italic', fontWeight: 'bold' }}>less time & mental energy</span> on those repetitive-yet-necessary household tasks. Groceries and home repairs can be logged with only a few button presses. When you realize you're running low on milk, simply look in your (digital) pantry and add it to your shopping list. When you're at the hardware store, just look at your to-do list to see what you need. Decide how much money you want to set aside & reference it easily when shopping. 
+      </p>
+      <p style={{ textAlign: 'center', marginBottom: '8px' }}>
+        Our goal is to make your life easier. We have more features planned for the future, so grab your saddle and join the posse!
+      </p>
       <br></br>
       <h4>carrier pigeon:</h4>
-      <p>Nat: email ( at ) email.com</p>
-      <p>Shawn: email ( at ) email.com</p>
+      <p>Nat: natalie.e.nichols ( at ) gmail.com</p>
+      <p>Shawn: shawnkang0818 ( at ) gmail.com</p>
       <p>Rich: rbozek ( at ) gmail.com</p>
     </main>
   )

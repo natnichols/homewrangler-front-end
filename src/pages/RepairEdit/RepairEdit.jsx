@@ -55,7 +55,19 @@ const RepairEdit = (props) => {
           placeholder="Description"
           onChange={handleChange}
         />
-        <button type="submit">Edit Repair 🔧✏️</button>
+        <label htmlFor="cost-input">Approximate Cost:</label>
+        <input 
+          required
+          type="text" 
+          name="cost"
+          id="cost-input"
+          value={formData.cost}
+          placeholder="Approximate Cost"
+          onChange={handleChange}
+        />
+        <div style={{ width: 'fit-content' }}>
+          <button type="submit">Edit Repair 🔧✏️</button>
+        </div>
       </form>
     </main>
   )

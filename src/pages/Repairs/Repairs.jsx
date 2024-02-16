@@ -24,10 +24,10 @@ const Repairs = (props) => {
   
   return (
     <main className={styles.container}>
-      <h1>List of Repairs</h1>
+      <h1>Repairs</h1>
       <div style={{ width: 'fit-content' }}>
         <button onClick={toggleAddRepairForm}>
-          {showAddRepair ? "Hide Add Form" : "Show Add Form"}
+          {showAddRepair ? "Collapse this form" : "Add New Repair"}
         </button>
       </div>
       {showAddRepair && <RepairAdd handleAddRepair={props.handleAddRepair} /> }
