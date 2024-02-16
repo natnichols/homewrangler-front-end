@@ -10,6 +10,7 @@ import styles from './ShoppingList.module.css'
 //components
 // import BudgetAvail from '../../components/BudgetAvail/BudgetAvail';
 import ShoppingListCard from '../../components/ShoppingListCard/ShoppingListCard';
+import BudgetAvail from '../../components/BudgetAvail/BudgetAvail';
 
 const ShoppingList = (props) => {
   // console.log('test props.user ', props.user);
@@ -25,6 +26,7 @@ const ShoppingList = (props) => {
 
   return (
     <main className={styles.container}>
+      <BudgetAvail budgets={props.budgets} profile={props.profile}/>
       <h1>My Shopping List</h1>
 
       <div className={`${styles.container} ${styles.listContainer}`}>
