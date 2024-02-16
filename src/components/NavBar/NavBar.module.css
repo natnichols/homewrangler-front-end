@@ -1,9 +1,7 @@
 .navwrapouter {
   /* NOTE: moved position & size props up to app.css to handle all other elements disappearing under nav bar: */
-
   margin: 0px;
   /* padding: 4px 0px 4px 0px; */
-  
   background-color: #DDA15E;
   font-size: 2em;
 }

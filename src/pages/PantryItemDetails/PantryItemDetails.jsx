@@ -23,7 +23,7 @@ const PantryItemDetails = (props) => {
 
   return (  
     <div className={styles.container}>
-      <h4>{pantryItem.name} details:</h4>
+      <h4>{pantryItem.name} details</h4>
       <br></br>
       <p>Category: { pantryItem.category ? (pantryItem.category + '\u00A0\u00A0') : ''}</p>
       <p>{ pantryItem.price ? ('$' + pantryItem.price + '\u00A0\u00A0') : ''}</p>
