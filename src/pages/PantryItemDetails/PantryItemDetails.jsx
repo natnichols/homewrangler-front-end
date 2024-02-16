@@ -1,8 +1,8 @@
-//npm modules
+// npm modules
 import { useState, useEffect } from "react"
 import { useParams, Link } from "react-router-dom";
 
-//services
+// services
 import * as pantryService from '../../services/pantryService'
 
 // css
