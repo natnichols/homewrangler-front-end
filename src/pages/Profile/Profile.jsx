@@ -44,10 +44,10 @@ const Profile = ({ user, handleLogout }) => {
           <button>Change Password</button>
         </NavLink>
         <NavLink
-              to="/"
-              onClick={handleLogout}
-            >
-              <button>Log Out</button>
+          to="/"
+          onClick={handleLogout}
+        >
+          <button>Log Out</button>
         </NavLink>
         
         {/* ** ICE BOX ** */}
