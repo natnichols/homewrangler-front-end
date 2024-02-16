@@ -162,7 +162,6 @@ function App() {
     setBudgets(budgets.filter(b => b._id !== deleteBudget._id))
     navigate('/budgets')
   }
-
   return (
     <>
       <div className='position-handle-nav'>
@@ -217,10 +216,12 @@ function App() {
           path="/pantryItems"
           element={
             <ProtectedRoute user={user}>
+              {/* <h5 className="top-right-box"><BudgetAvail budgets={budgets} profile={profile}/></h5> */}
               <PantryList
+                budgets={budgets}
                 user={user}
                 profile={profile}
-                pantryItems={pantryItems}
+                pantryItems={pantryItems }
                 handlePantryItemAdd={handlePantryItemAdd}
                 handleAddToShoppingList={handleAddToShoppingList}
                 handleDelFromShoppingList={handleDelFromShoppingList}
@@ -252,6 +253,7 @@ function App() {
           element={
             <ProtectedRoute user={user}>
               <ShoppingList
+                budgets={budgets}
                 user={user}
                 profile={profile}
                 pantryItems={pantryItems}
