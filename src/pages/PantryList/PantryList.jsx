@@ -4,8 +4,6 @@ import { useState} from 'react'
 //css
 import styles from './PantryList.module.css'
 
-// services
-
 //components
 import PantryCard from '../../components/PantryCard/PantryCard'
 import PantryItemAdd from '../../components/PantryItemAdd/PantryItemAdd'
