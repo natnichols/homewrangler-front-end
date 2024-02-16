@@ -1,12 +1,10 @@
 // npm
 import { useState} from 'react'
 
-//css
+// css
 import styles from './PantryList.module.css'
 
-// services
-
-//components
+// components
 import PantryCard from '../../components/PantryCard/PantryCard'
 import PantryItemAdd from '../../components/PantryItemAdd/PantryItemAdd'
 import BudgetAvail from '../../components/BudgetAvail/BudgetAvail'
@@ -46,7 +44,7 @@ const PantryList = (props) => {
             pantryItem={pantryItem}
             handleAddToShoppingList={props.handleAddToShoppingList}
             handleDelFromShoppingList={props.handleDelFromShoppingList}
-            />
+          />
         )}
       </div>
     </main>

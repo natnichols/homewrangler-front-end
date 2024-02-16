@@ -29,7 +29,7 @@ const Repairs = (props) => {
       <br></br>
       <BudgetAvail budgets={props.budgets} profile={props.profile}/>
       <br></br>
-      {showAddRepair && <RepairAdd handleAddRepair={props.handleAddRepair} /> }
+      {showAddRepair && <RepairAdd handleAddRepair={props.handleAddRepair} />}
       {filteredRepairs.map(repair => (
         <RepairCard 
           key={repair._id} 

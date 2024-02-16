@@ -1,13 +1,11 @@
-//css
+// css
 import styles from './ShoppingList.module.css'
 
-//components
-import ShoppingListCard from '../../components/ShoppingListCard/ShoppingListCard';
-import BudgetAvail from '../../components/BudgetAvail/BudgetAvail';
+// components
+import ShoppingListCard from '../../components/ShoppingListCard/ShoppingListCard'
+import BudgetAvail from '../../components/BudgetAvail/BudgetAvail'
 
 const ShoppingList = (props) => {
-
-  console.log('test single profile ON SHOPPING LIST PAGE! ', props.profile);
 
   if (!props.profile) {
     return <main className={styles.container}><h2>Loading...</h2></main>
@@ -41,4 +39,4 @@ const ShoppingList = (props) => {
   )
 }
 
-export default ShoppingList;
+export default ShoppingList

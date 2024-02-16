@@ -2,8 +2,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-// components
-
 // css
 import styles from './RepairCard.module.css'
 
@@ -18,7 +16,7 @@ const RepairCard = ({ repair }) => {
     <main className={styles.container}>
 
       <div style={{ display: 'flex', alignItems: 'center' }}>
-          <p><strong>{repair.name}</strong></p>
+        <p><strong>{repair.name}</strong></p>
         &nbsp;
         <p><strong>({repair.priority})</strong></p>
         &nbsp;
@@ -29,8 +27,7 @@ const RepairCard = ({ repair }) => {
 
       <p>Approx. Cost: ${repair.cost}</p>
 
-      { repair.repairTasks.length
-      ?
+      { repair.repairTasks.length ?
         <div style={{ width: 'fit-content', marginLeft: 'auto', marginRight: 'auto' }}>
           <br></br>
           <button onClick={toggleRepairTasks}>

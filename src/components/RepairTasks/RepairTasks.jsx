@@ -7,14 +7,14 @@ const RepairTasks = (props) => {
   return ( 
     <>
       {props.repairTasks.map(repairTask => (
-        <RepairTaskCard 
-          key={repairTask._id}
-          repairId={props.repairId}
-          user={props.user}
-          repairTask={repairTask}
-          handleDeleteRepairTask={props.handleDeleteRepairTask}
+          <RepairTaskCard 
+            key={repairTask._id}
+            repairId={props.repairId}
+            user={props.user}
+            repairTask={repairTask}
+            handleDeleteRepairTask={props.handleDeleteRepairTask}
           />
-          ))}
+        ))}
     </>
   )
 }

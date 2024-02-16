@@ -1,7 +1,7 @@
-//npm modules
-import { Link } from "react-router-dom"
+// npm modules
+import { Link } from 'react-router-dom'
 
-//css
+// css
 import styles from './ShoppingListCard.module.css'
 
 const ShoppingListCard = ({pantryItem,  handleDelFromShoppingList}) => {
@@ -26,12 +26,12 @@ const ShoppingListCard = ({pantryItem,  handleDelFromShoppingList}) => {
           { pantryItem.expires ? (<nobr>⚠️Perishable!⚠️</nobr>) : ''}
           &nbsp;&nbsp;
           <Link to={`/pantryItems/${pantryItem._id}`}>
-          👁️
+            👁️
           </Link>
         </p>
       </div>
     </main>
-  );
+  )
 }
 
-export default ShoppingListCard;
+export default ShoppingListCard

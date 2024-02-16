@@ -22,8 +22,6 @@ const Profile = ({ user, handleLogout }) => {
     fetchProfile()
   }, [user.profile])
 
-  console.log('test single profile: ', profile)
-
   if (!profile) {
     return <main className={styles.container}><h2>Loading profile.</h2></main>
   }
@@ -46,10 +44,10 @@ const Profile = ({ user, handleLogout }) => {
           <button>Change Password</button>
         </NavLink>
         <NavLink
-              to="/"
-              onClick={handleLogout}
-            >
-              <button>Log Out</button>
+          to="/"
+          onClick={handleLogout}
+        >
+          <button>Log Out</button>
         </NavLink>
         
         {/* ** ICE BOX ** */}

@@ -10,7 +10,7 @@ const RepairEdit = (props) => {
   const [formData, setFormData] = useState(state)
 
   const handleChange = evt => {
-    setFormData({...formData, [evt.target.name]: evt.target.value })
+    setFormData({ ...formData, [evt.target.name]: evt.target.value })
   }
 
   const handleSubmit = evt => {
@@ -36,7 +36,6 @@ const RepairEdit = (props) => {
         />
         <label htmlFor="priority-input">Priority:</label>
         <select 
-          // required 
           name="priority"
           id="priority-input"
           value={formData.priority}
@@ -45,11 +44,9 @@ const RepairEdit = (props) => {
           <option value="!" title="Low Priority" >!</option>
           <option value="!!" title="Mid Priority" >!!</option>
           <option value="!!!" title="High Priority" >!!!</option>
-          
         </select>
         <label htmlFor="description-input">Description</label>
         <input 
-          // required
           type="text" 
           name="description"
           id="description-input"
@@ -59,7 +56,6 @@ const RepairEdit = (props) => {
         />
         <label htmlFor="cost-input">Approximate Cost:</label>
         <input 
-          // required
           type="text" 
           name="cost"
           id="cost-input"

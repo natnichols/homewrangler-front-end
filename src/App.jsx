@@ -1,5 +1,5 @@
 // npm modules
-import { useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 
 // pages
@@ -48,11 +48,11 @@ function App() {
     const fetchProfile = async () => {
       try {
         if (user) {
-            const profileData = await profileService.getOneProfile(user.profile);
-            setProfile(profileData);
+            const profileData = await profileService.getOneProfile(user.profile)
+            setProfile(profileData)
           }
       } catch (error) {
-        console.error('Error fetching profile:', error);
+        console.error('Error fetching profile:', error)
       }
     }
     fetchProfile()
@@ -99,12 +99,12 @@ function App() {
   const handleAddToShoppingList = async (pantryItemId) => {
     await pantryService.addToShoppingList(pantryItemId)
     const profileUpdated = await profileService.getOneProfile(user.profile);
-    setProfile(profileUpdated);  
+    setProfile(profileUpdated)
   }
   const handleDelFromShoppingList = async (pantryItemId) => {
     await pantryService.delFromShoppingList(pantryItemId)
     const profileUpdated = await profileService.getOneProfile(user.profile);
-    setProfile(profileUpdated);  
+    setProfile(profileUpdated)
   }
   
 // Repair Functions
@@ -195,7 +195,7 @@ function App() {
               />
             </ProtectedRoute>
           }
-          />
+        />
         <Route
           path="/profiles"
           element={
@@ -203,7 +203,7 @@ function App() {
               <Profiles />
             </ProtectedRoute>
           }
-          />
+        />
 
 
         {/* PANTRY ROUTES */}

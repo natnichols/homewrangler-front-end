@@ -32,7 +32,7 @@ async function create(budgetFormData) {
   }
 }
 
-async function deleteBudget(budgetId){
+async function deleteBudget(budgetId) {
   try {
     const res = await fetch(`${BASE_URL}/${budgetId}`, {
       method: "DELETE",

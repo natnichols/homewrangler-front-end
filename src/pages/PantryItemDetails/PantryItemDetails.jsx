@@ -1,6 +1,6 @@
 // npm modules
-import { useState, useEffect } from "react"
-import { useParams, Link } from "react-router-dom";
+import { useState, useEffect } from 'react'
+import { useParams, Link } from 'react-router-dom'
 
 // services
 import * as pantryService from '../../services/pantryService'
@@ -42,9 +42,8 @@ const PantryItemDetails = (props) => {
             </div>
           </>
         )}
-
     </div>
-  );
+  )
 }
 
-export default PantryItemDetails;
+export default PantryItemDetails

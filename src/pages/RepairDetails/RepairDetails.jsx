@@ -57,7 +57,6 @@ const RepairDetails = (props) => {
         <>
           <Link to={`/repairs/${repairId}/edit`} state={repair}>✏️</Link>
           <Link to="#" title="delete repair" onClick={() => props.handleDeleteRepair(repairId)}>🗑️</Link>
-          {/* <button title="delete repair" onClick={() => props.handleDeleteRepair(repairId)}>🗑️</button> */}
         </>
       }
       </span>
@@ -72,9 +71,7 @@ const RepairDetails = (props) => {
         </button>
       </div>
 
-      {showAddRepairTask && <NewRepairTask 
-        handleAddRepairTask={handleAddRepairTask} 
-      />}
+      {showAddRepairTask && <NewRepairTask handleAddRepairTask={handleAddRepairTask} />}
 
       <RepairTasks 
         repairId={repairId} 
@@ -86,4 +83,4 @@ const RepairDetails = (props) => {
   )
 }
 
-export default RepairDetails;
+export default RepairDetails
