@@ -66,8 +66,6 @@ async function deletePantryItem(pantryItemId){
   }
 }
 
-
-//new Shopping List functions
 async function addToShoppingList(pantryItemId){
   try {
     const res = await fetch(`${BASE_URL}/shoppingList/add/${pantryItemId}`, {
@@ -95,7 +93,6 @@ async function delFromShoppingList(pantryItemId){
     console.log(error)
   }
 }
-
 
 export {
   index,

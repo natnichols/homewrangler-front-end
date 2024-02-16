@@ -31,7 +31,7 @@ const Landing = ({ user }) => {
       </>
       ) : (
       <>
-        {/* NOT-LOGGED IN SHOULD SEE THIS: */}
+        {/* NOT-LOGGED IN WILL SEE THIS: */}
         <h1>HomeWrangler</h1>
         <div>
           <img
