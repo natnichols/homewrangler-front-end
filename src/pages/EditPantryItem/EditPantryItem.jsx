@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useLocation } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 
 import styles from './EditPantryItem.module.css'
@@ -78,10 +79,20 @@ const EditPantryItem = (props) => {
           checked={formData.expires}
           onChange={handleChange}
         />
+
         <div style={{ width: 'fit-content' }}>
           <button type="submit">Update</button>
         </div>
       </form>
+      
+      
+        {/* <div style={{ width: 'fit-content' }}> */}
+          {/* <Link to={`/pantryItems/${props.pantryItem._id}`}> */}
+            {/* <button className={styles.button}>
+              Cancel
+            </button> */}
+          {/* </Link> */}
+        {/* </div> */}
     </main>
   )
 }

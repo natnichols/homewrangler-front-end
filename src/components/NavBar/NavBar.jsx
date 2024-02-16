@@ -31,15 +31,6 @@ const NavBar = ({ user, handleLogout }) => {
             </div>
 
             &nbsp;&nbsp;
-            <div className={styles.linkbox}>
-              <NavLink
-                title='Shipping List'
-                to={`/shoppingList`}
-                className={styles.link}
-              >🛒
-              </NavLink>
-            </div>
-
             
             <div className={styles.linkbox}>
               <NavLink
@@ -49,6 +40,15 @@ const NavBar = ({ user, handleLogout }) => {
                 // Not working yet:
                 // className={location.pathname === "/pantryItems" ? "styles.active" : "styles.link"} 
               >🥫
+              </NavLink>
+            </div>
+
+            <div className={styles.linkbox}>
+              <NavLink
+                title='Shipping List'
+                to={`/shoppingList`}
+                className={styles.link}
+              >🛒
               </NavLink>
             </div>
 
@@ -72,12 +72,14 @@ const NavBar = ({ user, handleLogout }) => {
             </div>
             &nbsp;&nbsp;
             
+            {/* <div className={styles.linkbox}> */}
             <NavLink
               to=""
               onClick={handleLogout}
             >
               <button>LogOut</button>
             </NavLink>
+            {/* </div> */}
 
           {/* end of both nav wrappers below */}
           </div>

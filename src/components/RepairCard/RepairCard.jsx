@@ -18,9 +18,9 @@ const RepairCard = ({ repair }) => {
       <main className={styles.container}>
 
         <div style={{ display: 'flex', alignItems: 'center' }}>
-            <h4>{repair.name}</h4>
+            <p><strong>{repair.name}</strong></p>
           &nbsp;
-          <h4>( {repair.priority} )</h4>
+          <p><strong>({repair.priority})</strong></p>
           &nbsp;
           <Link to={`/repairs/${repair._id}`}>
             👁️

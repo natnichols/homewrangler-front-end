@@ -29,7 +29,7 @@ const PantryCard = ({pantryItem, handleAddToShoppingList, handleDelFromShoppingL
           &nbsp;&nbsp;
           { pantryItem.price ? ('$' + pantryItem.price + '\u00A0\u00A0') : ''}
           {/* { pantryItem.category ? (pantryItem.category + '\u00A0\u00A0') : ''} */}
-          { pantryItem.amount ? ('qty:' + pantryItem.amount + '\u00A0\u00A0') : ''}
+          {/* { pantryItem.amount ? ('qty:' + pantryItem.amount + '\u00A0\u00A0') : ''} */}
           { pantryItem.expires ? ('⚠️Perishable!⚠️') : ''}
           &nbsp;
           <Link to={`/pantryItems/${pantryItem._id}`}>

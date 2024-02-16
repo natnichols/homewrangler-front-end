@@ -27,10 +27,18 @@
   padding: 2px;
   border: 2px solid  #7f7455;
   border-radius: 5px;
+  /* darkblue */
+  /* background: #007d96; */
+  /* darkorange */
   background-color: #BC6C25;
 }
 .linkbox:hover {
-  background-color: #86984a;
+  /* lightgreen */
+  /* background: #86984a; */
+  /* darkblue */
+  background: #007d96;
+  /* lightblue */
+  /* background: #55cdd4; */
 }
 .linkbox:active {
   text-decoration: none;
