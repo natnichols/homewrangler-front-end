@@ -40,7 +40,6 @@ const EditPantryItem = (props) => {
         />
         <label htmlFor="amount-input">Amount:</label>
         <input 
-          // required
           type="text" 
           name="amount"
           id="amount-input"
@@ -50,7 +49,6 @@ const EditPantryItem = (props) => {
         />
         <label htmlFor="category-input">Category:</label>
         <select 
-          // required 
           name="category"
           id="category-input"
           value={formData.category}
@@ -66,7 +64,6 @@ const EditPantryItem = (props) => {
         </select>
         <label htmlFor="price-input">Price:</label>
         <input 
-          // required
           type="text" 
           name="price"
           id="price-input"
@@ -76,7 +73,6 @@ const EditPantryItem = (props) => {
         />
         <label htmlFor="price-input">Expires?</label>
         <input
-          // required
           type="checkbox"
           name="expires"
           id="expires-input"
@@ -101,4 +97,4 @@ const EditPantryItem = (props) => {
   )
 }
 
-export default EditPantryItem;
+export default EditPantryItem
