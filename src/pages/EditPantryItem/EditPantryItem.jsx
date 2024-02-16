@@ -8,7 +8,7 @@ import styles from './EditPantryItem.module.css'
 
 const EditPantryItem = (props) => {
   const { state } = useLocation()
-  console.log(state)
+  // console.log(state)
   const [formData, setFormData] = useState(state)
 
   const handleSubmit = evt => {
@@ -17,7 +17,7 @@ const EditPantryItem = (props) => {
   }
 
   const handleChange = evt => {
-    const value = evt.target.type === "checkbox" ? evt.target.checked : evt.target.value;
+    const value = evt.target.type === "checkbox" ? evt.target.checked : evt.target.value
     setFormData({...formData, [evt.target.name]: value})
   }
   
@@ -101,4 +101,4 @@ const EditPantryItem = (props) => {
   )
 }
 
-export default EditPantryItem;
+export default EditPantryItem

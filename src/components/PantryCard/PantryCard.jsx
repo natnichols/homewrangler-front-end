@@ -51,7 +51,7 @@ const PantryCard = ({pantryItem, handleAddToShoppingList, handleDelFromShoppingL
 
       </div>
     </main>
-  );
+  )
 }
 
-export default PantryCard;
+export default PantryCard

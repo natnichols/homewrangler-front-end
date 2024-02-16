@@ -52,4 +52,4 @@ const RepairCard = ({ repair }) => {
   )
 }
 
-export default RepairCard;
+export default RepairCard

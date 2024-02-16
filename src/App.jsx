@@ -51,16 +51,16 @@ function App() {
     const fetchProfile = async () => {
       try {
         if (user) {
-            const profileData = await profileService.getOneProfile(user.profile);
-            setProfile(profileData);
+            const profileData = await profileService.getOneProfile(user.profile)
+            setProfile(profileData)
           }
       } catch (error) {
-        console.error('Error fetching profile:', error);
+        console.error('Error fetching profile:', error)
       }
     }
     fetchProfile()
   }, [user])
-  // console.log('test single profile: ', profile);
+  // console.log('test single profile: ', profile)
 
 
 
@@ -105,13 +105,13 @@ function App() {
   // new Shopping List functions:
   const handleAddToShoppingList = async (pantryItemId) => {
     await pantryService.addToShoppingList(pantryItemId)
-    const profileUpdated = await profileService.getOneProfile(user.profile);
-    setProfile(profileUpdated);  
+    const profileUpdated = await profileService.getOneProfile(user.profile)
+    setProfile(profileUpdated) 
   }
   const handleDelFromShoppingList = async (pantryItemId) => {
     await pantryService.delFromShoppingList(pantryItemId)
-    const profileUpdated = await profileService.getOneProfile(user.profile);
-    setProfile(profileUpdated);  
+    const profileUpdated = await profileService.getOneProfile(user.profile)
+    setProfile(profileUpdated)
   }
   
 // Repair Functions
@@ -145,7 +145,7 @@ function App() {
   useEffect (() => {
     const fetchAllBudgets = async () => {
       const data = await budgetService.index()
-      console.log('Budget data', data)
+      // console.log('Budget data', data)
       setBudgets(data)
     }
     if(user) fetchAllBudgets()

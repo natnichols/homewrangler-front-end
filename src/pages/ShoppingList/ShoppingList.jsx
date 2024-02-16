@@ -1,5 +1,5 @@
 //npm 
-// import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react'
 
 // services
 // import * as profileService from '../../services/profileService'
@@ -8,17 +8,17 @@
 import styles from './ShoppingList.module.css'
 
 //components
-// import BudgetAvail from '../../components/BudgetAvail/BudgetAvail';
-import ShoppingListCard from '../../components/ShoppingListCard/ShoppingListCard';
-import BudgetAvail from '../../components/BudgetAvail/BudgetAvail';
+// import BudgetAvail from '../../components/BudgetAvail/BudgetAvail'
+import ShoppingListCard from '../../components/ShoppingListCard/ShoppingListCard'
+import BudgetAvail from '../../components/BudgetAvail/BudgetAvail'
 
 const ShoppingList = (props) => {
-  // console.log('test props.user ', props.user);
-  // console.log('test props.user.profile ', props.user.profile);
-  // console.log('test props.user.profile._id ', props.user.profile._id);
-  // console.log('test props.user.profile.shoppingList ', props.user.profile.shoppingList);
+  // console.log('test props.user ', props.user)
+  // console.log('test props.user.profile ', props.user.profile)
+  // console.log('test props.user.profile._id ', props.user.profile._id)
+  // console.log('test props.user.profile.shoppingList ', props.user.profile.shoppingList)
 
-  console.log('test single profile ON SHOPPING LIST PAGE! ', props.profile);
+  // console.log('test single profile ON SHOPPING LIST PAGE! ', props.profile)
 
   if (!props.profile) {
     return <main className={styles.container}><h2>Loading...</h2></main>
@@ -54,4 +54,4 @@ const ShoppingList = (props) => {
   )
 }
 
-export default ShoppingList;
+export default ShoppingList

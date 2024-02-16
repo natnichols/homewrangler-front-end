@@ -4,8 +4,6 @@ import { useState} from 'react'
 //css
 import styles from './PantryList.module.css'
 
-// services
-
 //components
 import PantryCard from '../../components/PantryCard/PantryCard'
 import PantryItemAdd from '../../components/PantryItemAdd/PantryItemAdd'
@@ -38,7 +36,7 @@ const PantryList = (props) => {
       <br></br>
 
       <div className={`${styles.listContainer}`}>
-        {/* using variable from above to map thru ONLY owner's items */}
+        {/* using variable from above to map thru ONLY owner's owned items */}
         {filteredPantryItems.map(pantryItem => 
           <PantryCard
             key={pantryItem._id}

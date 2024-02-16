@@ -22,7 +22,7 @@ const Profile = ({ user, handleLogout }) => {
     fetchProfile()
   }, [user.profile])
 
-  console.log('test single profile: ', profile)
+  // console.log('test single profile: ', profile)
 
   if (!profile) {
     return <main className={styles.container}><h2>Loading profile.</h2></main>

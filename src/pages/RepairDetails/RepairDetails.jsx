@@ -86,4 +86,4 @@ const RepairDetails = (props) => {
   )
 }
 
-export default RepairDetails;
+export default RepairDetails
