@@ -19,7 +19,7 @@
 .linkbox {
   text-decoration: none;
   margin: 0px;
-  padding: 2px;
+  padding: 2px 6px;
   border: 2px solid  #525252;
   border-radius: 5px;
   /* darkorange */
@@ -45,7 +45,7 @@
 
 @media screen and (max-width: 540px) {
   .navwrapouter {
-    font-size: 1.4em;
+    font-size: 1.6em;
   }
   .navwrapinner{
     max-width: 360px;

@@ -85,7 +85,7 @@ const EditPantryItem = (props) => {
         </div>
       </form>
       
-      
+        {/* back-button (ice-box!) */}
         {/* <div style={{ width: 'fit-content' }}> */}
           {/* <Link to={`/pantryItems/${props.pantryItem._id}`}> */}
             {/* <button className={styles.button}>
