@@ -1,4 +1,5 @@
 import * as tokenService from './tokenService'
+
 const BASE_URL = `${import.meta.env.VITE_BACK_END_SERVER_URL}/api/pantryItems`
 
 async function index() {
@@ -54,7 +55,7 @@ async function update(pantryItemData) {
   }
 }
 
-async function deletePantryItem(pantryItemId){
+async function deletePantryItem(pantryItemId) {
   try {
     const res = await fetch(`${BASE_URL}/${pantryItemId}`, {
       method: "DELETE",
@@ -66,7 +67,7 @@ async function deletePantryItem(pantryItemId){
   }
 }
 
-async function addToShoppingList(pantryItemId){
+async function addToShoppingList(pantryItemId) {
   try {
     const res = await fetch(`${BASE_URL}/shoppingList/add/${pantryItemId}`, {
       method: 'POST',
@@ -82,7 +83,7 @@ async function addToShoppingList(pantryItemId){
   }
 }
 
-async function delFromShoppingList(pantryItemId){
+async function delFromShoppingList(pantryItemId) {
   try {
     const res = await fetch(`${BASE_URL}/shoppingList/remove/${pantryItemId}`, {
       method: "DELETE",
