@@ -25,7 +25,6 @@ const EditRepairTaskCard = () => {
     navigate(`/repairs/${repairId}`)
   }
 
-
   return ( 
     <main className={styles.container}>
       <form onSubmit={handleSubmit}>

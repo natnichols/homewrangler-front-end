@@ -5,9 +5,6 @@ import { Link } from "react-router-dom"
 import styles from "./PantryCard.module.css"
 
 const PantryCard = ({pantryItem, handleAddToShoppingList, handleDelFromShoppingList, profile}) => {
-  // console.log('test ', profile.shoppingList)
-  // console.log('test ', user)
-
   return (  
     <main className={styles.container}>
       <div>
@@ -38,6 +35,7 @@ const PantryCard = ({pantryItem, handleAddToShoppingList, handleDelFromShoppingL
           <strong>{pantryItem.name}</strong>
           &nbsp;&nbsp;
           { pantryItem.price ? ('$' + pantryItem.price + '\u00A0\u00A0') : ''}
+          {/* May add back in after more ice-box developments */}
           {/* { pantryItem.category ? (pantryItem.category + '\u00A0\u00A0') : ''} */}
           {/* { pantryItem.amount ? ('qty:' + pantryItem.amount + '\u00A0\u00A0') : ''} */}
           { pantryItem.expires ? ('⚠️Perishable!⚠️') : ''}
@@ -46,9 +44,6 @@ const PantryCard = ({pantryItem, handleAddToShoppingList, handleDelFromShoppingL
           👁️
           </Link>
         </p>
-        {/* <button onClick={() => handleAddToShoppingList(pantryItem._id)}>🛒➕</button>
-        <button onClick={() => handleDelFromShoppingList(pantryItem._id)}>🛒➖</button> */}
-
       </div>
     </main>
   );
