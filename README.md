@@ -9,11 +9,9 @@ Let us wrangle all that for you in the latest organizational app, **_HomeWrangle
 
 ![Placeholder for Logo OR Screenshot of Landing page](/src/assets/hw-logo-border-white.png)
 
-Do you have regular items in your pantry that you're tired of rewriting on your grocery list? Do you have a growing list of repairs that you need to take care of? Do you need a place to keep track of how much money that's all gonna cost? HomeWrangler can help you wrangle it all! 
+The goal of HomeWrangler is to help you spend **_less time & mental energy_** on those repetitive-yet-necessary household tasks. Groceries and home repairs can be logged with a few taps of a button. When you realize you're running low on milk, simply look in your digital pantry and add it to your shopping list. When you're at the hardware store, just look at your to-do list to see what you need. Decide how much money you want to set aside & reference it easily when shopping. HomeWrangler can help you wrangle it all! 
 
-The goal of HomeWrangler is to help you spend **_less time & mental energy_** on those repetitive-yet-necessary household tasks. Groceries and home repairs can be logged with a few taps of a button. When you realize you’re running low on milk, simply look in your digital pantry and add it to your shopping list. When you’re at the hardware store, just look at your to-do list to see what you need. Decide how much money you want to set aside & reference it easily when shopping.
-
-Our goal is to make y'all's life easier. We have more features planned for the future, so grab your saddle and join the posse!
+Our vision is to make y'all's life easier. We have more features planned for the future, so grab your saddle and join the posse!
 
 ## Ready to join us, partner? [Check Out HomeWrangler Here](https://homewrangler.netlify.app/ "HomeWrangler") 🤠
 
