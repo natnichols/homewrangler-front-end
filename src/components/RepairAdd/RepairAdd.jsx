@@ -65,7 +65,7 @@ const RepairAdd = (props) => {
           />
         </div>
 
-        <div style={{ width: 'fit-content' , marginLeft: 'auto', marginRight: 'auto' }}>
+        <div style={{ width: 'fit-content', marginLeft: 'auto', marginRight: 'auto' }}>
           <button type="submit">Add Repair 🔧✨</button>
         </div>
 

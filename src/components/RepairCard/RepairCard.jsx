@@ -15,27 +15,27 @@ const RepairCard = ({ repair }) => {
   }
 
   return (
-    
-      <article className={styles.container}>
-        <header>
-          <span>
-            <Link to={`/repairs/${repair._id}`}>
-              <h2>{repair.name}</h2>
-            </Link>
-            <h2>{repair.priority}</h2>
-          </span>
-        </header>
-        <div style={{ width: 'fit-content' }}>
+      <main className={styles.container}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <Link to={`/repairs/${repair._id}`}>
+            <h4>{repair.name}</h4>
+          </Link>
+          &nbsp;&nbsp;
+          <h4>( {repair.priority} )</h4>
+        </div>
+
+        <div style={{ width: 'fit-content', marginLeft: 'auto', marginRight: 'auto' }}>
           <button onClick={toggleRepairTasks}>
           {showRepairTasks ? "Hide Repair Tasks" : "Show Repair Tasks"}
           </button>
         </div>
+
         {showRepairTasks && repair.repairTasks.map(repairTask => (
           <li key={repairTask._id}>
             {repairTask.task}
           </li>
         ))}
-      </article>
+      </main>
   )
 }
 
