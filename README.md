@@ -53,6 +53,7 @@ Our vision is to make y'all's life easier. We have more features planned for the
 
 ## Ice Box 🧊
 - [ ] Dark Mode
+- [ ] Back button on Detail pages
 - [ ] Edit profile functionality
 - [x] Add Cost field to Repairs, allowing the user to factor in the cost of a repair into their budget
 - [ ] Add Supplies to Repairs, allowing the user to list supplies they want to add to their shopping list
