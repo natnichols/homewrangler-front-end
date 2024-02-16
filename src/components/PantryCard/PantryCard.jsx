@@ -16,7 +16,7 @@ const PantryCard = ({pantryItem, handleAddToShoppingList, handleDelFromShoppingL
           { profile.shoppingList.includes(pantryItem._id)
             ?
             <>
-              <Link href="#" title="remove pantry item" onClick={() => handleDelFromShoppingList(pantryItem._id)}>➖</Link>
+              <Link href="#" title="remove from shopping list" onClick={() => handleDelFromShoppingList(pantryItem._id)}>➖</Link>
               &nbsp;&nbsp;
             </>
             : 
@@ -25,7 +25,6 @@ const PantryCard = ({pantryItem, handleAddToShoppingList, handleDelFromShoppingL
               &nbsp;&nbsp;
             </>
           }
-          
           <strong>{pantryItem.name}</strong>
           &nbsp;&nbsp;
           { pantryItem.price ? ('$' + pantryItem.price + '\u00A0\u00A0') : ''}
