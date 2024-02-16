@@ -7,7 +7,7 @@ import styles from './RepairAdd.module.css'
 const RepairAdd = (props) => {
   const [formData, setFormData] = useState({
     name: '',
-    priority: '',
+    priority: '!',
     description: '',
   })
 
@@ -44,11 +44,11 @@ const RepairAdd = (props) => {
           placeholder="Priority"
           onChange={handleChange}
         /> */}
-        <label htmlFor="priority-input">Priority:</label>
+        <label htmlFor="priority-input1">Priority:</label>
         <select 
-          // required 
+          required 
           name="priority"
-          id="priority-input"
+          id="priority-input1"
           value={formData.priority}
           onChange={handleChange}
         >
