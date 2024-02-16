@@ -14,7 +14,9 @@ const BudgetAvail = (props) => {
   
   return (
     <main className={styles.container}>
-      <h4>Amount Available: ${totalAmount}</h4>
+      <div style={{ width: 'fit-content' }}>
+        <h4>Amount Available: ${totalAmount}</h4>
+      </div>
     </main>
   )
 }
