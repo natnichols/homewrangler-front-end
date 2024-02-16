@@ -1,4 +1,14 @@
-.container {
+.container input, .container textarea { 
+  width: 100%;
+  padding: 14px;
+  font-size: 14px;
+  resize: vertical;
+  border-radius: 5px;
+  margin: 4px 0px 0px 0px;
+  border: 1px solid #283618;
+}
+
+/* .container {
   padding: 0;
   display: flex;
   border: none;
@@ -13,19 +23,10 @@
 .container h3 {
   margin: 0;
   color: black;
-}
+} */
 
-.container input, .container textarea { 
-  width: 100%;
-  padding: 14px;
-  font-size: 14px;
-  resize: vertical;
-  border-radius: 5px;
-  margin: 14px 0px 14px 0px;
-  border: 1px solid var(--border);
-}
 
-.container textarea {
+/* .container textarea {
   min-height: 50px;
 }
 
@@ -53,4 +54,4 @@
 .container button[type="submit"] img {
   width: 18px;
   height: 18px;
-}
+} */ 

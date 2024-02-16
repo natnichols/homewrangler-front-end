@@ -85,7 +85,8 @@ const PantryItemAdd = (props) => {
           checked={formData.expires}
           onChange={handleChange}
         />
-        Also add to Shopping List? (checkbox)
+        {/* Stretch goal: */}
+        {/* Also add to Shopping List? (checkbox) */}
         <br/>
         <div style={{ width: 'fit-content' }}>
           <button className={styles.button} type="submit">Add to Pantry</button>

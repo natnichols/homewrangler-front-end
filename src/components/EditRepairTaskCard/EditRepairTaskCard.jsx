@@ -29,8 +29,11 @@ const EditRepairTaskCard = () => {
   return ( 
     <main className={styles.container}>
       <form onSubmit={handleSubmit}>
-        <h1>Edit Repair Task</h1>
-        <label htmlFor="task-input">Task</label>
+        <h2>Edit Task</h2>
+        <br></br>
+
+        <label htmlFor="task-input">Task:</label>
+        <br></br>
         <textarea 
           required
           name="task" 
@@ -39,7 +42,9 @@ const EditRepairTaskCard = () => {
           placeholder="Task"
           onChange={handleChange}
         />
+        <br></br>
         <label htmlFor="done-input">Done?</label>
+        <br></br>
         <input 
           type="checkbox" 
           name="done" 
@@ -47,7 +52,11 @@ const EditRepairTaskCard = () => {
           checked={formData.done}
           onChange={handleChange} 
         />
-        <button type="submit">Submit Changes🪛✏️</button>
+        <br></br>
+        <br></br>
+        <div style={{ width: 'fit-content', marginLeft: 'auto', marginRight: 'auto' }}>
+          <button type="submit">Submit Changes🪛✏️</button>
+        </div>
       </form>
     </main>
   )

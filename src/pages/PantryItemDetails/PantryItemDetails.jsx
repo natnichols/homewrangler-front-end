@@ -6,7 +6,7 @@ import { useParams, Link } from "react-router-dom";
 import * as pantryService from '../../services/pantryService'
 
 // css
-import styles from './PantryItemDetails'
+import styles from './PantryItemDetails.module.css'
 
 const PantryItemDetails = (props) => {
   const { pantryItemId } = useParams()
@@ -22,13 +22,14 @@ const PantryItemDetails = (props) => {
 
 
   return (  
-    <main className={styles.container}>
-      <ul>{pantryItem.name}
-        {/* <li>Name: {pantryItem.name} </li> */}
-        <li>Price: {pantryItem.price}</li>
-        <li>Category: {pantryItem.category}</li>
-        <li>Qty: {pantryItem.amount}</li>
-        
+    <div className={styles.container}>
+      <h4>{pantryItem.name} details</h4>
+      <br></br>
+      <p>Category: { pantryItem.category ? (pantryItem.category + '\u00A0\u00A0') : ''}</p>
+      <p>{ pantryItem.price ? ('$' + pantryItem.price + '\u00A0\u00A0') : ''}</p>
+      <p>{ pantryItem.amount ? ('qty:' + pantryItem.amount + '\u00A0\u00A0') : ''}</p>
+      <p>{ pantryItem.expires ? ('⚠️Perishable!⚠️') : ''}</p>
+      <br></br>
         {pantryItem.owner && pantryItem.owner._id === props.user.profile && (
           <>
             <div style={{ width: 'fit-content' }}>
@@ -36,15 +37,14 @@ const PantryItemDetails = (props) => {
                 <button>Edit</button>
               </Link>
             </div>
+            
             <div style={{ width: 'fit-content' }}>
               <button onClick={() => props.handleDeletePantryItem(pantryItemId)}>Delete</button>
             </div>
           </>
         )}
-      </ul>
-      
-      
-    </main>
+
+    </div>
   );
 }
 

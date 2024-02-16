@@ -6,7 +6,7 @@ import { useState } from 'react'
 // components
 import RepairAdd from '../../components/RepairAdd/RepairAdd'
 import RepairCard from '../../components/RepairCard/RepairCard'
-// import BudgetAvail from '../../components/BudgetAvail/BudgetAvail'
+import BudgetAvail from '../../components/BudgetAvail/BudgetAvail'
 
 // services
 
@@ -30,6 +30,9 @@ const Repairs = (props) => {
           {showAddRepair ? "Collapse this form" : "Add New Repair"}
         </button>
       </div>
+      <br></br>
+      <BudgetAvail budgets={props.budgets} profile={props.profile}/>
+      <br></br>
       {showAddRepair && <RepairAdd handleAddRepair={props.handleAddRepair} /> }
       {filteredRepairs.map(repair => (
         <RepairCard 

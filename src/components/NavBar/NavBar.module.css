@@ -1,12 +1,12 @@
 .navwrapouter {
   /* NOTE: moved position & size props up to app.css to handle all other elements disappearing under nav bar: */
-
   margin: 0px;
   /* padding: 4px 0px 4px 0px; */
-  
   background-color: #DDA15E;
   font-size: 2em;
 }
+
+
 
 .navwrapinner{
   display: flex;
@@ -14,9 +14,8 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-evenly;
-  max-width: 560px;
+  max-width: 540px;
   height: 70px;
-  
   margin-left: auto;
   margin-right: auto;
 }
@@ -49,3 +48,12 @@
 /* a.active {
   text-decoration: underline;
 } */
+
+@media screen and (max-width: 540px) {
+  .navwrapouter {
+    font-size: 1.4em;
+  }
+  .navwrapinner{
+    max-width: 360px;
+  }
+}

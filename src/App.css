@@ -36,12 +36,13 @@ body {
   font-size: 16px;
 }
 
+
 .position-handle-nav{
   position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
-  max-width: 100%;
+  /* max-width: 100%; */
   z-index: 1000;
 }
 .position-handle-remainder{
@@ -49,23 +50,26 @@ body {
   margin-top: 90px;
   margin-bottom: 30px;
   max-width: 600px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
+
 
 
 h1, h2, h3, h4 {
   margin: 0px;
 }
 h1 {
-  font-size: 1.8em;
+  font-size: 1.5em;
 }
 h2 {
-  font-size: 1.6em;
+  font-size: 1.35em;
 }
 h3 {
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 h4 {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 p {
@@ -107,4 +111,13 @@ button:active {
   background: #283618;
   border: 2px solid #606C38;
   color: #ffffff;
+}
+
+@media screen and (max-width: 540px) {
+  body {
+    font-size: 14px;
+  }
+  .position-handle-remainder{
+    max-width: 360px;
+  }
 }

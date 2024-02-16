@@ -25,12 +25,17 @@ const ShoppingList = (props) => {
   }
 
   return (
-    <main className={styles.container}>
-      <BudgetAvail budgets={props.budgets} profile={props.profile}/>
-      <h1>My Shopping List</h1>
+    <main>
+      <header className={styles.container}>
 
-      <div className={`${styles.container} ${styles.listContainer}`}>
-        {/* {props.pantryItems.map(pantryItem =>  */}
+        <h1>My Shopping List</h1>
+        <br></br>
+        <BudgetAvail budgets={props.budgets} profile={props.profile}/>
+
+      </header>
+      <br></br>
+
+      <div className={`${styles.listContainer}`}>
         {props.pantryItems
           .filter(pantryItem => props.profile.shoppingList.includes(pantryItem._id))
           .map(pantryItem => 
