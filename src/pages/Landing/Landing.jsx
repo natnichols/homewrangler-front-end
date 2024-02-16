@@ -40,7 +40,7 @@ const Landing = ({ user }) => {
             style={{ width: '400px', maxWidth: '100%' }} 
           />
         </div>
-        <h3>Take control of yer household, pardner.</h3>
+        <h3 style={{ textAlign: 'center' }}>Take control of yer household, pardner.</h3>
         <NavLink to="/auth/login"><button>Log In</button></NavLink>
         <NavLink to="/auth/signup"><button>Sign Up</button></NavLink>
       </>

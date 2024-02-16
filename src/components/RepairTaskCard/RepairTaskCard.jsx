@@ -16,32 +16,38 @@ const RepairTaskCard = ({ repairTask, repairId, user, handleDeleteRepairTask }) 
   // }
 
   return ( 
-    <article>
-      <header>
-        <span>
-          {repairTask.owner._id === user.profile &&
-            <>
-              <Link title='edit repair task' to={`/repairs/${repairId}/repairTasks/${repairTask._id}`} state={repairTask}>
-                ✏️
-              </Link>
-              {/* <button onClick={toggleEditRepairTask}>
-                {showEditRepairTask ? "" : "📝"}
-              </button> */}
-              <button title="remove repair task" onClick={() => handleDeleteRepairTask(repairId, repairTask._id)}>
-                🗑️
-              </button>
-            </>
-          }
-          {/* {showEditRepairTask && <EditRepairTaskCard  
-            repairId={repairId} 
-            user={user} 
-            repairTask={repairTask} 
-          />} */}
-        </span>
-      </header>
-      <li>{repairTask.task} - {repairTask.done ? 'done' : 'not done' }</li>
-      {/* want to add checkbox ^^^ */}
-    </article>
+    <main>
+      <span>
+        {/* &bull; {repairTask.task} - {repairTask.done ? 'done' : 'not done' } */}
+
+        {repairTask.done ? (
+          <del>{repairTask.task}</del>
+        ) : (
+          <>{repairTask.task}</>
+        )}
+
+        {/* want to add checkbox ^^^ */}
+        {repairTask.owner._id === user.profile &&
+          <>
+            <Link title='edit task' to={`/repairs/${repairId}/repairTasks/${repairTask._id}`} state={repairTask}>
+              ✏️
+            </Link>
+            <Link title="remove task" to="#" onClick={() => handleDeleteRepairTask(repairId, repairTask._id)}>
+              🗑️
+            </Link>
+            {/* <button onClick={toggleEditRepairTask}>
+              {showEditRepairTask ? "" : "📝"}
+            </button> */}
+          </>
+        }
+        {/* {showEditRepairTask && <EditRepairTaskCard  
+          repairId={repairId} 
+          user={user} 
+          repairTask={repairTask} 
+        />} */}
+      </span>
+      <br></br>
+    </main>
   )
 }
 

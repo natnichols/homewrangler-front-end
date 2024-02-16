@@ -9,17 +9,20 @@ const ShoppingListCard = ({pantryItem,  handleDelFromShoppingList}) => {
     <main className={styles.container}>
       <div>
         <p>
-          <Link to={`/pantryItems/${pantryItem._id}`}>
-            {pantryItem.name}
-          </Link>
-          &nbsp;&nbsp;
-          🛒&nbsp;
+          🛒
           <Link href="#" title="remove from shopping list" onClick={() => handleDelFromShoppingList(pantryItem._id)}>➖</Link>
           &nbsp;&nbsp;
-          { pantryItem.category ? (pantryItem.category + '\u00A0\u00A0') : ''}
-          { pantryItem.price ? ('$' + pantryItem.price + '\u00A0\u00A0') : ''}
-          { pantryItem.amount ? ('qty:' + pantryItem.amount + '\u00A0\u00A0') : ''}
-          { pantryItem.expires ? ('⚠️Perishable!⚠️') : ''}
+          <strong>{pantryItem.name}</strong>
+          &nbsp;&nbsp;
+          &nbsp;&nbsp;
+          { pantryItem.category ? (pantryItem.category + '\u00A0\u00A0') : ''} 
+          { pantryItem.price ? ('$' + pantryItem.price + '\u00A0\u00A0') : ''} 
+          { pantryItem.amount ? ('qty:' + pantryItem.amount + '\u00A0\u00A0') : ''} 
+          { pantryItem.expires ? (<nobr>⚠️Perishable!⚠️</nobr>) : ''}
+          &nbsp;&nbsp;
+          <Link to={`/pantryItems/${pantryItem._id}`}>
+          👁️
+          </Link>
         </p>
         {/* <button onClick={() => handleAddToShoppingList(pantryItem._id)}>🛒➕</button>
         <button onClick={() => handleDelFromShoppingList(pantryItem._id)}>🛒➖</button> */}

@@ -23,8 +23,8 @@ import Budgets from './pages/Budgets/Budgets'
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import RepairAdd from './components/RepairAdd/RepairAdd'
-import AddAmountForm from './components/AddAmountForm/AddAmountForm'
-import BudgetAvail from './components/BudgetAvail/BudgetAvail'
+// import AddAmountForm from './components/AddAmountForm/AddAmountForm'
+// import BudgetAvail from './components/BudgetAvail/BudgetAvail'
 
 // services
 import * as authService from './services/authService'
@@ -196,7 +196,10 @@ function App() {
           path="/profiles/profile"
           element={
             <ProtectedRoute user={user}>
-              <Profile user={user} />
+              <Profile
+                user={user}
+                handleLogout={handleLogout}
+              />
             </ProtectedRoute>
           }
           />
@@ -221,7 +224,7 @@ function App() {
                 budgets={budgets}
                 user={user}
                 profile={profile}
-                pantryItems={pantryItems }
+                pantryItems={pantryItems}
                 handlePantryItemAdd={handlePantryItemAdd}
                 handleAddToShoppingList={handleAddToShoppingList}
                 handleDelFromShoppingList={handleDelFromShoppingList}
@@ -275,6 +278,7 @@ function App() {
                 user={user}
                 profile={profile}
                 repairs={repairs} 
+                budgets={budgets}
                 handleAddRepair={handleAddRepair} 
               />
             </ProtectedRoute>
@@ -319,10 +323,12 @@ function App() {
           path="/budgets"
           element={
             <ProtectedRoute user={user}>
-              <BudgetAvail budgets={budgets} profile={profile}/>
-              <AddAmountForm handleAddBudget={handleAddBudget} />
-              <Budgets handleDeleteBudget={handleDeleteBudget} profile={profile} budgets={budgets}/>
-              {/* <Budgets handleDeleteBudget={handleDeleteBudget} budgets={budgets.filter(budget => budget.owner._id === user.profile._id)} /> */}
+              <Budgets
+                handleDeleteBudget={handleDeleteBudget}
+                handleAddBudget={handleAddBudget}
+                profile={profile}
+                budgets={budgets}
+              />
             </ProtectedRoute>
           }
         />

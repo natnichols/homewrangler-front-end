@@ -11,14 +11,7 @@ import styles from './Profile.module.css'
 // images
 import hwLogoBrown from '../../assets/hw-logo-border-brown.png'
 
-const Profile = ({ user }) => {
-  // removed! no need to do by URL anymore.
-  // const { profileId } = useParams()
-
-  // will provide profile id:
-  // console.log('test user.profile: ', user.profile);
-  // will not work - 'profile' property is already an id
-  // console.log('test user.profile._id: ', user.profile._id);
+const Profile = ({ user, handleLogout }) => {
   const [profile, setProfile] = useState(null)
 
   useEffect(() => {
@@ -51,6 +44,12 @@ const Profile = ({ user }) => {
         <p>Email: {user.email}</p>
         <NavLink to="/auth/change-password">
           <button>Change Password</button>
+        </NavLink>
+        <NavLink
+              to="/"
+              onClick={handleLogout}
+            >
+              <button>Log Out</button>
         </NavLink>
         
         {/* ** ICE BOX ** */}

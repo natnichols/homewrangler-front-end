@@ -32,7 +32,7 @@ const AddAmountForm = (props) => {
           onChange={handleChange}
         />
         <div style={{ width: 'fit-content', margin: '0 auto' }}>
-          <button type="submit">Adjust Budget</button>
+          <button type="submit">Adjust Total Budget</button>
         </div>
       </form>
     </main>

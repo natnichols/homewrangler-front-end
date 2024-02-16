@@ -79,7 +79,7 @@ const Signup = ({ handleAuthEvt }) => {
 
   return (
     <main className={styles.container}>
-      <h1>Sign Up component</h1>
+      <h1>Sign Up</h1>
       <p className={styles.message}>{message}</p>
       <form autoComplete="off" onSubmit={handleSubmit} className={styles.form}>
         <label className={styles.label}>
@@ -123,16 +123,20 @@ const Signup = ({ handleAuthEvt }) => {
           />
         </label>
         <div>
-          <Link to="/">Cancel</Link>
           <button
             className={styles.button}
             disabled={ isFormInvalid() || isSubmitted }
           >
-            {!isSubmitted ? 'Sign Up' : '🚀 Sending...'}
+            {!isSubmitted ? 'Sign Up' : 'Working...'}
           </button>
+          <Link to="/">
+            <button className={styles.button}>
+              Cancel
+            </button>
+          </Link>
+
         </div>
       </form>
-      <h3>end of Signup component</h3>
     </main>
   )
 }
