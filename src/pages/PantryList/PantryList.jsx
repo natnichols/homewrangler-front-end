@@ -1,10 +1,10 @@
 // npm
 import { useState} from 'react'
 
-//css
+// css
 import styles from './PantryList.module.css'
 
-//components
+// components
 import PantryCard from '../../components/PantryCard/PantryCard'
 import PantryItemAdd from '../../components/PantryItemAdd/PantryItemAdd'
 import BudgetAvail from '../../components/BudgetAvail/BudgetAvail'
