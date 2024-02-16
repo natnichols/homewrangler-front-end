@@ -23,8 +23,8 @@ import Budgets from './pages/Budgets/Budgets'
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import RepairAdd from './components/RepairAdd/RepairAdd'
-import AddAmountForm from './components/AddAmountForm/AddAmountForm'
-import BudgetAvail from './components/BudgetAvail/BudgetAvail'
+// import AddAmountForm from './components/AddAmountForm/AddAmountForm'
+// import BudgetAvail from './components/BudgetAvail/BudgetAvail'
 
 // services
 import * as authService from './services/authService'
