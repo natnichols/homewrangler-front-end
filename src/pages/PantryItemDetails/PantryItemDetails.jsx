@@ -6,7 +6,7 @@ import { useParams, Link } from "react-router-dom";
 import * as pantryService from '../../services/pantryService'
 
 // css
-import styles from './PantryItemDetails'
+import styles from './PantryItemDetails.module.css'
 
 const PantryItemDetails = (props) => {
   const { pantryItemId } = useParams()
