@@ -196,7 +196,10 @@ function App() {
           path="/profiles/profile"
           element={
             <ProtectedRoute user={user}>
-              <Profile user={user} />
+              <Profile
+                user={user}
+                handleLogout={handleLogout}
+              />
             </ProtectedRoute>
           }
           />
