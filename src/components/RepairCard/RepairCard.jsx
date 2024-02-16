@@ -29,7 +29,7 @@ const RepairCard = ({ repair }) => {
           <div style={{ width: 'fit-content', marginLeft: 'auto', marginRight: 'auto' }}>
             <br></br>
             <button onClick={toggleRepairTasks}>
-            {showRepairTasks ? "Hide Repair Tasks" : "Show Repair Tasks"}
+            {showRepairTasks ? "Hide Tasks" : "Show Tasks"}
             </button>
           </div>
         : '' }
