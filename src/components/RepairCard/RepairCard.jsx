@@ -16,7 +16,7 @@ const RepairCard = ({ repair }) => {
     <main className={styles.container}>
 
       <div style={{ display: 'flex', alignItems: 'center' }}>
-          <p><strong>{repair.name}</strong></p>
+        <p><strong>{repair.name}</strong></p>
         &nbsp;
         <p><strong>({repair.priority})</strong></p>
         &nbsp;
