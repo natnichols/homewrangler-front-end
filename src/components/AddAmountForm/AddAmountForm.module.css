@@ -1,3 +1,14 @@
-.container{
-  color: black;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.container button {
+  margin-left: auto;
+  margin-right: auto; /* Set left and right margins to auto */
 }
