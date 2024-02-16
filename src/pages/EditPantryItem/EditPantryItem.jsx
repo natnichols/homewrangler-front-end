@@ -1,8 +1,8 @@
-import { useState } from "react"
-import { useLocation } from "react-router-dom"
+import { useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
 // for use with ice-box button at bottom
-// import { Link } from "react-router-dom"
+// import { Link } from 'react-router-dom'
 
 import styles from './EditPantryItem.module.css'
 
