@@ -7,9 +7,8 @@ import styles from './NavBar.module.css'
 // image
 import cowboyHatSmall from '../../assets/cowboy-hat-tp-bg-small.png'
 
-const NavBar = ({ user, handleLogout }) => {
-  // this test was for passing profile ID to Single Profile component
-  // {console.log('TEST USER ', user);}
+const NavBar = ({ user }) => {
+
   if (user) {
     return (
       <nav>
@@ -37,8 +36,6 @@ const NavBar = ({ user, handleLogout }) => {
                 title='Pantry'
                 to="/pantryItems"
                 className={styles.link}
-                // Not working yet:
-                // className={location.pathname === "/pantryItems" ? "styles.active" : "styles.link"} 
               >🥫
               </NavLink>
             </div>
@@ -71,15 +68,6 @@ const NavBar = ({ user, handleLogout }) => {
               </NavLink>
             </div>
             &nbsp;&nbsp;
-            
-            {/* <div className={styles.linkbox}> */}
-            <NavLink
-              to=""
-              onClick={handleLogout}
-            >
-              <button>LogOut</button>
-            </NavLink>
-            {/* </div> */}
 
           {/* end of both nav wrappers below */}
           </div>
