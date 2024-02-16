@@ -57,7 +57,6 @@ const RepairDetails = (props) => {
         <>
           <Link to={`/repairs/${repairId}/edit`} state={repair}>✏️</Link>
           <Link to="#" title="delete repair" onClick={() => props.handleDeleteRepair(repairId)}>🗑️</Link>
-          {/* <button title="delete repair" onClick={() => props.handleDeleteRepair(repairId)}>🗑️</button> */}
         </>
       }
       </span>
@@ -84,4 +83,4 @@ const RepairDetails = (props) => {
   )
 }
 
-export default RepairDetails;
+export default RepairDetails
