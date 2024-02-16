@@ -2,8 +2,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-// components
-
 // css
 import styles from './RepairCard.module.css'
 
