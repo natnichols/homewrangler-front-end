@@ -37,7 +37,7 @@ const RepairAdd = (props) => {
           />
         </div>
 
-          <p>Priority:</p>
+        <p>Priority:</p>
         <div className="input-container">
           {/* <label htmlFor="priority-input1" style={{ display: 'inline-block', marginRight: '10px' }}>Priority:</label> */}
           <select 
