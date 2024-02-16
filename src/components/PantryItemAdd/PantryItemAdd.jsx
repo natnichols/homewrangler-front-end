@@ -14,9 +14,9 @@ const PantryItemAdd = (props) => {
   })
 
   const handleSubmit = evt => {
-    //prevent page refashing
+    // prevent page refashing
     evt.preventDefault()
-    //call handleAddPantryItem
+    // call handleAddPantryItem on props!
     props.handlePantryItemAdd(formData)
   }
 
@@ -29,6 +29,7 @@ const PantryItemAdd = (props) => {
   return (  
     <main className={styles.container}>
       <form className={styles.form} onSubmit={handleSubmit} >
+        {/* May use again after more content added */}
         {/* <label htmlFor="name-input">Name:</label> */}
         <input 
           required
@@ -39,9 +40,9 @@ const PantryItemAdd = (props) => {
           value={formData.name}
           onChange={handleChange}
         />
+        {/* May use again after more content added */}
         {/* <label htmlFor="category-input">Category:</label> */}
         <select 
-          // required 
           name="category"
           id="category-input"
           value={formData.category}
@@ -55,9 +56,9 @@ const PantryItemAdd = (props) => {
           <option value="Household">Household</option>
           <option value="Repairs">Repairs</option>
         </select>
+        {/* May use again after more content added */}
         {/* <label htmlFor="amount-input">Amount:</label> */}
         <input 
-          // required
           type="text" 
           name="amount"
           id="amount-input"
@@ -65,9 +66,9 @@ const PantryItemAdd = (props) => {
           value={formData.amount}
           onChange={handleChange}
         />
+        {/* May use again after more content added */}
         {/* <label htmlFor="price-input">Price:</label> */}
         <input 
-          // required
           type="text" 
           name="price"
           id="price-input"
@@ -75,19 +76,19 @@ const PantryItemAdd = (props) => {
           value={formData.price}
           onChange={handleChange}
         />
+        {/* May use again after more content added */}
         {/* <label htmlFor="expires-input">Expires?</label> */}
         Expires?
         <input
-          // required
           type="checkbox"
           name="expires"
           id="expires-input"
           checked={formData.expires}
           onChange={handleChange}
         />
-        {/* Stretch goal: */}
-        {/* Also add to Shopping List? (checkbox) */}
-        <br/>
+        {/* Ice-box feature here: */}
+        {/* Also add to Shopping List (checkbox) */}
+        <br></br>
         <div style={{ width: 'fit-content' }}>
           <button className={styles.button} type="submit">Add to Pantry</button>
         </div>

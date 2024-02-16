@@ -29,8 +29,6 @@ const ShoppingListCard = ({pantryItem,  handleDelFromShoppingList}) => {
           👁️
           </Link>
         </p>
-        {/* <button onClick={() => handleAddToShoppingList(pantryItem._id)}>🛒➕</button>
-        <button onClick={() => handleDelFromShoppingList(pantryItem._id)}>🛒➖</button> */}
       </div>
     </main>
   );

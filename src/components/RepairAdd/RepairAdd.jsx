@@ -26,6 +26,7 @@ const RepairAdd = (props) => {
       <form onSubmit={handleSubmit}>
 
         <div className="input-container">
+          {/* May use again after more content added */}
           {/* <label htmlFor="name-input">Name</label> */}
           <input 
             required
@@ -40,6 +41,7 @@ const RepairAdd = (props) => {
 
         <p>Priority:</p>
         <div className="input-container">
+          {/* May use again after more content added */}
           {/* <label htmlFor="priority-input1" style={{ display: 'inline-block', marginRight: '10px' }}>Priority:</label> */}
           <select 
             required 
@@ -55,6 +57,7 @@ const RepairAdd = (props) => {
         </div>
 
         <div className="input-container">
+          {/* May use again after more content added */}
           {/* <label htmlFor="description-input">Description</label> */}
           <input 
             type="text" 

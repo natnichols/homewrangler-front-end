@@ -20,7 +20,6 @@ const PantryItemDetails = (props) => {
     fetchPantryItem()
   }, [pantryItemId])
 
-
   return (  
     <div className={styles.container}>
       <h4>{pantryItem.name} details</h4>

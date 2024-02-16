@@ -23,8 +23,6 @@ import Budgets from './pages/Budgets/Budgets'
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import RepairAdd from './components/RepairAdd/RepairAdd'
-// import AddAmountForm from './components/AddAmountForm/AddAmountForm'
-// import BudgetAvail from './components/BudgetAvail/BudgetAvail'
 
 // services
 import * as authService from './services/authService'
@@ -45,7 +43,6 @@ function App() {
   const [profile, setProfile] = useState([])
   const navigate = useNavigate()
 
-
   // to auto-update profile data in state if anything changes (initially for use with handleAdd & handleDel from shopping cart)
   useEffect(() => {
     const fetchProfile = async () => {
@@ -60,9 +57,6 @@ function App() {
     }
     fetchProfile()
   }, [user])
-  // console.log('test single profile: ', profile);
-
-
 
   const handleLogout = () => {
     authService.logout()
@@ -100,7 +94,6 @@ function App() {
     setPantryItems(pantryItems.filter(p => p._id !== deletedPantryItem._id))
     navigate('/pantryItems')
   }
-
 
   // new Shopping List functions:
   const handleAddToShoppingList = async (pantryItemId) => {
@@ -170,7 +163,7 @@ function App() {
 
       <div className='position-handle-remainder'>
       <Routes>
-        {/* LANDING ROUTES */}
+        {/* LANDING ROUTE */}
         <Route path="/" element={<Landing user={user} />} />
 
         {/* AUTH ROUTES */}
@@ -219,7 +212,6 @@ function App() {
           path="/pantryItems"
           element={
             <ProtectedRoute user={user}>
-              {/* <h5 className="top-right-box"><BudgetAvail budgets={budgets} profile={profile}/></h5> */}
               <PantryList
                 budgets={budgets}
                 user={user}
@@ -268,7 +260,6 @@ function App() {
           }
         />
 
-
         {/* REPAIR ROUTES */}
         <Route
           path="/repairs"
@@ -300,7 +291,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-        {/* are below routes needed? */}
         <Route 
           path="/repairs/new"
           element={
@@ -318,7 +308,7 @@ function App() {
           }
         />
 
-        {/* BUDGET ROUTES */}
+        {/* BUDGET ROUTE */}
         <Route
           path="/budgets"
           element={

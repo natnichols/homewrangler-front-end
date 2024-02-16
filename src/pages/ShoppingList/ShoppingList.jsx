@@ -1,22 +1,11 @@
-//npm 
-// import { useState, useEffect } from 'react';
-
-// services
-// import * as profileService from '../../services/profileService'
-
 //css
 import styles from './ShoppingList.module.css'
 
 //components
-// import BudgetAvail from '../../components/BudgetAvail/BudgetAvail';
 import ShoppingListCard from '../../components/ShoppingListCard/ShoppingListCard';
 import BudgetAvail from '../../components/BudgetAvail/BudgetAvail';
 
 const ShoppingList = (props) => {
-  // console.log('test props.user ', props.user);
-  // console.log('test props.user.profile ', props.user.profile);
-  // console.log('test props.user.profile._id ', props.user.profile._id);
-  // console.log('test props.user.profile.shoppingList ', props.user.profile.shoppingList);
 
   console.log('test single profile ON SHOPPING LIST PAGE! ', props.profile);
 
@@ -42,14 +31,12 @@ const ShoppingList = (props) => {
           <ShoppingListCard
             key={pantryItem._id}
             pantryItem={pantryItem}
+            // can utilize later with some ice-box features
             // handleAddToShoppingList={props.handleAddToShoppingList}
             handleDelFromShoppingList={props.handleDelFromShoppingList}
           />
         )}
       </div>
-
-        {/* <BudgetAvail/> */}
-
     </main>
   )
 }

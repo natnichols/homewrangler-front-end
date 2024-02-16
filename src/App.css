@@ -5,6 +5,7 @@
 }
 
 html{
+  /* keep for future ice-box ref (along with body width below) */
   /* width: 50%; */
 }
 
@@ -16,6 +17,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   
+  /* keep for future ice-box ref (along with html width above) */
   /* width: 100%; */
   display: flex;
   align-items: center;
@@ -23,39 +25,34 @@ body {
   flex-direction: column;
   
   margin: 0;
-  /* min-height: 100vh; */
-  
-
   background-color: #FEFAE0;
-  /* background-color: #DDA15E; */
+
   font-family: Trebuchet, system-ui, Arial, sans-serif;
-  /* font-family:verdana, geneva, tahoma, kalimati, sans-serif; */
-
-  /* font-family: Garamond, "apple garamond", Baskerville, Times, serif;   */
   color: #525252;
-  /* color: #BC6C25; */
   font-size: 16px;
-}
 
+  /* alt options for future */
+  /* font-family:verdana, geneva, tahoma, kalimati, sans-serif; */
+  /* font-family: Garamond, "apple garamond", Baskerville, Times, serif;   */
+  /* color: #BC6C25; */
+}
 
 .position-handle-nav{
   position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
-  /* max-width: 100%; */
   z-index: 1000;
 }
 .position-handle-remainder{
-  /* make sure to check this value against height in NavBar.css */
+  /* make sure to check this value against height in NavBar.css - they work together */
   margin-top: 90px;
+
   margin-bottom: 30px;
   max-width: 600px;
   padding-left: 10px;
   padding-right: 10px;
 }
-
-
 
 h1, h2, h3, h4 {
   margin: 0px;
@@ -86,11 +83,11 @@ p {
 }
 
 a {
-  /* color: #BC6C25; */
   color: #606C38;
   text-decoration: none;
-  /* font-weight: 500; */
   font-weight: 700;
+  /* color scheme opt */
+  /* color: #BC6C25; */
 }
 
 button {
@@ -109,7 +106,6 @@ button {
   text-decoration: none;
 
   cursor: pointer;
-  /* margin: auto; */
 }
 button:hover {
   /* lightblue */
@@ -133,5 +129,4 @@ button:active {
   .position-handle-remainder{
     max-width: 360px;
   }
-
 }

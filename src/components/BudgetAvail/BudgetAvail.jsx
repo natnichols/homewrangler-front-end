@@ -3,7 +3,7 @@ import styles from './BudgetAvail.module.css'
 
 
 const BudgetAvail = (props) => {
-  // Check if budgets is defined before using reduce
+  // To check if 'budgets' is defined before using reduce
   if (!props.budgets || props.budgets.length === 0) {
     return <div>No budgets available</div>
   }
@@ -22,4 +22,3 @@ const BudgetAvail = (props) => {
 }
 
 export default BudgetAvail
-

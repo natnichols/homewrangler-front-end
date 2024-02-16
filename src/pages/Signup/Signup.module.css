@@ -27,7 +27,6 @@ input[type="file"] {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin-bottom: 50px; */
 }
 
 .label {
@@ -37,11 +36,3 @@ input[type="file"] {
   align-items: center;
   margin-bottom: 8px;
 }
-
-/* .button {
-  margin-left: 16px;
-} */
-
-/* .form > label:last-of-type {
-  margin-bottom: 20px;
-} */
