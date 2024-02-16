@@ -44,7 +44,6 @@ const RepairEdit = (props) => {
           <option value="!" title="Low Priority" >!</option>
           <option value="!!" title="Mid Priority" >!!</option>
           <option value="!!!" title="High Priority" >!!!</option>
-          
         </select>
         <label htmlFor="description-input">Description</label>
         <input 
