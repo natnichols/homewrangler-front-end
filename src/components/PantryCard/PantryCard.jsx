@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 //css
 import styles from "./PantryCard.module.css"
 
-const PantryCard = ({pantryItem, handleAddToShoppingList, handleDelFromShoppingList, user, profile}) => {
+const PantryCard = ({pantryItem, handleAddToShoppingList, handleDelFromShoppingList, profile}) => {
   // console.log('test ', profile.shoppingList)
   // console.log('test ', user)
 
