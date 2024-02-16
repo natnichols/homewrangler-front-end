@@ -22,7 +22,7 @@ const PantryItemAdd = (props) => {
 
   const handleChange = evt  => {
     //to change value of checkbox from "on/off" to "true/false"
-    const value = evt.target.type === "checkbox" ? evt.target.checked : evt.target.value;
+    const value = evt.target.type === "checkbox" ? evt.target.checked : evt.target.value
     setFormData({...formData, [evt.target.name]: value})
   }
 

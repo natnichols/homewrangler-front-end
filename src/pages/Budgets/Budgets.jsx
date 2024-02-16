@@ -7,7 +7,6 @@ const Budgets = (props) => {
 
   const filteredBudgets = props.budgets.filter(budget => budget.owner._id === props.profile._id)
 
-  console.log(filteredBudgets)
   return (  
     <main className={styles.container}>
       <h1>Budget</h1>
