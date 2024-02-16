@@ -17,7 +17,7 @@ const EditPantryItem = (props) => {
   }
 
   const handleChange = evt => {
-    const value = evt.target.type === "checkbox" ? evt.target.checked : evt.target.value;
+    const value = evt.target.type === "checkbox" ? evt.target.checked : evt.target.value
     setFormData({...formData, [evt.target.name]: value})
   }
   
