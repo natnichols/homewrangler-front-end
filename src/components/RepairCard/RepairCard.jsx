@@ -24,11 +24,15 @@ const RepairCard = ({ repair }) => {
           <h4>( {repair.priority} )</h4>
         </div>
 
-        <div style={{ width: 'fit-content', marginLeft: 'auto', marginRight: 'auto' }}>
-          <button onClick={toggleRepairTasks}>
-          {showRepairTasks ? "Hide Repair Tasks" : "Show Repair Tasks"}
-          </button>
-        </div>
+        { repair.repairTasks.length
+        ?
+          <div style={{ width: 'fit-content', marginLeft: 'auto', marginRight: 'auto' }}>
+            <br></br>
+            <button onClick={toggleRepairTasks}>
+            {showRepairTasks ? "Hide Repair Tasks" : "Show Repair Tasks"}
+            </button>
+          </div>
+        : '' }
 
         {showRepairTasks && repair.repairTasks.map(repairTask => (
           <li key={repairTask._id}>

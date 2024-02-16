@@ -2,7 +2,7 @@
   width: 100%;
   /* min-height: 220px; */
   margin: 4px; 
-  padding: 8px 14px;
+  padding: 10px 14px 14px 14px;
   border-radius: 5px;
   /* border: 1px solid #283618; */
   background-color: var(--card-background);
