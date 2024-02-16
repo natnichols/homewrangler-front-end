@@ -5,7 +5,7 @@ import RepairTaskCard from '../RepairTaskCard/RepairTaskCard'
 // import styles from './RepairTasks.module.css'
 
 const RepairTasks = (props) => {
-  if (!props.repairTasks.length) return <h4>No Repair Tasks</h4>
+  if (!props.repairTasks.length) return <h4>No Tasks!</h4>
 
   return ( 
     <>

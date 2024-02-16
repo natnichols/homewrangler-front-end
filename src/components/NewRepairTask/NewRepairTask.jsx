@@ -26,7 +26,10 @@ const NewRepairTask = (props) => {
         placeholder="Add a Task"
         onChange={handleChange}
       />
-      <button type="submit">🛠️✨</button>
+      <div style={{ width: 'fit-content', marginLeft: 'auto', marginRight: 'auto' }}>
+        <button type="submit">🛠️✨</button>
+      </div>
+      <br></br>
     </form>
   )
 }

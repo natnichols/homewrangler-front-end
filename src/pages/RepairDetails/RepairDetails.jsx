@@ -68,7 +68,7 @@ const RepairDetails = (props) => {
 
       <div style={{ width: 'fit-content' }}>
         <button onClick={toggleAddRepairTask}>
-          {showAddRepairTask ? "Collapse This Form" : "Add Task" }
+          {showAddRepairTask ? "Collapse This Form" : "Add" }
         </button>
       </div>
 
