@@ -52,11 +52,18 @@ const Profile = ({ user }) => {
         
         {/* ** ICE BOX ** */}
         {/* <div style={{ width: 'fit-content' }}>
-          <button>edit profile (not active - stretch)</button>
+          <button>edit profile</button>
         </div> */}
       <br></br>
       <h4>Gather 'round the campfire:</h4>
-      <p>HomeWrangler was created to make daily household tasks simpler to keep track of. (more info)</p>
+
+      <p style={{ textAlign: 'center', marginBottom: '8px' }}>
+        Life is complicated out on the range. Why waste all yer perfectly good mind juice on simple things like grocery lists or repairs? Let us wrangle it for ya.
+      </p>
+      <p style={{ textAlign: 'center', marginBottom: '8px' }}>
+        The primary goal of HomeWrangler is to reduce your mental energy regarding those repetitive, 
+      </p>
+
       <br></br>
       <h4>carrier pigeon:</h4>
       <p>Nat: email ( at ) email.com</p>
