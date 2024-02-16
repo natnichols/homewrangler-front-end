@@ -10,7 +10,12 @@ const ShoppingListCard = ({pantryItem,  handleDelFromShoppingList}) => {
       <div>
         <p>
           🛒
-          <Link href="#" title="remove from shopping list" onClick={() => handleDelFromShoppingList(pantryItem._id)}>➖</Link>
+          <Link
+            href="#" title="remove from shopping list"
+            onClick={() => handleDelFromShoppingList(pantryItem._id)}
+          >
+            <span style={{ fontSize: '1.2em' }}>➖</span>
+          </Link>
           &nbsp;&nbsp;
           <strong>{pantryItem.name}</strong>
           &nbsp;&nbsp;

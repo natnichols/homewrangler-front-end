@@ -20,8 +20,10 @@ const RepairEdit = (props) => {
 
   return (
     <main className={styles.container}>
+      <h2 style={{ width: 'fit-content', marginLeft: 'auto', marginRight: 'auto' }}>
+        Edit Repair
+      </h2>
       <form onSubmit={handleSubmit}>
-        <h2>Edit Repair</h2>
         <label htmlFor="name-input">Name</label>
         <input 
           required
@@ -47,7 +49,7 @@ const RepairEdit = (props) => {
         </select>
         <label htmlFor="description-input">Description</label>
         <input 
-          required
+          // required
           type="text" 
           name="description"
           id="description-input"
@@ -57,7 +59,7 @@ const RepairEdit = (props) => {
         />
         <label htmlFor="cost-input">Approximate Cost:</label>
         <input 
-          required
+          // required
           type="text" 
           name="cost"
           id="cost-input"
@@ -65,7 +67,7 @@ const RepairEdit = (props) => {
           placeholder="Approximate Cost"
           onChange={handleChange}
         />
-        <div style={{ width: 'fit-content' }}>
+        <div style={{ width: 'fit-content', marginLeft: 'auto', marginRight: 'auto' }}>
           <button type="submit">Edit Repair 🔧✏️</button>
         </div>
       </form>
