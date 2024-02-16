@@ -1,8 +1,8 @@
 // npm
-import { useState } from "react";
+import { useState } from 'react'
 
-//css
-import styles from "./PantryItemAdd.module.css"
+// css
+import styles from './PantryItemAdd.module.css'
 
 const PantryItemAdd = (props) => {
   const [formData, setFormData] = useState({
