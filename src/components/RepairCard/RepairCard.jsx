@@ -16,13 +16,17 @@ const RepairCard = ({ repair }) => {
 
   return (
       <main className={styles.container}>
+
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <Link to={`/repairs/${repair._id}`}>
             <h4>{repair.name}</h4>
-          </Link>
-          &nbsp;&nbsp;
+          &nbsp;
           <h4>( {repair.priority} )</h4>
+          &nbsp;
+          <Link to={`/repairs/${repair._id}`}>
+            👁️
+          </Link>
         </div>
+
         <p>Approx. Cost: ${repair.cost}</p>
 
         { repair.repairTasks.length
