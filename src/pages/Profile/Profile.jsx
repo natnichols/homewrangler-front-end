@@ -8,6 +8,9 @@ import * as profileService from '../../services/profileService'
 // css
 import styles from './Profile.module.css'
 
+// images
+import hwLogoBrown from '../../assets/hw-logo-border-brown.png'
+
 const Profile = ({ user }) => {
   // removed! no need to do by URL anymore.
   // const { profileId } = useParams()
@@ -55,6 +58,12 @@ const Profile = ({ user }) => {
           <button>edit profile</button>
         </div> */}
       <br></br>
+      <br></br>
+      <img
+        src={hwLogoBrown}
+        alt="Logo."
+        style={{ width: '200px', maxWidth: '100%' }} 
+      />
       <h4>Gather 'round the campfire:</h4>
 
       <p style={{ textAlign: 'center', marginBottom: '8px' }}>
@@ -67,7 +76,7 @@ const Profile = ({ user }) => {
         Our goal is to make your life easier. We have more features planned for the future, so grab your saddle and join the posse!
       </p>
       <br></br>
-      <h4>carrier pigeon:</h4>
+      <h4>Carrier pigeon:</h4>
       <p>Nat: natalie.e.nichols ( at ) gmail.com</p>
       <p>Shawn: shawnkang0818 ( at ) gmail.com</p>
       <p>Rich: rbozek ( at ) gmail.com</p>
