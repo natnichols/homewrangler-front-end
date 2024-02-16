@@ -27,11 +27,11 @@ const AddAmountForm = (props) => {
           type="number"
           name="amount"
           id="amount-input"
-          placeholder="Input + or - number eg. 10 or -10"
+          placeholder="Input + or - number, eg. 10 or -10"
           value={formData.amount}
           onChange={handleChange}
         />
-        <div style={{ width: 'fit-content' }}>
+        <div style={{ width: 'fit-content', margin: '0 auto' }}>
           <button type="submit">Adjust Budget</button>
         </div>
       </form>

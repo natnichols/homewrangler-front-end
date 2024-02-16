@@ -1,5 +1,3 @@
-import { useState, useEffect } from 'react'
-
 import styles from './Budgets.module.css'
 
 
