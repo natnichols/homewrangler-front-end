@@ -1,4 +1,16 @@
 .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.container p {
+  margin: 2px;
+}
+
+/* .container {
   height: 100%;
   display: flex;
   overflow: hidden;
@@ -43,4 +55,4 @@
 input:focus, select:focus {
   outline: none;
   border: 1px solid var(--primary);
-}
+} */

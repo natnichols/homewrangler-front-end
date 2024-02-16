@@ -1,11 +1,23 @@
 .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.container p {
+  margin: 2px;
+}
+
+/* .container {
   height: 100%;
   display: flex;
   overflow: hidden;
   padding: 28px 21px;
   align-items: center;
   flex-direction: column;
-}
+} */
 
 .container textarea, button { 
   width: 100%;
@@ -14,10 +26,11 @@
   resize: vertical;
   border-radius: 5px;
   margin: 7px 0px 14px 0px;
-  border: 1px solid var(--border);
+  border: 1px solid #283618;
   font-family: canada-type-gibson, sans-serif;
 }
 
+/*
 .container label {
   font-weight: 600;
   margin: 7px 0px 14px 0px;
@@ -38,4 +51,4 @@
   margin-top: 14px;
   text-align: center;
   color: rgb(200, 200, 200);
-}
+} */
