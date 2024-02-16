@@ -54,7 +54,7 @@ Our vision is to make y'all's life easier. We have more features planned for the
 ## Ice Box 🧊
 - [ ] Dark Mode
 - [ ] Edit profile functionality
-- [ ] Add Cost field to Repairs, allowing the user to factor in the cost of a repair into their budget
+- [x] Add Cost field to Repairs, allowing the user to factor in the cost of a repair into their budget
 - [ ] Add Supplies to Repairs, allowing the user to list supplies they want to add to their shopping list
 - [ ] Add categories to budgets to allow users to set up multiple budgets for different categories (eg. Groceries, Bills, Vacation)
 - [ ] Add Amount Left field to Pantry Items, so that the user can keep track of how much they have left of certain items in their pantry
