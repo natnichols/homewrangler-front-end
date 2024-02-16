@@ -13,7 +13,7 @@ The goal of HomeWrangler is to help you spend **_less time & mental energy_** on
 
 Our vision is to make y'all's life easier. We have more features planned for the future, so grab your saddle and join the posse!
 
-## Ready to join us, partner? [Check Out HomeWrangler Here](https://homewrangler.netlify.app/ "HomeWrangler") 🤠
+## Ready to join us, pardner? [Check Out HomeWrangler Here](https://homewrangler.netlify.app/ "HomeWrangler") 🤠
 
 <!--! add additional app screenshot? -->
 
