@@ -8,7 +8,7 @@ import styles from './EditPantryItem.module.css'
 
 const EditPantryItem = (props) => {
   const { state } = useLocation()
-  console.log(state)
+  
   const [formData, setFormData] = useState(state)
 
   const handleSubmit = evt => {
