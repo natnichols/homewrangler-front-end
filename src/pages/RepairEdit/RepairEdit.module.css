@@ -23,12 +23,12 @@
   margin: 7px 0px 14px 0px;
 }
 
-/* .container button {
+.container button {
   color: white;
   font-weight: 600;
   margin: 21px 0px 0px 0px;
   background: var(--primary);
-} */
+}
 
 .container a {
   border: none;
@@ -39,8 +39,8 @@
   text-align: center;
   color: rgb(200, 200, 200);
 }
-/* 
+
 input:focus, select:focus {
   outline: none;
   border: 1px solid var(--primary);
-} */
+}

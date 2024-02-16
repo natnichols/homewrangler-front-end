@@ -45,38 +45,43 @@ const RepairDetails = (props) => {
 
   return (
     <main className={styles.container}>
-      <article>
-        <header>
-          <h1>{repair.name} - {repair.priority}</h1>
-          <span>
-          {repair.owner._id === props.user.profile &&
-            <>
-              <Link to={`/repairs/${repairId}/edit`} state={repair}><button title="edit repair item" >✏️</button></Link>
-              <button title="remove repair item" onClick={() => props.handleDeleteRepair(repairId)}>🗑️</button>
-            </>
-          }
-          </span>
-        </header>
-        <h3>Description: {repair.description}</h3>
-        <h3>Approximate Cost: ${repair.cost}</h3>
-      </article>
-      <section>
-        <h1>Repair Tasks</h1>
-        <div style={{ width: 'fit-content' }}>
-          <button onClick={toggleAddRepairTask}>
-            {showAddRepairTask ? "Collapse This Form" : "Add Repair Task" }
-          </button>
-        </div>
-        {showAddRepairTask && <NewRepairTask 
-          handleAddRepairTask={handleAddRepairTask} 
-        />}
-        <RepairTasks 
-          repairId={repairId} 
-          user={props.user} 
-          repairTasks={repair.repairTasks} 
-          handleDeleteRepairTask={handleDeleteRepairTask}
-        />
-      </section>
+
+      <h2>{repair.name}</h2>
+      <span>
+      <p>Priority: {repair.priority}</p>
+      <p>{ repair.cost ? ('Approximate Cost: $' + repair.cost) : ''}</p>
+      <p>{ repair.description ? ('Description: ' + repair.description) : ''}</p>
+
+      
+      {repair.owner._id === props.user.profile &&
+        <>
+          <Link to={`/repairs/${repairId}/edit`} state={repair}>✏️</Link>
+          <Link to="#" title="delete repair" onClick={() => props.handleDeleteRepair(repairId)}>🗑️</Link>
+          {/* <button title="delete repair" onClick={() => props.handleDeleteRepair(repairId)}>🗑️</button> */}
+        </>
+      }
+      </span>
+      <br></br>
+      <br></br>
+      <h4>Repair Tasks</h4>
+
+
+      <div style={{ width: 'fit-content' }}>
+        <button onClick={toggleAddRepairTask}>
+          {showAddRepairTask ? "Collapse This Form" : "Add Task" }
+        </button>
+      </div>
+
+      {showAddRepairTask && <NewRepairTask 
+        handleAddRepairTask={handleAddRepairTask} 
+      />}
+
+      <RepairTasks 
+        repairId={repairId} 
+        user={props.user} 
+        repairTasks={repair.repairTasks} 
+        handleDeleteRepairTask={handleDeleteRepairTask}
+      />
     </main>
   )
 }

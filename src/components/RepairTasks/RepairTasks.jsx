@@ -16,8 +16,8 @@ const RepairTasks = (props) => {
           user={props.user}
           repairTask={repairTask}
           handleDeleteRepairTask={props.handleDeleteRepairTask}
-        />
-      ))}
+          />
+          ))}
     </>
   )
 }
