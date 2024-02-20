@@ -27,21 +27,21 @@ const RepairCard = ({ repair }) => {
 
       <p>Approx. Cost: ${repair.cost}</p>
 
-      { repair.repairTasks.length ?
+      { repair.repairTasks.length ? 
         <div style={{ width: 'fit-content', marginLeft: 'auto', marginRight: 'auto' }}>
           <br></br>
           <button onClick={toggleRepairTasks}>
           {showRepairTasks ? "Hide Tasks" : "Show Tasks"}
           </button>
         </div>
-      : '' }
+        : '' }
 
       {showRepairTasks && repair.repairTasks.map(repairTask => (
         <li key={repairTask._id}>
           {repairTask.done ? (
-            <del>{repairTask.task}</del>
-          ) : (
-            <>{repairTask.task}</>
+              <del>{repairTask.task}</del>
+            ) : (
+              <>{repairTask.task}</>
           )}
         </li>
       ))}
