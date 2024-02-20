@@ -12,25 +12,25 @@ const PantryCard = ({pantryItem, handleAddToShoppingList, handleDelFromShoppingL
           🛒&nbsp;
           { profile.shoppingList.includes(pantryItem._id)
             ?
-            <>
-              <Link
-                href="#"
-                title="remove from shopping list" onClick={() => handleDelFromShoppingList(pantryItem._id)}
-              >
-                <span style={{ fontSize: '1.2em' }}>➖</span>
-              </Link>
-              &nbsp;&nbsp;
-            </>
+              <>
+                <Link
+                  href="#"
+                  title="remove from shopping list" onClick={() => handleDelFromShoppingList(pantryItem._id)}
+                >
+                  <span style={{ fontSize: '1.2em' }}>➖</span>
+                </Link>
+                &nbsp;&nbsp;
+              </>
             : 
-            <>
-              <Link
-                href="#"
-                title="add to shopping list" onClick={() => handleAddToShoppingList(pantryItem._id)}
-              >
-                <span style={{ fontSize: '1.2em' }}>➕</span>
-              </Link>
-              &nbsp;&nbsp;
-            </>
+              <>
+                <Link
+                  href="#"
+                  title="add to shopping list" onClick={() => handleAddToShoppingList(pantryItem._id)}
+                >
+                  <span style={{ fontSize: '1.2em' }}>➕</span>
+                </Link>
+                &nbsp;&nbsp;
+              </>
           }
           <strong>{pantryItem.name}</strong>
           &nbsp;&nbsp;
