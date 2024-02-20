@@ -34,15 +34,15 @@ const RepairCard = ({ repair }) => {
           {showRepairTasks ? "Hide Tasks" : "Show Tasks"}
           </button>
         </div>
-        : '' }
+        : '' 
+      }
 
       {showRepairTasks && repair.repairTasks.map(repairTask => (
         <li key={repairTask._id}>
-          {repairTask.done ? (
-              <del>{repairTask.task}</del>
-            ) : (
-              <>{repairTask.task}</>
-          )}
+          {repairTask.done ?
+            <del>{repairTask.task}</del>
+            : <>{repairTask.task}</>
+          }
         </li>
       ))}
     </main>
