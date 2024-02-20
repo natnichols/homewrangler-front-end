@@ -20,8 +20,8 @@ const Budgets = (props) => {
       <h3>Ledger</h3>
       {filteredBudgets.map(budget =>
         <p key={budget._id}>
-          {budget.amount > 0 ? 
-            'added'
+          {budget.amount > 0 
+            ? 'added'
             : 'removed'
           }
           : ${Math.abs(budget.amount)}
