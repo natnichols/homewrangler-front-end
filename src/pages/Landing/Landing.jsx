@@ -10,8 +10,8 @@ import hwLogoBrown from '../../assets/hw-logo-border-brown.png'
 const Landing = ({ user }) => {
   return (
     <main className={styles.container}>
-      {user ? (
-        <>
+      {user 
+        ? <>
           <br></br>
           {/* 'LOGGED-IN USER WILL SEE THIS' */}
           <h2>Well howdy, {user ? user.name : 'pardner'}!</h2>
@@ -29,8 +29,7 @@ const Landing = ({ user }) => {
           <br/>
           <NavLink to="/budgets"><button>Budgets</button></NavLink>
         </>
-      ) : (
-        <>
+        : <>
           {/* NOT-LOGGED IN WILL SEE THIS: */}
           <h1>HomeWrangler</h1>
           <div>
@@ -44,7 +43,7 @@ const Landing = ({ user }) => {
           <NavLink to="/auth/login"><button>Log In</button></NavLink>
           <NavLink to="/auth/signup"><button>Sign Up</button></NavLink>
         </>
-      )}
+      }
     </main>
   )
 }
